@@ -1,0 +1,41 @@
+.footer {
+	font-size: smaller;
+	padding: 10px; /* use em */
+	text-align: center;
+}
+
+.page-title {
+	font-size: x-large;
+	text-align: center;
+	vertical-align: center;
+}
+
+.content-corners .ui-bar {
+	-webkit-border-top-left-radius: inherit;
+	border-top-left-radius: inherit;
+	-webkit-border-top-right-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+.content-corners .ui-body {
+	border-top-width: 0;
+	-webkit-border-bottom-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	-webkit-border-bottom-right-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+.small-content-panel {
+	width: 30em;
+	margin: auto;
+	padding: 2em;
+}
+
+.login-form {
+	padding: 2em;
+	text-align: center;
+}
+
+.login-submit-btn {
+	margin-top: 2em;
+}

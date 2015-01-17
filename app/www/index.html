@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="css/cocina.css" />
+        <title>e-Learning - Cocina Mexicana</title>
+    </head>
+    <body>
+
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-theme="a">
+            <div class="ui-grid-b ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d"><a href="#navpanel"><img src="img/ic_menu_black_36dp.png" /></a></div></div>
+                <div class="ui-block-b"><div class="ui-body ui-body-d page-title">Cocina Mexicana</div></div>
+                <div class="ui-block-c"><div class="ui-body ui-body-d"></div></div>
+            </div><!-- /ui-grid-b -->
+        </div><!-- header -->
+
+        <!-- home -->
+        <div data-role="page" id="home">
+            <div role="main" class="ui-content">
+                <p>blubb blubb mexikanische Küche</p>
+            </div>
+        </div><!-- /home -->
+
+        <!-- login -->
+        <div data-role="page" id="login">
+            <div role="main" class="ui-content">
+                <div class="ui-corner-all content-corners small-content-panel">
+                    <div class="ui-bar ui-bar-a">Login</div>
+                    <div class="ui-body ui-body-a login-form">
+                        <form id="login-form">
+                            <label for="login-username">Benutzername</label>
+                            <input type="text" name="login-username" id="login-username" value="">
+                            <label for="login-password">Passwort</label>
+                            <input type="password" name="login-password" id="login-password" value="" autocomplete="off">
+                            <label for="login-submit"></lable>
+                            <button class="ui-shadow ui-btn ui-corner-all login-submit-btn" type="submit" id="login-submit-btn">Einloggen</button>
+                        </form>
+                        <br />
+                        <p>Du besitzt noch kein Benuterkonto?</p>
+                        <a href="#register" data-role="button">Zur Registrierung</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /login -->
+
+        <!-- register -->
+        <div data-role="page" id="register">
+            <div role="main" class="ui-content">
+                <div class="ui-corner-all content-corners small-content-panel">
+                    <div class="ui-bar ui-bar-a">Registrierung</div>
+                    <div class="ui-body ui-body-a login-form">
+                        <form id="register-form">
+                            <label for="username">Benutzername</label>
+                            <input type="text" name="username" id="username" value="">
+                            <label for="password">Passwort</label>
+                            <input type="password" name="password" id="password" value="" autocomplete="off">
+                            <label for="password-repeat">Passwort wiederholen</label>
+                            <input type="password" name="password-repeat" id="password-repeat" value="" autocomplete="off">
+                            <label for="email">E-Mail Adresse</label>
+                            <input type="text" name="email" id="email" value="">
+                            <label for="firstname">Vorname</label>
+                            <input type="text" name="firstname" id="firstname" value="">
+                            <label for="lastname">Nachname</label>
+                            <input type="text" name="lastname" id="lastname" value="">
+                            <label for="register-submit"></lable>
+                            <button class="ui-shadow ui-btn ui-corner-all login-submit-btn" type="submit" id="register-submit-btn">Registrieren</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /register -->
+
+        <!-- userpanel -->
+        <div data-role="page" id="userpanel">
+            <div role="main" class="ui-content">
+                User-Settings ... Ranking Infos .. bla bla bla :)
+            </div>
+        </div><!-- /userpanel -->
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-theme="a" class="footer">
+            Brauchen wir überhaupt?
+        </div><!-- /footer -->
+
+        <!-- navpanel -->
+        <div data-role="panel" id="navpanel" data-display="overlay" data-position="left" data-theme="a">
+            <div style="height: 4em">
+                <em>Hier kleines Logo?</em>
+            </div>
+
+            <ul data-role="listview" id="navigationlist">
+                <li><a href="#home">Startseite</a></li>
+                <li id="usermenu"><a href="#login">Login / Registrieren</a></li>
+                <li><a href="#">Tip des Tages</a></li>
+                <li><a href="#">Rezeptdatenbank</a></li>
+                <li><a href="#">Rezept nach Zutat</a></li>
+                <li><a href="#">F.A.Q.</a></li>
+                <li><a href="#">Über</a></li>
+            </ul>
+        </div><!-- /navpanel -->
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="lib/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/LoginHandler.js"></script>
+        <script type="text/javascript" src="js/User.js"></script>
+        <script type="text/javascript" src="js/NavigationHandler.js"></script>
+        <script type="text/javascript" src="js/cocina.js"></script>
+    </body>
+</html>
