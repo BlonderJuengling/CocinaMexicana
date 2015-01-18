@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * General constants
+ */
+
+define('ACCOUNT_CREATED_SUCCESSFULLY', 0);
+define('ACCOUNT_CREATE_FAILED', 1);
+define('ACCOUNT_USERNAME_ALREADY_EXISTED', 2);
+define('ACCOUNT_EMAIL_ALREADY_EXISTED', 3);
+define('ACCOUNT_CHECKED_SUCCESSFULLY', 4);
+
+?>
