@@ -176,27 +176,23 @@ $app->post('/account', function() use ($app) {
 	validateEmail($accountData['email']);
 
 	$db = new DbHandler();
-	$res = $db->createAccount($accountData['username'], $accountData['email'], $accountData['password'],
+	$result = $db->createAccount($accountData['username'], $accountData['email'], $accountData['password'],
 								$accountData['firstname'], $accountData['lastname']);
 
-	if($res === ACCOUNT_CREATED_SUCCESSFULLY) {
+	if($result['status'] === ACCOUNT_CREATED_SUCCESSFULLY) {
 		$response['error'] = false;
 		$response['message'] = 'You are successfully registered';
 		echoResponse(201, $response);
 	}
-	else if($res === ACCOUNT_CREATE_FAILED) {
+	else if($result['status'] === ACCOUNT_CREATE_FAILED) {
 		$response['error'] = true;
 		$response['message'] = 'Oops! An error occured while registration';
 		echoResponse(200, $response);
 	}
-	else if($res === ACCOUNT_USERNAME_ALREADY_EXISTED) {
+	else if($result['status'] === ACCOUNT_NOT_UNIQUE) {
 		$response['error'] = true;
-		$response['message'] = 'Sorry, this username already existed';
-		echoResponse(200, $response);
-	}
-	else if($res === ACCOUNT_EMAIL_ALREADY_EXISTED) {
-		$response['error'] = true;
-		$response['message'] = 'Sorry, this email already existed';
+		$response['error_codes'] = $result['detail'];
+		$response['message'] = 'Sorry, account is not unique';
 		echoResponse(200, $response);
 	}
 });
@@ -240,7 +236,6 @@ $app->put('/account', function() use ($app) {
 	$response['message'] = 'Update account information via RestAPI not yet implemented';
 	echoResponse(200, $response);
 });
-
 
 /**
  * Login for user using email and password

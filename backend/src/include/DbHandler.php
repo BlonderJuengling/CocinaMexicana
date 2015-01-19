@@ -21,7 +21,7 @@ class DbHandler {
 	 */
 	public function createAccount($username, $email, $password, $firstname, $lastname) {
 		require_once('PassHash.php');
-		$response = array();
+		$status = array();
 
 		$emailExists = $this->isEmailExists($email);
 		$usernameExists = $this->isUsernameExists($username);
@@ -44,20 +44,26 @@ class DbHandler {
 			$statement->closeCursor();
 
 			if($result) {
-				return ACCOUNT_CREATED_SUCCESSFULLY;
+				$status['status'] = ACCOUNT_CREATED_SUCCESSFULLY;
+				$status['detail'] = null;
+				return $status;
 			}
 			else {
-				return ACCOUNT_CREATE_FAILED;
+				$status['status'] = ACCOUNT_CREATE_FAILED;
+				$status['detail'] = null;
 			}
 		}
-		else if($emailExists) {
-			return ACCOUNT_EMAIL_ALREADY_EXISTED;
-		}
 		else {
-			return ACCOUNT_USERNAME_ALREADY_EXISTED;
-		}
+			$status['status'] = ACCOUNT_NOT_UNIQUE;
+			$status['detail'] = array();
 
-		return $response;
+			if($emailExists)
+				$status['detail'][ACCOUNT_EMAIL_ALREADY_EXISTED] = 'e-mail already exists';
+			if($usernameExists)
+				$status['detail'][ACCOUNT_USERNAME_ALREADY_EXISTED] = 'username already exists';
+
+			return $status;
+		}
 	}
 
 	/**

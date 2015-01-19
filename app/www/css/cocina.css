@@ -39,3 +39,13 @@
 .login-submit-btn {
 	margin-top: 2em;
 }
+
+.input-label {
+	padding-top: 1em;
+}
+
+.form-error {
+	font-size: smaller;
+	font-weight: bold;
+	color: red;
+}

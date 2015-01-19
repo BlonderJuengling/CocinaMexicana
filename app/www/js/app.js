@@ -7,15 +7,25 @@ var app = {
     initialize: function() {
         $("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
         $("[data-role=panel]").panel().enhanceWithin();
+        $('#registerPopupSuccess').popup(); // init popup to get expected behavior
 
         this.bindEvents();
         this.navHandler.refresh();
     },
     // Bind Event Listeners
     bindEvents: function() {
-        $('#login-submit-btn').on('click', this.loginHandler.validateUserCredentials);
-        $('#register-submit-btn').on('click', this.validateRegistration);
+        $('#login-submit-btn').on('click', function (event) {
+            event.preventDefault();
 
+            app.loginHandler.login();
+        });
+
+        $('#register-submit-btn').on('click', function (event) {
+            event.preventDefault();
+            var regHandler = new RegistrationHandler();
+
+            regHandler.register();
+        });
 
         if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Blackberry)/)) {
             console.log('Running on mobile device');

@@ -75,18 +75,24 @@
                     <div class="ui-bar ui-bar-a">Registrierung</div>
                     <div class="ui-body ui-body-a login-form">
                         <form id="register-form">
-                            <label for="username">Benutzername</label>
+                            <label for="username" class="input-label">Benutzername</label>
                             <input type="text" name="username" id="username" value="">
-                            <label for="password">Passwort</label>
+                            <span id="error-username" class="form-error"></span>
+                            <label for="password" class="input-label">Passwort</label>
                             <input type="password" name="password" id="password" value="" autocomplete="off">
-                            <label for="password-repeat">Passwort wiederholen</label>
+                            <span id="error-password" class="form-error"></span>
+                            <label for="password-repeat" class="input-label">Passwort wiederholen</label>
                             <input type="password" name="password-repeat" id="password-repeat" value="" autocomplete="off">
-                            <label for="email">E-Mail Adresse</label>
+                            <span id="error-passwordRep" class="form-error"></span>
+                            <label for="email" class="input-label">E-Mail Adresse</label>
                             <input type="text" name="email" id="email" value="">
-                            <label for="firstname">Vorname</label>
+                            <span id="error-email" class="form-error"></span>
+                            <label for="firstname" class="input-label">Vorname</label>
                             <input type="text" name="firstname" id="firstname" value="">
-                            <label for="lastname">Nachname</label>
+                            <span id="error-firstname" class="form-error"></span>
+                            <label for="lastname" class="input-label">Nachname</label>
                             <input type="text" name="lastname" id="lastname" value="">
+                            <span id="error-lastname" class="form-error"></span>
                             <label for="register-submit"></lable>
                             <button class="ui-shadow ui-btn ui-corner-all login-submit-btn" type="submit" id="register-submit-btn">Registrieren</button>
                         </form>
@@ -94,6 +100,18 @@
                 </div>
             </div>
         </div><!-- /register -->
+
+        <!-- registerPopupSuccess -->
+        <div data-role="popup" id="registerPopupSuccess" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+            <div data-role="header" data-theme="a">
+                <h1>Erfolgreich registriert!</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <h3 class="ui-title">Du hast dich erfolgreich auf Cocina Mexicana registriert.</h3>
+                <p>Du wirst nun auf die Login-Seite weitergeleitet</p>
+                <a href="#login" class="ui-btn ui-cornor-all ui-shadow ui-btn-inline ui-btn-b">Okay</a>
+            </div>
+        </div><!-- /registerPopupSuccess -->
 
         <!-- userpanel -->
         <div data-role="page" id="userpanel">
@@ -127,9 +145,11 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
         <script type="text/javascript" src="lib/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/Enums.js"></script>
         <script type="text/javascript" src="js/LoginHandler.js"></script>
         <script type="text/javascript" src="js/User.js"></script>
         <script type="text/javascript" src="js/NavigationHandler.js"></script>
-        <script type="text/javascript" src="js/cocina.js"></script>
+        <script type="text/javascript" src="js/RegistrationHandler.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>

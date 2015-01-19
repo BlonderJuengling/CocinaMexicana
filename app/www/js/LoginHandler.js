@@ -3,32 +3,22 @@ var LoginHandler = function () {
 
 	this.user = username;
 	this.pass = password;
-	this.success = false;
-	this.error = new Array();
+	this.status = UserStatus.GUEST;
+	this.errors = new Array();
 }
 
-LoginHandler.prototype.validateUserCredentials = function (event) {
-	var loginData = {
-		'username' : $('#login-form #login-username').val(),
-		'password' : $('#login-form #login-password').val(),
-		'status' : UserStatus.USER
-	};
+LoginHandler.prototype.login = function () {
+	this.setCredentialsFromForm();
 
-	event.preventDefault();
+	if(!this.isValid()) {
+		this.showError();
+		return;
+	}
 
-	// here do ajax request on backend zu validate user credentials
-	// ...
-
-	// don't unterstand why "this.loginUser" not working
-	// maybe wrong context, because method called from on-click listener?
-	app.loginHandler.loginUser(loginData.username, loginData.password, loginData.status);
-}
-
-LoginHandler.prototype.loginUser = function (username, password, status) {
 	var user = {
-		'username' : username,
-		'password' : password,
-		'status' : status
+		'username' : this.username,
+		'password' : this.password,
+		'status' : this.status
 	};
 
 	this.writeLocalStorage(user);
@@ -36,6 +26,24 @@ LoginHandler.prototype.loginUser = function (username, password, status) {
 	app.navHandler.refresh();
 
 	// redirect to home / userportal
+}
+
+LoginHandler.prototype.setCredentialsFromForm = function () {
+	this.user = $('#login-form #login-username').val();
+	this.pass = $('#login-form #login-password').val();
+}
+
+LoginHandler.prototype.isValid = function (event) {
+	// here do ajax request on backend zu validate user credentials
+	// ...
+
+	this.status = UserStatus.USER;
+
+	return true;
+}
+
+LoginHandler.prototype.showError = function () {
+	console.log(this.TAG + 'show error handling here :)');
 }
 
 LoginHandler.prototype.writeLocalStorage = function (user) {
@@ -60,7 +68,7 @@ LoginHandler.prototype.writeLocalStorage = function (user) {
 	}
 }
 
-LoginHandler.prototype.logoutUser = function () {
+LoginHandler.prototype.logout = function () {
 	this.clearLocalStorage();
 	app.currentUser.clearCurrentUser();
 	app.navHandler.refresh();
@@ -71,3 +79,4 @@ LoginHandler.prototype.clearLocalStorage = function () {
 		window.localStorage.clear('session');
 	}
 }
+

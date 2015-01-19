@@ -1,10 +1,3 @@
-var
-	UserStatus = {
-		GUEST: 0,
-		ADMIN: 1,
-		USER: 2
-	};
-
 var User = function () {
 	this.TAG = 'User => ';
 
