@@ -17,7 +17,7 @@ RegistrationHandler.prototype.register = function () {
 	var self = this,
 		request = $.ajax({
 			type: 'POST',
-			url: 'localhost/cocina/api/v1/account',
+			url: 'http://localhost/cocina/api/v1/account',
 			data: this.user,
 		});
 
@@ -49,12 +49,10 @@ RegistrationHandler.prototype.getValuesFromForm = function () {
 };
 
 RegistrationHandler.prototype.clearErrorLabels = function() {
-	console.log(this.TAG + 'clear error information on form');
-	$('.form-error').text('');
+	$('#register-form .form-error').text('');
 };
 
 RegistrationHandler.prototype.clearForm = function() {
-	console.log(this.TAG + 'clear form input fields!');
 	$('#register-form').trigger('reset');
 };
 

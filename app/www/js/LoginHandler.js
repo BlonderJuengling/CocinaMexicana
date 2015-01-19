@@ -8,24 +8,16 @@ var LoginHandler = function () {
 }
 
 LoginHandler.prototype.login = function () {
+	this.errors = []; // clear array with old error information
+	this.clearErrorLabels();
 	this.setCredentialsFromForm();
 
-	if(!this.isValid()) {
+	if(!this.isValidInput()) {
 		this.showError();
 		return;
 	}
 
-	var user = {
-		'username' : this.username,
-		'password' : this.password,
-		'status' : this.status
-	};
-
-	this.writeLocalStorage(user);
-	app.currentUser.setCurrentUser(user);
-	app.navHandler.refresh();
-
-	// redirect to home / userportal
+	this.validateCredentials(this.user, this.pass);
 }
 
 LoginHandler.prototype.setCredentialsFromForm = function () {
@@ -33,31 +25,74 @@ LoginHandler.prototype.setCredentialsFromForm = function () {
 	this.pass = $('#login-form #login-password').val();
 }
 
-LoginHandler.prototype.isValid = function (event) {
-	// here do ajax request on backend zu validate user credentials
-	// ...
+LoginHandler.prototype.isValidInput = function (event) {
+	if(this.user === '')
+		this.errors.push({ 'field' : 'username', 'msg' : 'Bitte gib deinen Benutzernamen ein' });
+	if(this.pass === '')
+		this.errors.push({ 'field' : 'password', 'msg' : 'Bitte gib dein Passwort ein' });
 
-	this.status = UserStatus.USER;
+	if(this.errors.length > 0)
+		return false;
 
 	return true;
 }
 
+LoginHandler.prototype.validateCredentials = function(username, password) {
+	var self = this,
+		request = $.ajax({
+			type: 'POST',
+			url: 'http://localhost/cocina/api/v1/login',
+			data: { 'username' : username, 'password' : password},
+		});
+
+	request.done(function (response) {
+		if(response.error) {
+			$('#error-login-username').text('Ungültiger Benutzername / Passwort');
+			return;
+		}
+
+		var user = response.account;
+			user.status = UserStatus.USER;
+
+		self.writeLocalStorage(user);
+		self.clearForm();
+		app.currentUser.setCurrentUser(user);
+		app.navHandler.refresh();
+
+		$.mobile.changePage('#userpanel');
+	});
+
+	request.fail(function (jqXHR, status) {
+		console.log(self.TAG + 'Error | Status: ' + status + '; jqXHR: ' + JSON.stringify(jqXHR));
+	});
+};
+
 LoginHandler.prototype.showError = function () {
-	console.log(this.TAG + 'show error handling here :)');
+	for(var item in this.errors) {
+		var error = this.errors[item];
+		$('#error-login-' + error.field).text(error.msg);
+	}
 }
+
+LoginHandler.prototype.clearErrorLabels = function() {
+	$('#login-form .form-error').text('');
+};
+
+LoginHandler.prototype.clearForm = function() {
+	$('#login-form').trigger('reset');
+};
 
 LoginHandler.prototype.writeLocalStorage = function (user) {
 	if(window.localStorage != null) {
 		var session = JSON.parse(window.localStorage.getItem('session'));
 
 		if(session == null) {
-			localStorage.setItem('session', JSON.stringify(
-				{ 'username' : user.username, 'password' : user.password, status: user.status }));
+			localStorage.setItem('session', JSON.stringify(user));
 
 			console.log(this.TAG + 'session data stored in LocalStorage');
 		}
-		else if(session.username === username) {
-			console.log(this.TAG + 'session for user "%s" already exist -> nothing to do', username);
+		else if(session.username === user.username) {
+			console.log(this.TAG + 'session for user "%s" already exist -> nothing to do', user.username);
 		}
 		else {
 			console.log(this.TAG + 'Ups! Something went wrong. Session for other user already exists');

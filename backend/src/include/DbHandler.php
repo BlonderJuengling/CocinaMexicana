@@ -117,7 +117,7 @@ class DbHandler {
 	 * @param String $password password to account
 	 * @return boolean
 	 */
-	public function checkLogin($usernme, $password) {
+	public function checkLogin($username, $password) {
 		require_once('PassHash.php');
 
 		$statement = $this->conn->prepare("SELECT password FROM cm_accounts WHERE username = :username");
@@ -129,12 +129,7 @@ class DbHandler {
 			$password_hash = $result['password'];
 			$statement->closeCursor();
 
-			if(PassHash::checkPassword($password_hash, $password)) {
-				return true;
-			}
-			else {
-				return false;
-			}
+			return PassHash::checkPassword($password_hash, $password);
 		}
 		else {
 			$statement->closeCursor();

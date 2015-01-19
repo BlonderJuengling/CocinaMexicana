@@ -53,10 +53,12 @@
                     <div class="ui-bar ui-bar-a">Login</div>
                     <div class="ui-body ui-body-a login-form">
                         <form id="login-form">
-                            <label for="login-username">Benutzername</label>
+                            <label for="login-username" class="input-label">Benutzername</label>
                             <input type="text" name="login-username" id="login-username" value="">
-                            <label for="login-password">Passwort</label>
+                            <span id="error-login-username" class="form-error"></span>
+                            <label for="login-password" class="input-label">Passwort</label>
                             <input type="password" name="login-password" id="login-password" value="" autocomplete="off">
+                            <span id="error-login-password" class="form-error"></span>
                             <label for="login-submit"></lable>
                             <button class="ui-shadow ui-btn ui-corner-all login-submit-btn" type="submit" id="login-submit-btn">Einloggen</button>
                         </form>

@@ -265,6 +265,8 @@ $app->post('/login', function() use ($app) {
 	}
 	else {
 		$response['error'] = true;
+		$response['username'] = $loginData['username'];
+		$response['password'] = $loginData['password'];
 		$response['message'] = 'Login failed. Incorrect credentials';
 	}
 
