@@ -9,10 +9,20 @@ var app = {
         $("[data-role=panel]").panel().enhanceWithin();
         $('#registerPopupSuccess').popup(); // init popup to get expected behavior
 
+        this.initMainPageSlider();
         this.bindEvents();
         this.navHandler.refresh();
     },
     // Bind Event Listeners
+    initMainPageSlider: function () {
+        $('#main-page-slider').pgwSlider({
+            displayControls: true,
+            selectionMode: 'mouseOver',
+            autoSlide: false,
+            adaptiveHeight: false,
+            displayControls: true
+        });
+    },
     bindEvents: function() {
         $('#login-submit-btn').on('click', function (event) {
             event.preventDefault();

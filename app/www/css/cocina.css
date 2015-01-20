@@ -49,3 +49,9 @@
 	font-weight: bold;
 	color: red;
 }
+
+.main-page-slider-wrapper {
+	max-width: 50em;
+	margin: auto;
+	padding-top: 2em;
+}
