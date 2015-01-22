@@ -17,7 +17,7 @@ RegistrationHandler.prototype.register = function () {
 	var self = this,
 		request = $.ajax({
 			type: 'POST',
-			url: 'http://localhost/cocina/api/v1/account',
+			url: BaseRequestUrl + '/account',
 			data: this.user,
 		});
 

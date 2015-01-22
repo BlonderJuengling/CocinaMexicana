@@ -1,4 +1,6 @@
-var	UserStatus = {
+var	BaseRequestUrl = 'http://localhost/cocina/api/v1',
+
+	UserStatus = {
 		GUEST: 0,
 		ADMIN: 1,
 		USER: 2

@@ -1,21 +1,16 @@
 var User = function () {
 	this.TAG = 'User => ';
-
-	this.username = null;
-	this.password = null;
-	this.status = UserStatus.GUEST;
+	this.user = null;
 
 	this.load();
 }
 
 User.prototype.load = function () {
 	if(window.localStorage =! null) {
-		var user = JSON.parse(window.localStorage.getItem('session'));
+		var userInStore = JSON.parse(window.localStorage.getItem('session'));
 
-		if(user !== null) {
-			this.username = user.username;
-			this.password = user.password;
-			this.status = user.status;
+		if(userInStore !== null) {
+			this.setCurrentUser(userInStore);
 
 			console.log(this.TAG + 'successfully restored user session');
 		}
@@ -25,25 +20,28 @@ User.prototype.load = function () {
 }
 
 User.prototype.getCurrentUser = function () {
-	return {
-		'username' : this.username,
-		'password' : this.password,
-		'status' : this.status
-	};
+	return this.user;
 }
 
 User.prototype.setCurrentUser = function (user) {
-	this.username = user.username;
-	this.password = user.password;
-	this.status = user.status;
+	this.user = user;
 }
 
 User.prototype.clearCurrentUser = function () {
-	this.username = null;
-	this.password = null;
-	this.status = UserStatus.GUEST;
+	this.user = null;
 }
 
 User.prototype.getUserStatus = function () {
-	return this.status;
+	if(this.user == null)
+		return UserStatus.GUEST;
+
+	return this.user.status;
 }
+
+User.prototype.isLoggedIn = function() {
+	if(this.getCurrentUser() === null) {
+		return false;
+	}
+
+	return true;
+};

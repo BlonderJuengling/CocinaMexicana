@@ -3,6 +3,7 @@ var app = {
     currentUser: new User(),
     navHandler: new NavigationHandler(),
     loginHandler: new LoginHandler(),
+    userpanel: new Userpanel(),
     // Application Constructor
     initialize: function() {
         $("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
@@ -35,6 +36,12 @@ var app = {
             var regHandler = new RegistrationHandler();
 
             regHandler.register();
+        });
+
+        $('#userpanel').on('pagebeforeshow', function () {
+            console.log('before page show event;');
+            app.userpanel.setUser(app.currentUser);
+            app.userpanel.open();
         });
 
         if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Blackberry)/)) {

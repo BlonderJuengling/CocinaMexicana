@@ -1,16 +1,15 @@
 var LoginHandler = function () {
 	this.TAG = 'LoginHandler => ';
 
-	this.user = username;
-	this.pass = password;
-	this.status = UserStatus.GUEST;
+	this.user = null;
+	this.pass = null;
 	this.errors = new Array();
 }
 
 LoginHandler.prototype.login = function () {
 	this.errors = []; // clear array with old error information
 	this.clearErrorLabels();
-	this.setCredentialsFromForm();
+	this.parseCredentialsFromForm();
 
 	if(!this.isValidInput()) {
 		this.showError();
@@ -20,7 +19,7 @@ LoginHandler.prototype.login = function () {
 	this.validateCredentials(this.user, this.pass);
 }
 
-LoginHandler.prototype.setCredentialsFromForm = function () {
+LoginHandler.prototype.parseCredentialsFromForm = function () {
 	this.user = $('#login-form #login-username').val();
 	this.pass = $('#login-form #login-password').val();
 }
@@ -41,7 +40,7 @@ LoginHandler.prototype.validateCredentials = function(username, password) {
 	var self = this,
 		request = $.ajax({
 			type: 'POST',
-			url: 'http://localhost/cocina/api/v1/login',
+			url: BaseRequestUrl + '/login',
 			data: { 'username' : username, 'password' : password},
 		});
 
@@ -50,16 +49,17 @@ LoginHandler.prototype.validateCredentials = function(username, password) {
 			$('#error-login-username').text('Ungültiger Benutzername / Passwort');
 			return;
 		}
-
-		var user = response.account;
+		else {
+			var user = response.account;
 			user.status = UserStatus.USER;
 
-		self.writeLocalStorage(user);
-		self.clearForm();
-		app.currentUser.setCurrentUser(user);
-		app.navHandler.refresh();
+			self.writeLocalStorage(user);
+			self.clearForm();
+			app.currentUser.setCurrentUser(user);
+			app.navHandler.refresh();
 
-		$.mobile.changePage('#userpanel');
+			$.mobile.changePage('#userpanel');
+		}
 	});
 
 	request.fail(function (jqXHR, status) {
@@ -114,4 +114,3 @@ LoginHandler.prototype.clearLocalStorage = function () {
 		window.localStorage.clear('session');
 	}
 }
-

@@ -9,6 +9,7 @@ require_once PROJECT_ROOT . '/include/PassHash.php';
 $app->response->headers->set('Access-Control-Allow-Origin', '*');
 $app->response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
 $app->response->headers->set('Access-Control-Max-Age', '3600');
+$app->response->headers->set('Content-Type', 'application/json');
 
 // global user id from database
 $account_id = NULL;
