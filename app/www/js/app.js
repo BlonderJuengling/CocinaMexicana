@@ -9,6 +9,7 @@ var app = {
         $("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
         $("[data-role=panel]").panel().enhanceWithin();
         $('#registerPopupSuccess').popup(); // init popup to get expected behavior
+        $('#errorPopup').popup();
 
         this.initMainPageSlider();
         this.bindEvents();
@@ -39,9 +40,20 @@ var app = {
         });
 
         $('#userpanel').on('pagebeforeshow', function () {
-            console.log('before page show event;');
             app.userpanel.setUser(app.currentUser);
             app.userpanel.open();
+        });
+
+        $('#classQuiz').on('pagebeforeshow', function () {
+            var quiz = new Quiz('quiz_classification.json');
+            quiz.load(function(event) {
+                console.log('Event: %s', event);
+                quiz.show();
+            });
+        });
+
+        $('#errorPopup .ui-content a').on('click', function () {
+            $('#errorPopup').popup('close');
         });
 
         if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Blackberry)/)) {

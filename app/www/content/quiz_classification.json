@@ -1,0 +1,51 @@
+{
+    "id" : "classQuiz",
+    "title": "Wie gut kennen Sie die mexikanische Küche?",
+    "intro": "Das Einstufungsquiz soll lediglich dazu dienen, die grundlegenden Kenntnisse des Besuchers hinsichtlich der mexikanischen Küche zu überprüfen. Anhand des Quiz-Ergebnis wird der Anwender entsprechend seines Grundverständnisses eingestuft und klassifiziert.",
+    "questions": [
+        {
+            "question": "Welches dieser drei Gerichte ist ursprünglich nicht typisch mexikanisch?",
+            "type": "sc",
+            "answers": [
+                "Tacos",
+                "Quesadillas",
+                "Nachos"
+            ],
+            "correct_answer": 3,
+            "explanation": "Nachos sind kein mexikanisches, sondern texanisches Gericht, wobei das heutige Texas ehemaliges mexikanisches Gebiet ist. Sie gehören zur Tex-Mex-Küche und sind größtenteils in Mexiko unbekannt."
+        },
+        {
+            "question": "Welches mexikanische Gericht wird in Amerika häufig als Wrap bezeichnet?",
+            "type": "sc",
+            "answers": [
+                "Maismehltortilla",
+                "Weizenmehltortilla",
+                "Dinkelmehltortilla"
+            ],
+            "correct_answer": 2,
+            "explanation": "Weizenmehltortillas werden häufig auch als Wraps bezeichnet. Diese werden meist gerollt und mit verschiedenen Gemüse- und Fleischsorten gefüllt."
+        },
+        {
+            "question": "Guacamole ist ein sehr beliebter Dip, der wahlweise zu Tortilla Chips, Taquitos oder Fleisch verzehrt wird. Welche Zutat bildet den Hauptbestandteil hierfür?",
+            "type": "sc",
+            "answers": [
+                "Avocado",
+                "Tomate",
+                "Chilischote"
+            ],
+            "correct_answer": 1,
+            "explanation": "Das Wort Guacamole stammt von dem Nahuatl-Wort ahuacamolli und bedeutet so viel wie 'Avocadosauce'."
+        },
+        {
+            "question": "Neben der Guacamole existieren noch viele weitere Saucen und Dips. Was serviert der Kellner, wenn Sie eine „Mole poblano“ bestellen?",
+            "type": "sc",
+            "answers": [
+                "Chili-Schoko-Sauce",
+                "Zwiebel-Knoblauch-Sauce",
+                "Mango-Senf-Sauce"
+            ],
+            "correct_answer": 1,
+            "explanation": "Mole Poblano ist eine mexikanische Chili-Schokoladen-Sauce, die vorzugsweise zu Pute oder anderem Geflügel verzehrt wird."
+        }
+    ]
+}

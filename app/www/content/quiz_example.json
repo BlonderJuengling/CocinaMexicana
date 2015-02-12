@@ -1,0 +1,29 @@
+{
+    "id" : "classQuiz",
+    "title": "Einstufungsquiz für Neueinsteiger",
+    "intro": "Blubb bli bla hallo",
+    "questions": [
+        {
+            "question": "frage 1",
+            "type": "sc",
+            "answers": [
+                "antwort 1",
+                "antwort 2",
+                "antwort 3"
+            ],
+            "correct_answer": 1,
+            "explanation": "hilfetext hier, warum richtige antwort und so ;D"
+        },
+        {
+            "question": "frage 2",
+            "type": "mc",
+            "answers": [
+                "antwort 12",
+                "antwort 23",
+                "antwort 34"
+            ],
+            "correct_answer": 2,
+            "explanation": "hilfetext hier, warum richtige antwort und so ;D"
+        }
+    ]
+}

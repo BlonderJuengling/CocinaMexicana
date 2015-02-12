@@ -31,6 +31,11 @@
 	padding: 2em;
 }
 
+.quiz-content {
+	width: 35em;
+	margin: auto;
+}
+
 .login-form {
 	padding: 2em;
 	text-align: center;
@@ -54,4 +59,32 @@
 	max-width: 50em;
 	margin: auto;
 	padding-top: 2em;
+}
+
+.quiz-answer {
+	border-color: rgb(119, 113, 113);
+	border-style: solid;
+	background-color: #C0DCFF;
+	padding: 0.5em;
+	border-width: thin;
+}
+
+.quiz-explanation {
+	border-color: rgb(119, 113, 113);
+	border-style: solid;
+	background-color: #C0DCFF;
+	padding: 0.5em;
+	border-width: thin;
+	font-size: smaller;
+	font-style: italic;
+}
+
+.quiz-wrong {
+	background-color: #FDB0BF;
+	border-color: #FF0A0A;
+}
+
+.quiz-correct {
+	background-color: #99FCA2;
+	border-color: #2C8B26;
 }
