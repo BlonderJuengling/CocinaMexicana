@@ -38,10 +38,32 @@ User.prototype.getUserStatus = function () {
 	return this.user.status;
 }
 
+User.prototype.getUsername = function() {
+	return this.user.username;
+};
+
 User.prototype.isLoggedIn = function() {
-	if(this.getCurrentUser() === null) {
+	if(this.getCurrentUser() === null)
 		return false;
-	}
 
 	return true;
+};
+
+User.prototype.setClassQuiz = function(value) {
+	this.user.class_quiz_done = value;
+	this.updateQuizHint(value);
+};
+
+User.prototype.updateQuizHint = function(isQuizDone) {
+	if(isQuizDone)
+		$('.hint-quiz').hide();
+	else
+		$('.hint-quiz').show();
+};
+
+User.prototype.isClassQuizDone = function() {
+	if(this.user.class_quiz_done != 0)
+		return true;
+
+	return false;
 };

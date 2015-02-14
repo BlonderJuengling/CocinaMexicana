@@ -1,7 +1,8 @@
-var Quiz = function (fileName) {
+var Quiz = function (fileName, currentUser) {
 	this.TAG = 'Quiz => ';
 
 	this.file = fileName;
+	this.currentUser = currentUser;
 	this.quiz = {};
 	this.page = null;
 	this.builder = new QuizBuilder();
@@ -16,9 +17,8 @@ Quiz.prototype.load = function(callback) {
 
 		self.quiz = quizData;
 
-		if(typeof(callback) == 'function' && callback != null) {
+		if(typeof(callback) === 'function' && callback !== undefined) {
 			self.builder.build(quizData);
-			//self.validator.setSolution(self.extractSolution(quizData.questions));
 			self.validator.setQuiz(quizData);
 			self.page = self.builder.getQuizPage();
 
@@ -51,6 +51,8 @@ Quiz.prototype.bindEvents = function() {
 
 	$('#submitQuiz').on('click', function(event) {
 		event.preventDefault();
-		self.validator.validate();
+		self.validator.validate(function (resultQuiz) {
+			self.currentUser.setClassQuiz(1);
+		});
 	});
 };

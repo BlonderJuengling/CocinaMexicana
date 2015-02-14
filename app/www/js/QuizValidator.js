@@ -9,7 +9,7 @@ QuizValidator.prototype.setQuiz = function(quiz) {
 	this.quiz = quiz;
 };
 
-QuizValidator.prototype.validate = function() {
+QuizValidator.prototype.validate = function(callback) {
 	var userSolution = this.getUserSolution(),
 		quizQuestions = this.quiz.questions,
 		evaluation = [];
@@ -28,7 +28,10 @@ QuizValidator.prototype.validate = function() {
 	this.buildResultPage(evaluation);
 	this.showResult();
 
-	console.log(evaluation);
+	if(typeof(callback) === 'function' && callback !== undefined) {
+		var result = {}; // TODO: create result :))
+		callback(result);
+	}
 };
 
 QuizValidator.prototype.showError = function(errorType) {
@@ -97,8 +100,6 @@ QuizValidator.prototype.appendQuestionsAndAnswers = function(quizResult) {
 		html += '<p><div class="quiz-answer ' + answerBoxClass + '">Deine Antwort: ' + item.answers[quizResult[index].answer_index] + '</div></p>';
 		html += '<p><div class="quiz-answer">Richtige Antwort: ' + item.answers[item.correct_answer -1] + '</div></p>';
 		html += '<p><div class="quiz-explanation"><b>Erklärung:</b><br />' + item.explanation + '</div></p>';
-
-		console.log(quizResult[index].answer_index);
 	});
 
 	return html;

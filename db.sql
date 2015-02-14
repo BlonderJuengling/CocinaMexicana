@@ -11,4 +11,5 @@ CREATE TABLE IF NOT EXISTS cm_accounts (
 	lastname varchar(100) DEFAULT NULL COMMENT 'lastname of account owner',
 	api_key VARCHAR(32) NOT NULL COMMENT 'api key for account',
     created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'datetime when account was created'
+    class_quiz_done TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'shows if user already done the classification quiz'
 );

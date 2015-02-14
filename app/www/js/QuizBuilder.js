@@ -51,12 +51,10 @@ QuizBuilder.prototype.buildAnswerChoices = function(type, answers) {
 			this.appendScAnswers(answers);
 			break;
 		default:
-			console.log(this.TAG + 'error: unknown answer type');
+			console.log(this.TAG + 'error: unknown question type');
 	}
 
 	this.quizPage += '</form>';
-
-	console.log('Type: %s, Answers: %s', type, JSON.stringify(answers));
 };
 
 QuizBuilder.prototype.appendMcAnswers = function(answers) {

@@ -12,6 +12,7 @@ var app = {
         $('#errorPopup').popup();
 
         this.initMainPageSlider();
+        this.displayMainQuizHint();
         this.bindEvents();
         this.navHandler.refresh();
     },
@@ -24,6 +25,11 @@ var app = {
             adaptiveHeight: false,
             displayControls: true
         });
+    },
+    displayMainQuizHint: function () {
+        if(app.currentUser.isLoggedIn() && !app.currentUser.isClassQuizDone()) {
+            $('#home .hint-quiz').show();
+        }
     },
     bindEvents: function() {
         $('#login-submit-btn').on('click', function (event) {
@@ -45,9 +51,8 @@ var app = {
         });
 
         $('#classQuiz').on('pagebeforeshow', function () {
-            var quiz = new Quiz('quiz_classification.json');
+            var quiz = new Quiz('quiz_classification.json', app.currentUser);
             quiz.load(function(event) {
-                console.log('Event: %s', event);
                 quiz.show();
             });
         });

@@ -61,6 +61,17 @@
 	padding-top: 2em;
 }
 
+.hint-quiz {
+	display: none;
+	margin: auto;
+	width: 75%;
+	border-color: #2C8B26;
+	border-style: solid;
+	background-color: #99FCA2;
+	padding: 0.5em;
+	border-width: thin;
+}
+
 .quiz-answer {
 	border-color: rgb(119, 113, 113);
 	border-style: solid;
@@ -87,4 +98,9 @@
 .quiz-correct {
 	background-color: #99FCA2;
 	border-color: #2C8B26;
+}
+
+.debugging-info {
+	font-size: smaller;
+	font-style: italic;
 }
