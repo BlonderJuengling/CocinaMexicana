@@ -8,7 +8,7 @@ require PROJECT_ROOT . '/libs/Slim/Slim.php';
 $app = new \Slim\Slim(
 	array(
 		'version' => 0.1,
-		'debug' => false,
+		'debug' => true,
 		'mode' => 'production',
 	)
 );

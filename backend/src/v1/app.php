@@ -4,6 +4,7 @@ require_once PROJECT_ROOT . '/include/environment.php';
 require_once PROJECT_ROOT . '/include/config.inc.php';
 require_once PROJECT_ROOT . '/include/DbHandler.php';
 require_once PROJECT_ROOT . '/include/PassHash.php';
+require_once PROJECT_ROOT . '/include/QuizEval.php';
 
 // allow cors
 $app->response->headers->set('Access-Control-Allow-Origin', '*');
@@ -144,10 +145,10 @@ if(!function_exists('authenticate'))
 			}
 			else {
 				global $account_id;
-				$account = $db->getAccountIdByApiKey($apiKey);
+				$result = $db->getAccountIdByApiKey($apiKey);
 
-				if($account != null) {
-					$account_id = $account['id'];
+				if($result != null) {
+					$account_id = $result['id'];
 				}
 			}
 		}
@@ -272,6 +273,39 @@ $app->post('/login', function() use ($app) {
 	}
 
 	echoResponse(200, $response);
+});
+
+/**
+ * Quiz - store quiz result in backend
+ * url - /quiz
+ * method - POST
+ * params - userid, score (object)
+ * headers - Authorization
+ */
+$app->post('/quiz', 'authenticate', function () use ($app) {
+	$params = array('userid', 'score');
+	verifyRequiredParams($params, $app);
+
+	$quizData = getRequestPostValues($app->request(), $params);
+	$response = array();
+
+	$quizEvaluation = new QuizEval($quizData['score']);
+	$rankId = $quizEvaluation->getRankId();
+
+	$db = new DbHandler();
+	if($db->updateUserRankId($rankId, $quizData['userid'])) {
+		$rankName = $db->getRankNameById($rankId);
+
+		$response['error'] = false;
+		$response['current_rank'] = $rankName;
+		echoResponse(201, $response);
+	}
+	else {
+		$response['error'] = true;
+		$response['message'] = 'Nothing to do. Quiz rank already up to date';
+		$response['rank_id'] = $rankId;
+		echoResponse(200, $response);
+	}
 });
 
 ?>

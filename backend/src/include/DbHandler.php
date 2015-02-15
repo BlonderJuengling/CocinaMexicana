@@ -153,6 +153,7 @@ class DbHandler {
 			return $account;
 		}
 		else {
+			$statement->closeCursor();
 			return NULL;
 		}
 	}
@@ -173,6 +174,7 @@ class DbHandler {
 			return $apiKey;
 		}
 		else {
+			$statement->closeCursor();
 			return NULL;
 		}
 	}
@@ -193,12 +195,13 @@ class DbHandler {
 			return $accountId;
 		}
 		else {
+			$statement->closeCursor();
 			return NULL;
 		}
 	}
 
 	/**
-	 * validate api key
+	 * Validate api key
 	 * if the api key is in db than we know that it is an valid key
 	 * @param String $apiKey api key to validate
 	 * @return boolean result of validation (true means that key is valid)
@@ -212,4 +215,66 @@ class DbHandler {
 		return $numRows > 0;
 	}
 
+
+	/* ---------------------------- 'ranks' table method ---------------------------- */
+
+	/**
+	 * Update rank informatoin for user
+	 * @param Integer $rankId id of rank
+	 * @param Integer $userId id of user to update rank info
+	 * @return boolean result of update (true means update succeed)
+	 */
+	public function updateUserRankId($rankId, $userId) {
+		$statement = $this->conn->prepare("UPDATE cm_accounts SET rank_id = :rank WHERE id = :userid");
+		$statement->bindParam(':rank', $rankId, PDO::PARAM_INT);
+		$statement->bindParam(':userid', $userId, PDO::PARAM_INT);
+		$statement->execute();
+		$numRows = $statement->rowCount();
+		$statement->closeCursor();
+		return $numRows > 0;
+	}
+
+	/**
+	 * Returns unique id for rank
+	 * @param String $category category of rank
+	 * @param Integer $sort order of rank in category
+	 * @return Integer unique id of specified rank
+	 */
+	public function getUniqueRankId($category, $sort) {
+		$statement = $this->conn->prepare("SELECT id FROM cm_ranks WHERE sort = :sort AND category = :cat");
+		$statement->bindParam(':cat', utf8_decode($category), PDO::PARAM_STR);
+		$statement->bindParam(':sort', $sort, PDO::PARAM_INT);
+		$statement->execute();
+
+		if($statement) {
+			$rank = $statement->fetch();
+			$statement->closeCursor();
+			return $rank['id'];
+		}
+		else {
+			$statement->closeCursor();
+			return NULL;
+		}
+	}
+
+	/**
+	 * Return rank name as string
+	 * @param Integer $rankdId id of rank
+	 * @return String rank name
+	 */
+	public function getRankNameById($rankdId) {
+		$statement = $this->conn->prepare("SELECT rank FROM cm_ranks WHERE id = :rankId");
+		$statement->bindParam(':rankId', $rankdId, PDO::PARAM_INT);
+		$statement->execute();
+
+		if($statement) {
+			$result = $statement->fetch();
+			$statement->closeCursor();
+			return utf8_encode($result['rank']);
+		}
+		else {
+			$statement->closeCursor();
+			return NULL;
+		}
+	}
 }
