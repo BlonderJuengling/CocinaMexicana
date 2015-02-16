@@ -1,7 +1,7 @@
-.footer {
-	font-size: smaller;
-	padding: 10px; /* use em */
-	text-align: center;
+hr {
+	 border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #000;
 }
 
 .page-title {
@@ -103,4 +103,65 @@
 .debugging-info {
 	font-size: smaller;
 	font-style: italic;
+}
+
+.content-wrapper {
+	padding: 1em;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.recipe-image {
+	width: 15em;
+	float: left;
+	margin-top: 1.5em;
+	margin-left: 0.75em;
+}
+
+.recipe-header {;
+	margin-left: 17em;
+}
+
+.recipe-ingredients {
+	margin-top: 1em;
+	margin-bottom: :1em;
+}
+
+.tbl-ingredients {
+	margin-left: 1em;
+}
+
+.feedback-left {
+	width: 30%;
+	float: left;
+}
+
+.feedback-right {
+	width: 30%;
+	float: right;
+}
+
+.feedback-middle {
+	margin-left: 37%;
+	margin-right: 37%;
+}
+
+.feedback-2-left {
+	width: 49%;
+	float: left;
+}
+
+.feedback-2-right {
+	width: 49%;
+	float: right;
+}
+
+.wrapper {
+	overflow: hidden;
+	margin-bottom: 2em;
+}
+
+.preview-img {
+	width: 95%;
+	margin: 0 auto;
 }

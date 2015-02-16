@@ -57,6 +57,16 @@ var app = {
             });
         });
 
+        $('#recipeDetail').on('pagebeforeshow', function () {
+            var self = this,
+                recipeId = app.getUrlParameterByName('id'),
+                recipeController = new RecipeController(recipeId);
+
+            recipeController.init(function (event) {
+                recipeController.parse();
+            });
+        });
+
         $('#errorPopup .ui-content a').on('click', function () {
             $('#errorPopup').popup('close');
         });
@@ -69,6 +79,11 @@ var app = {
             console.log('Running on desktop browser');
             app.onDeviceReady();
         }
+    },
+    getUrlParameterByName: function (name) {
+        return decodeURI(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec($.mobile.path.get())||[,null])[1]
+        );
     },
     // deviceready Event Handler
     //

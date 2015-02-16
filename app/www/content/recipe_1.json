@@ -1,0 +1,33 @@
+{
+    "id" : "1",
+    "title" : "Burrito gefüllt mit Hackfleisch, Mais & Jalapenoscheiben",
+    "level" : "mittel",
+    "time" : "15 Minuten",
+    "kind" : "Hauptgericht",
+    "feature" : "",
+    "ingredients" : [
+        "18|Tortilla/s",
+        "1 kg|gemischtes Hackfleisch",
+        "800 gr|gehackte Tomaten (Pizzatomaten aus der Dose)",
+        "2|Zwiebeln",
+        "400 ml|Wasser",
+        "1|Eisbergsalat",
+        "1 Glas|Chilischoten, Jalapenos in Scheiben",
+        "1 Dose|Mais",
+        "1 Flasche|Käsesauce",
+        "1 Pck.|Gewürzmischung (Fuege, Burrito Seasonning Mix",
+        "|Salz und Pfeffer",
+        "|Cayennepfeffer"
+    ],
+    "preperation" : [
+        "blubb lubb blubb",
+        "hier jetzt weiter",
+        "was dann bitte?",
+        "und nu?"
+    ],
+    "images" : [
+        "recipe_1_a.jpg",
+        "recipe_1_b.jpg",
+        "recipe_1_c.jpg"
+    ]
+}
