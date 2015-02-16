@@ -51,8 +51,42 @@ Quiz.prototype.bindEvents = function() {
 
 	$('#submitQuiz').on('click', function(event) {
 		event.preventDefault();
-		self.validator.validate(function (resultQuiz) {
-			self.currentUser.setClassQuiz(1);
+		self.validator.validate(function (quizResult) {
+			self.storeQuizResult(quizResult);
 		});
+
+		$.mobile.changePage('#resultQuiz');
 	});
+};
+
+Quiz.prototype.storeQuizResult = function(result) {
+	var self = this,
+		request = $.ajax({
+			url: BaseRequestUrl + '/quiz',
+			beforeSend: function (xhr) {
+				xhr.setRequestHeader('Authorization', self.currentUser.getApiKey());
+			},
+			type: 'POST',
+			crossDomain: true,
+			contentType: 'application/x-www-form-urlencoded',
+			data: {
+				'userid' : self.currentUser.getUserId(),
+				'score' : JSON.stringify(result)
+			}
+		});
+
+	request.done(function (response) {
+		if(response.error) {
+			console.log(response.message);
+			return;
+		}
+
+		$('#resultQuiz .quiz-content #classRank').text(response.current_rank);
+		self.currentUser.setCurrentRank(response.rank_id);
+	});
+
+	request.fail(function (jqXHR, status) {
+		console.log(self.TAG + 'Error | Status: ' + status + '; jqXHR: ' + JSON.stringify(jqXHR));
+	});
+
 };

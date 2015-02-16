@@ -38,8 +38,16 @@ User.prototype.getUserStatus = function () {
 	return this.user.status;
 }
 
+User.prototype.getUserId = function() {
+	return this.user.id;
+};
+
 User.prototype.getUsername = function() {
 	return this.user.username;
+};
+
+User.prototype.getApiKey = function() {
+	return this.user.api_key;
 };
 
 User.prototype.isLoggedIn = function() {
@@ -49,21 +57,21 @@ User.prototype.isLoggedIn = function() {
 	return true;
 };
 
-User.prototype.setClassQuiz = function(value) {
-	this.user.class_quiz_done = value;
-	this.updateQuizHint(value);
+User.prototype.setCurrentRank = function(rankId) {
+	this.user.rank_id = rankId;
+	this.updateQuizHint();
 };
 
-User.prototype.updateQuizHint = function(isQuizDone) {
-	if(isQuizDone)
+User.prototype.updateQuizHint = function() {
+	if(this.isClassQuizDone())
 		$('.hint-quiz').hide();
 	else
 		$('.hint-quiz').show();
 };
 
 User.prototype.isClassQuizDone = function() {
-	if(this.user.class_quiz_done != 0)
-		return true;
+	if(Number.parseInt(this.user.rank_id) === -1)
+		return false;
 
-	return false;
+	return true;
 };

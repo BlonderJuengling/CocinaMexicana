@@ -2,6 +2,8 @@ var QuizValidator = function () {
 	this.TAG = 'QuizValidator => ';
 
 	this.quiz = null;
+	this.evaluation = null;
+	this.result = null;
 	this.resultPage = '';
 }
 
@@ -11,27 +13,52 @@ QuizValidator.prototype.setQuiz = function(quiz) {
 
 QuizValidator.prototype.validate = function(callback) {
 	var userSolution = this.getUserSolution(),
-		quizQuestions = this.quiz.questions,
-		evaluation = [];
+		quizQuestions = this.quiz.questions;
 
 	if(userSolution.length < quizQuestions.length) {
 		this.showError('no-selection');
 		return;
 	}
 
+	this.evaluation = this.getEvaluation(userSolution, quizQuestions);
+	this.result = this.getResult(this.evaluation);
+
+	this.buildResultPage(this.evaluation);
+	this.showResult();
+
+	if(typeof(callback) === 'function' && callback !== undefined) {
+		callback(this.result);
+	}
+};
+
+QuizValidator.prototype.getEvaluation = function(userSolution, quizQuestions) {
+	var eval = []
+
 	for(var i = 0; i < userSolution.length; i++) {
-		evaluation.push({
+		eval.push({
 			'is_correct' : this.isAnswerCorrect(userSolution[i], quizQuestions[i].correct_answer),
 			'answer_index' : userSolution[i] -1 });
 	}
 
-	this.buildResultPage(evaluation);
-	this.showResult();
+	return eval;
+};
 
-	if(typeof(callback) === 'function' && callback !== undefined) {
-		var result = {}; // TODO: create result :))
-		callback(result);
-	}
+QuizValidator.prototype.getResult = function(evaluation) {
+	return {
+		'questions' : this.evaluation.length,
+		'correct_answers' : this.getNumberOfCorrectAnswers()
+	};
+};
+
+QuizValidator.prototype.getNumberOfCorrectAnswers = function() {
+	var count = 0;
+
+	this.evaluation.forEach(function (item, index) {
+		if(item.is_correct === true)
+			count++;
+	});
+
+	return count;
 };
 
 QuizValidator.prototype.showError = function(errorType) {
@@ -66,25 +93,27 @@ QuizValidator.prototype.getUserSolution = function() {
 
 QuizValidator.prototype.showResult = function() {
 	$('#resultQuiz .quiz-content').append(this.resultPage).enhanceWithin();
-	$.mobile.changePage('#resultQuiz');
+	this.bindEvents();
+};
+
+QuizValidator.prototype.bindEvents = function(first_argument) {
+	var self = this;
+
+	$('#btn-to-userpanel').on('click', function (event) {
+		event.preventDefault();
+		$.mobile.changePage('#userpanel');
+	});
 };
 
 QuizValidator.prototype.buildResultPage = function(quizResult) {
 	var correctAnswers = this.getNumberOfCorrectAnswers(quizResult);
 
-	this.resultPage = '<h2 class="quiz-result-heading">Du hast ' + correctAnswers + ' von ' + quizResult.length + ' Fragen richtig beantwortet</h2><br />';
-	this.resultPage += this.appendQuestionsAndAnswers(quizResult);
-};
-
-QuizValidator.prototype.getNumberOfCorrectAnswers = function(quizResult) {
-	var count = 0;
-
-	quizResult.forEach(function (item, index) {
-		if(item.is_correct === true)
-			count++;
-	});
-
-	return count;
+	this.resultPage = '<h2 class="quiz-result-heading">Du hast ' + correctAnswers + ' von ' + quizResult.length + ' Fragen richtig beantwortet</h2>';
+	this.resultPage +=
+		'<h3>Du erhälst den Einstiegsrang "<span id="classRank"></span>"!</h3>' +
+		this.appendQuestionsAndAnswers(quizResult) +
+		'<br />' +
+		'<button type="submit" class="ui-shadow ui-btn ui-corner-all" id="btn-to-userpanel">weiter zum Benutzerportal</button>';
 };
 
 QuizValidator.prototype.appendQuestionsAndAnswers = function(quizResult) {

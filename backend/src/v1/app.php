@@ -9,8 +9,9 @@ require_once PROJECT_ROOT . '/include/QuizEval.php';
 // allow cors
 $app->response->headers->set('Access-Control-Allow-Origin', '*');
 $app->response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+$app->response->headers->set('Access-Control-Allow-Headers', 'X-Requested-With');
 $app->response->headers->set('Access-Control-Max-Age', '3600');
-$app->response->headers->set('Content-Type', 'application/json');
+$app->response->headers->set('Content-Type', 'application/json, Authorization');
 
 // global user id from database
 $account_id = NULL;
@@ -298,6 +299,7 @@ $app->post('/quiz', 'authenticate', function () use ($app) {
 
 		$response['error'] = false;
 		$response['current_rank'] = $rankName;
+		$response['rank_id'] = $rankId;
 		echoResponse(201, $response);
 	}
 	else {
@@ -306,6 +308,16 @@ $app->post('/quiz', 'authenticate', function () use ($app) {
 		$response['rank_id'] = $rankId;
 		echoResponse(200, $response);
 	}
+});
+
+/**
+ * Necessary for preflight CORS requests from ajax
+ * url - /*wildcard*
+ * method - OPTIONS
+ */
+$app->options('/(:name+)', function () use ($app) {
+	$app->response()->header('Access-Control-Allow-Origin', '*');
+	$app->response()->header('Access-Control-Allow-Headers', 'X-Requested-With, Authorization');
 });
 
 ?>
