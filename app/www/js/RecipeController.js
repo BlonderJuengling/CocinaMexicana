@@ -1,9 +1,10 @@
-var RecipeController = function (recipeId) {
+var RecipeController = function (recipeId, user) {
 	this.TAG = 'RecipeHandler => ';
 
 	this.id = recipeId;
 	this.template = 'recipe_detail.html';
 	this.recipe = null;
+	this.user = user;
 }
 
 RecipeController.prototype.init = function(callback) {
@@ -49,6 +50,7 @@ RecipeController.prototype.parse = function() {
 	this.loadMainPicture(recipe.images);
 	this.buildIngredients(recipe.ingredients);
 	this.buildPreperations(recipe.preperation);
+	this.setFeedbackVisiblity();
 };
 
 RecipeController.prototype.loadMainPicture = function(images) {
@@ -83,4 +85,13 @@ RecipeController.prototype.buildPreperations = function(preperation) {
 	});
 
 	$('.recipe-preperation').append(instruction);
+};
+
+RecipeController.prototype.setFeedbackVisiblity = function() {
+	var overlayer = $('.feedback > .wrapper > .overlayer');
+
+	if(this.user.isLoggedIn())
+		overlayer.hide();
+	else
+		overlayer.show();
 };

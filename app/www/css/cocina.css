@@ -165,3 +165,17 @@ hr {
 	width: 95%;
 	margin: 0 auto;
 }
+
+.underlayer {
+	position: relative;
+}
+
+.overlayer {
+	background: #FAF3F3;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.75;
+	z-index: 10;
+	padding-top: 3em;
+}

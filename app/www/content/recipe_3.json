@@ -1,0 +1,38 @@
+{
+    "id" : "3",
+    "title" : "Einfacher Tres Leches Kuchen",
+    "level" : "einfach",
+    "time" : "2 Stunden 10 Minuten",
+    "kind" : "Nachspeise",
+    "feature" : "",
+    "ingredients" : [
+        "6|getrennte Eier",
+        "100 g|Zucker",
+        "125 g|Mehl",
+        "1 TL|Backpulver",
+        "1 Prise|Salz",
+        "1 Schale|ungespritze Limetten",
+        "350 ml|gezuckerte Kondensmilch",
+        "350 ml|Kondensmilch",
+        "250 ml|Creme double",
+        "1 Schuss|Amaretto / dunkler Rum",
+        "1 Dose|Pfirsichscheiben (abgetropft)",
+        "250 ml|Schlagsahne",
+        "|Limettenschale"
+    ],
+    "preperation" : [
+        "Backofen auf 180 C / Gas 4 vorheizen. Eine 23 cm Springform einfetten und mit Mehl bestäuben.",
+        "Eiweiß in eine Schüssel geben und steif schlagen. Die Hälfte des Zuckers hinzugeben und weiterschlagen, bis sich der Zucker aufgelöst hat.",
+        "Eigelb mit sauberem Handrührer in einer zweiten Schüssel cremig aufschlagen. Den restlichen Zucker hinzufügen und zu einer hellgelben dicken Masse aufschlagen.",
+        "Eischnee vorsichtig unter die Eigelbmischung heben und Mehl darübersieben. Ebenfalls unterheben und dann vorsichtig mit Limettenschale vermischen. Teig in die vorbereitete Springform geben und glatt streichen.",
+        "Im vorgeheizten Backofen 30 Minuten backen. Ofen ausstellen und den Kuchen 20 Minuten darin stehen lassen. Die Ofentür nicht öffnen.",
+        "In der Zwischenzeit gezuckerte und ungezuckerte Kondensmilch, Creme double und Amaretto in eine Schüssel gießen und gut verrühren.",
+        "Kuchen aus der Springform nehmen und auf eine tiefe Kuchenplatte setzen. Den Kuchen mehrmals mit einer Gabel einstechen und die Milchmischung darübergießen. Kuchen etwa 1 Stunde in den Kühlschrank stellen, damit er die Milchmischung aufsaugen kann.",
+        "Mit Pfirsichscheiben, Schlagsahne und Limettenschale garnieren und servieren. Guten Appetit!"
+    ],
+    "images" : [
+        "recipe_3_a.jpg",
+        "recipe_3_b.jpg",
+        "recipe_3_c.jpg"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "id" : "2",
+    "title" : "Kartoffelspalten mit Gemüse mexikanischer Art und Guacamole",
+    "level" : "mittel",
+    "time" : "25 Minuten",
+    "kind" : "Hauptgericht",
+    "feature" : "vegetarisch",
+    "ingredients" : [
+        "5 große|Kartoffeln",
+        "3 EL|Olivenöl",
+        "|Salz und Pfeffer",
+        "|Paprikapulver",
+        "1|Zwiebel",
+        "2 große|Paprikaschoten (rot und grün)",
+        "1 Dose|Mais (280 gr.)",
+        "1 Dose|Kidneybohnen (280 gr.)",
+        "1 kleine|Chilischote",
+        "etwas|Öl",
+        "250 ml|passierte Tomaten (oder in Stücken)",
+        "1 Msp.|Cayennepfeffer",
+        "1 TL|Paprikapulver edelsüß",
+        "150 g|Joghurt oder Soja-Joghurt",
+        "1|Avocado (reif)",
+        "1 Zehe|Knoblauch",
+        "1|Tomate"
+    ],
+    "preperation" : [
+        "Irgendwie die Kartoffeln schneiden",
+        "nächster Schritt mit Soße",
+        "Auch hier noch was zubereiten"
+    ],
+    "images" : [
+        "recipe_2_a.jpg",
+        "recipe_2_b.jpg",
+        "recipe_2_c.jpg"
+    ]
+}

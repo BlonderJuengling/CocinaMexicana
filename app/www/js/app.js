@@ -4,6 +4,7 @@ var app = {
     navHandler: new NavigationHandler(),
     loginHandler: new LoginHandler(),
     userpanel: new Userpanel(),
+    passDataObject: { selectedRecipeId : null },
     // Application Constructor
     initialize: function() {
         $("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
@@ -57,10 +58,16 @@ var app = {
             });
         });
 
-        $('#recipeDetail').on('pagebeforeshow', function () {
+        $('#recipeDatabase').find('a').unbind('click').click(function (event, data) {
+            event.preventDefault();
+            app.passDataObject.selectedRecipeId = this.id;
+            $.mobile.changePage('#recipeDetail', { transition: 'flip' });
+        });
+
+        $('#recipeDetail').on('pagebeforeshow', function (event, data) {
             var self = this,
-                recipeId = app.getUrlParameterByName('id'),
-                recipeController = new RecipeController(recipeId);
+            recipeId = app.passDataObject.selectedRecipeId;
+                recipeController = new RecipeController(recipeId, app.currentUser);
 
             recipeController.init(function (event) {
                 recipeController.parse();
