@@ -2,3 +2,5 @@
 hooks/
 platforms/
 plugins/
+app/www/js/Globals.js
+backend/src/include/environment.php
