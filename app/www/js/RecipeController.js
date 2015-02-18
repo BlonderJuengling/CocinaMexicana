@@ -3,6 +3,8 @@ var RecipeController = function (recipeId, user) {
 
 	this.id = recipeId;
 	this.template = 'recipe_detail.html';
+	this.keywordFile = 'ingredients.json';
+	this.keywords = '';
 	this.recipe = null;
 	this.user = user;
 }
@@ -38,8 +40,16 @@ RecipeController.prototype.loadRecipe = function(callback) {
 	});
 };
 
+RecipeController.prototype.loadKeywordList = function(callback) {
+	$.getJSON('content/' + this.keywordFile, function (keywords) {
+		if(typeof(callback) === 'function' && callback !== undefined)
+			callback('keywords-received', keywords);
+	});
+};
+
 RecipeController.prototype.parse = function() {
-	var recipe = this.recipe;
+	var self = this,
+		recipe = this.recipe;
 
 	$('#recipe-title').text(recipe.title);
 	$('#recipe-level').text(recipe.level);
@@ -51,6 +61,11 @@ RecipeController.prototype.parse = function() {
 	this.buildIngredients(recipe.ingredients);
 	this.buildPreperations(recipe.preperation);
 	this.setFeedbackVisiblity();
+
+	this.loadKeywordList(function (event, result) {
+		self.keywords = result;
+		self.highlightKeywords();
+	});
 };
 
 RecipeController.prototype.loadMainPicture = function(images) {
@@ -94,4 +109,18 @@ RecipeController.prototype.setFeedbackVisiblity = function() {
 		overlayer.hide();
 	else
 		overlayer.show();
+};
+
+RecipeController.prototype.highlightKeywords = function() {
+	var keywordArray = [];
+
+	this.keywords.forEach(function (keyword, index) {
+		keywordArray.push(keyword.name);
+	});
+
+	$('.tbl-ingredients').highlight(keywordArray, { element : 'a', className : 'ingr-highlight', target : '#detailPopup' });
+	$('.ingr-highlight').on('click', function (event, data) {
+		console.log(event.target.text);
+		$('#detailPopup').popup('open');
+	});
 };

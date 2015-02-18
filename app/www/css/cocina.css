@@ -179,3 +179,7 @@ hr {
 	z-index: 10;
 	padding-top: 3em;
 }
+
+.ingr-highlight {
+	font-weight: bold;
+}

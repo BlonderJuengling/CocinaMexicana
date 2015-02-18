@@ -11,6 +11,7 @@ var app = {
         $("[data-role=panel]").panel().enhanceWithin();
         $('#registerPopupSuccess').popup(); // init popup to get expected behavior
         $('#errorPopup').popup();
+        $('#detailPopup').popup();
 
         this.initMainPageSlider();
         this.displayMainQuizHint();
