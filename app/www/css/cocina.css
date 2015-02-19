@@ -180,6 +180,39 @@ hr {
 	padding-top: 3em;
 }
 
+.knowledge-header{
+	width: 100%;
+	display: table;
+	margin: 0 auto;
+}
+
+#knowledgetopics li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+	display:table-cell;
+}
+
+#knowledgetopics img {
+	max-width:100%;
+	width:100%;
+	max-height:100px;
+	height: 100px;
+}
+
+.knowledge-body{
+	margin-top: 5em;
+}
+
+.knowledge-chapter-image{
+	float:left;
+}
+
+.knowledge-article-chapter{
+	clear:left;
+	padding-top:20px;
+}
+
 .ingr-highlight {
 	font-weight: bold;
 }
