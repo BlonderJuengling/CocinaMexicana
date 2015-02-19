@@ -76,5 +76,5 @@ QuizBuilder.prototype.appendScAnswers = function(answers) {
 };
 
 QuizBuilder.prototype.appendSubmit = function() {
-	this.quizPage += '<p>&nbsp;</p><input type="button" id="submitQuiz" value="Abschicken">';
+	this.quizPage += '<p>&nbsp;</p><input type="button" id="submitQuiz" data-theme="b" value="Abschicken">';
 };

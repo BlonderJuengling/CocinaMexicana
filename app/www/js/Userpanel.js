@@ -35,7 +35,7 @@ Userpanel.prototype.buildUserpanelPage = function() {
 	panelContent += this.appendClassQuizHint(this.user.isClassQuizDone());
 	panelContent += '<p>Noch gibt es hier keine Funktion, aber schon bald folgt hier mehr! <br />' +
 		'<br />' +
-		'<button class="ui-shadow ui-btn ui-corner-all" type="submit" id="logout-submit-btn">Ausloggen!</button>' +
+		'<button class="ui-shadow ui-btn ui-corner-all" data-theme="b" type="submit" id="logout-submit-btn">Ausloggen!</button>' +
 		'<p>&nbsp;</p>';
 
 	panelContent += this.appendUserForDebugging(this.user.getCurrentUser());

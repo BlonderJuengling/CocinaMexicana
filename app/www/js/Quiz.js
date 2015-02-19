@@ -52,10 +52,11 @@ Quiz.prototype.bindEvents = function() {
 	$('#submitQuiz').on('click', function(event) {
 		event.preventDefault();
 		self.validator.validate(function (quizResult) {
-			self.storeQuizResult(quizResult);
+			if(quizResult !== null) {
+				self.storeQuizResult(quizResult);
+				$.mobile.changePage('#resultQuiz');
+			}
 		});
-
-		$.mobile.changePage('#resultQuiz');
 	});
 };
 

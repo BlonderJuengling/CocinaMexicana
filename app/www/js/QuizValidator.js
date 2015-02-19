@@ -17,7 +17,11 @@ QuizValidator.prototype.validate = function(callback) {
 
 	if(userSolution.length < quizQuestions.length) {
 		this.showError('no-selection');
-		return;
+
+		if(typeof(callback) === 'function' && callback !== undefined){
+			callback(null);
+			return;
+		}
 	}
 
 	this.evaluation = this.getEvaluation(userSolution, quizQuestions);
@@ -113,7 +117,7 @@ QuizValidator.prototype.buildResultPage = function(quizResult) {
 		'<h3>Du erhälst den Einstiegsrang "<span id="classRank"></span>"!</h3>' +
 		this.appendQuestionsAndAnswers(quizResult) +
 		'<br />' +
-		'<button type="submit" class="ui-shadow ui-btn ui-corner-all" id="btn-to-userpanel">weiter zum Benutzerportal</button>';
+		'<button type="submit" class="ui-shadow ui-btn ui-corner-all" data-theme="b" id="btn-to-userpanel">weiter zum Benutzerportal</button>';
 };
 
 QuizValidator.prototype.appendQuestionsAndAnswers = function(quizResult) {
