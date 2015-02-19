@@ -112,7 +112,8 @@ RecipeController.prototype.setFeedbackVisiblity = function() {
 };
 
 RecipeController.prototype.highlightKeywords = function() {
-	var keywordArray = [];
+	var keywordArray = [],
+		self = this;
 
 	this.keywords.forEach(function (keyword, index) {
 		keywordArray.push(keyword.name);
@@ -120,7 +121,11 @@ RecipeController.prototype.highlightKeywords = function() {
 
 	$('.tbl-ingredients').highlight(keywordArray, { element : 'a', className : 'ingr-highlight', target : '#detailPopup' });
 	$('.ingr-highlight').on('click', function (event, data) {
-		console.log(event.target.text);
-		$('#detailPopup').popup('open');
+		var ingredientName = event.target.text,
+			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
+			ingredientContr = new IngredientController(ingredient[0]);
+
+		ingredientContr.parse();
+		$('#detailPopup').popup('open', { positionTo : 'window'});
 	});
 };

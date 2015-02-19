@@ -1,26 +1,69 @@
 [
     {
-    	"name" : "Jalapenos",
-    	"explanation" : "muhaha du da"
-    },
-    {
-    	"name" : "Chilischoten",
-    	"explanation" : "scharf und schärfer"
-    },
-    {
         "name" : "Mais",
-        "explanation" : "mais halt ;D"
+        "introduction" : "Das wichtigste Ernährungselement in Mexiko ist der Mais. Er ist die Grundlage der mexikanischen Küche und bildet einen Grundstein der gesamten kulinarischen Entwicklung. Aus ihm werden unendlich viele Gerichte gezaubert. Ohne ihn gäbe es keine Tortillas, keine Enchiladas, keine Tortillachips – kurz: die mexikanische Küche würde uns nicht so in ihren Bann ziehen.",
+        "sections" : [
+            {
+                "heading" : "Gelber Mais",
+                "content" : "Der normale gelbe Mais, wie wir ihn hier kennen, hat in Mexiko fast keine Bedeutung, stattdessen wird er speziell behandelt. Der Mais wird in einer Wasser-Kalklösung einige Tage lang getränkt, bis er sich durch Gärung zersetzt. Die entstandene Flüssigkeit wird als “Tejuino” an Märkten als Durstlöscher verkauft (schmeckt abscheulich bitter, ist aber Geschmacksache). Die gegärten Körner wiederum werden getrocknet und zu Mehl verarbeitet, das zur Herstellung von Maistortillas dient. Dieses Mehl können Sie im Fachhandel als Mais-Tortillamehl oder Masa Harina kaufen."
+            },
+            {
+                "heading" : "Weißer Mais",
+                "content" : "Es handelt sich um eine spezielle Sorte, die größer als die normale gelbe ist. Der weiße Mais hat einen harten Kern und eine weiße Ummantelung. Weißer Mais dient zur Herstellung von “Pozole” (Maiseintopf), einem klassischen und sehr beliebten Gericht. Exportiert wird diese Maissorte selten. Am ehesten finden Sie weißen Mais frisch im Fachhandel; leider ist er hier in Europa aber immer sehr teuer."
+            },
+            {
+                "heading" : "Popcorn a la Mexiko",
+                "content" : "Ob nun gerade Kinowetter herrscht oder nicht: Was hierzulande beim Kinobesuch nie fehlen sollte, ist auch in Mexiko ein beliebter Snack – Popcorn. Falls Sie einmal die Möglichkeit haben sollten, in Mexiko ins Kino zu gehen, werden Sie eine große Überraschung erleben: Während wir nur kleinere, meist süße Snacks genießen, begibt sich der Mexikaner an große Essenstheken und bestellt sich dort einen mittleren Imbiss, welchen er im Kinosaal verspeist. Sehr beliebt sind Hot-Dogs, Sandwiches, kleine Tacos, warme Tortillachips oder eben auch Popcorn."
+            },
+            {
+                "heading" : "Und wieder mit Chilisoße",
+                "content" : "Bei mexikanischem Popcorn gibt es viele Variationen: Einige bestreuen es mit in Essig eingelegten Chilis und krönen das Ganze mit einem kräftigen Schuss rote Chilisauce. Die knusprigen Maiskörner werden nach einer Weile zu einer matschig-scharfen Pampe – sicherlich nicht jedermanns Geschmack, doch schmeckt diese Mischung viel besser als sie aussieht. Probieren Sie es doch mal beim nächsten Film!"
+            }
+        ],
+        "images" : [
+            "mais_01.jpg",
+            "mais_02.jpg",
+            "mais_03.jpg",
+            "mais_04.jpg"
+        ],
+        "quiz_url" : "http://www.moodle.de/quiz?id=mais"
     },
     {
-        "name" : "Hackfleisch",
-        "explanation" : "Mett"
+        "name" : "Chilischoten",
+        "introduction" : "Chilischoten sind die wohl wichtigsten Früchte für die mexikanische Küche. Für die Mexikaner aber heißt Chile (so werden sie bezeichnet) nicht gleich Chile: Jedes Gericht wird mit einer anderen Sorte Chili gereicht, auch wenn alle zur großen Capsicum-Familie gehören. Es gibt unendlich viele verschiedene Chilisorten, alle unterschiedlich in Schärfe und Geschmack, ebenso unterscheiden sich Anbaugebiet und beste Klimabedingungen je nach Art.",
+        "sections" : [
+            {
+                "heading" : "Generell gilt:",
+                "content" : "Je kleiner eine Schote, desto schärfer. Kerne sind ebenfalls sehr scharf und sollten mit Vorsicht behandelt werden. Empfindliche Personen sollten Chilischoten nur mit Gummihandschuhen verarbeiten, aber auch sonst gilt: Nicht versehentlich beim Zubereiten ans Auge oder andere Schleimhäute fassen."
+            },
+            {
+                "heading" : "Weiterführende Informationen",
+                "content" : "Weitere Informationen finden Sie in unserem Bereich Wissenswertes."
+            }
+        ]
     },
     {
-        "name" : "Zwiebeln",
-        "explanation": "zwiebeln aus natürlichem anbau!"
+        "name" : "Avocado",
+        "introduction" : "Dieser in Mexiko heimische Baum aus der Familie der Lorbeergewächse entwickelt vielseitig verwendbare Früchte. Avocados enthalten bis zu 27 Prozent Fett und sind reich an Mineralien, Proteinen und Vitaminen. Es soll fast 400 verschiedene Sorten geben – von kleinen, fingerdicken Früchten, die mit der Haut gegessen werden, bis hin zu riesigen birnenförmigen Früchten. Außerhalb von Mexiko sind die beinahe glatte, grünschalige fuerte mit ihrem milden Geschmack und die narbige, braune hass, die wundervoll nussig schmeckt, am weitesten verbreitet. Avocados haben in der Küche Mexikos einen hohen Stellenwert. In vielen Gerichten werden sie verwendet – nicht nur kalt, sondern auch warm. Meist findet man bei einem mexikanischen Essen die milde Salsa Guacamole auf dem herrlich gedeckten Tisch.",
+        "sections" : [
+            {
+                "heading" : "Tipp",
+                "content" : "Sind die Früchte noch zu unreif, kann man diese in einer Papiertüte bei Zimmertemperatur einige Tage nachreifen lassen. Sollten sie im Gegenteil bereits zu weich sein, lassen sie sich im Kühlschrank einige Tage bedenkenlos lagern."
+            }
+        ]
     },
     {
-        "name" : "Limetten",
-        "explanation" : "Noch zu ergänzen"
+        "name" : "Tortilla",
+        "introduction" : "Für viele sind Tortillas, Tacos, Burritos oder Fajitas ein- und dasselbe. Doch da gibt es markante Unterschiede. Bei allen Gerichten werden zwar Tortillas verwendet, doch sind jeweils Füllungen, Zubereitungsarten und Präsentation verschieden.",
+        "sections" : [
+            {
+                "heading" : "Aufgepasst",
+                "content" : "Harte Tacoshells suchen Sie in in Mexiko vergebens, da sie ein typisches Gericht aus der TexMex-Küche sind. Wer also wirklich mexikanisch essen möchte, sollte etwas anderes als harte Tortilla-Hüllen bestellen."
+            },
+            {
+                "heading" : "Mais oder Weizen?",
+                "content" : "Bei Tortillas unterscheidet man zwischen zwei Tortilla-Arten: Tortillas aus Weizenmehl und Tortillas aus Maismehl. Weitere Informationen hierzu finden Sie in unserem Bereich Wissenswertes."
+            }
+        ]
     }
 ]

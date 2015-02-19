@@ -216,3 +216,9 @@ hr {
 .ingr-highlight {
 	font-weight: bold;
 }
+
+#detailPopup {
+	right: 5% !important;
+	left: 5% !important;
+	width: 90% !important;
+}

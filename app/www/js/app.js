@@ -11,7 +11,7 @@ var app = {
         $("[data-role=panel]").panel().enhanceWithin();
         $('#registerPopupSuccess').popup(); // init popup to get expected behavior
         $('#errorPopup').popup();
-        $('#detailPopup').popup();
+        $('#detailPopup').popup().enhanceWithin();
 
         this.initMainPageSlider();
         this.displayMainQuizHint();
@@ -62,7 +62,7 @@ var app = {
         $('#recipeDatabase').find('a').unbind('click').click(function (event, data) {
             event.preventDefault();
             app.passDataObject.selectedRecipeId = this.id;
-            $.mobile.changePage('#recipeDetail', { transition: 'flip' });
+            $.mobile.changePage('#recipeDetail');
         });
 
         $('#recipeDetail').on('pagebeforeshow', function (event, data) {
