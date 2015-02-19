@@ -73,7 +73,16 @@ var app = {
                 recipeController.parse();
             });
         });
-
+		
+		$('#knowledgeDatabase').find('a').click(function (event, data) {
+            event.preventDefault();
+			$('#knowledge-body').load('content/knowledgedb-' + this.id + '.html');          
+        });
+		
+		$(".knowledge-chapter-header").click(function(event){
+          $(".knowledge-chapter-image").toggle('normal');
+        });
+		
         $('#errorPopup .ui-content a').on('click', function () {
             $('#errorPopup').popup('close');
         });
