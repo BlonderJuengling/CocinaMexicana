@@ -213,6 +213,10 @@ hr {
 	padding-top:20px;
 }
 
+.knowledge-chapter-header {
+	overflow: overlay;
+}
+
 .ingr-highlight {
 	font-weight: bold;
 }
@@ -221,4 +225,21 @@ hr {
 	right: 5% !important;
 	left: 5% !important;
 	width: 90% !important;
+}
+
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
+.float-clear {
+	clear: both;
+}
+
+.btn-toggle {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	width: 8em;
+	max-width: 10em;
 }

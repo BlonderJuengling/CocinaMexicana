@@ -77,7 +77,12 @@ var app = {
 
 		$('#knowledgeDatabase').find('a').click(function (event, data) {
             event.preventDefault();
-			$('#knowledge-body').load('content/knowledgedb-' + this.id + '.html');
+			$('#knowledge-body').load('content/knowledgedb-' + this.id + '.html', function () {
+                $('.knowledge-body').enhanceWithin();
+                $('.knowledge-article-chapter > .knowledge-content').hide();
+
+                var knowdledgeHandler = new KnowledgeHandler($('.knowledge-body'));
+            });
         });
 
 		$(".knowledge-chapter-header").click(function(event){
