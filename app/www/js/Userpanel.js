@@ -14,7 +14,7 @@ Userpanel.prototype.open = function() {
 		return;
 	}
 
-	$('#userpanel .ui-content').html(this.buildUserpanelPage());
+	$('#userpanel .ui-content').html(this.buildUserpanelPage()).enhanceWithin();
 
 	if(!this.user.isClassQuizDone()) {
 		$('#userpanel .hint-quiz').show();
@@ -47,7 +47,7 @@ Userpanel.prototype.appendClassQuizHint = function(isQuizDone) {
 	return '<div class="hint-quiz">Du hast bisher noch nicht unser Einstufungsquiz gespielt.' +
 		'Bitte hol dies schnellstmöglich nach, damit wir eine Einschätzung haben, wie gut du dich bereits ' +
 		'in der mexikanischen Küche auskennst.<br /><br />' +
-		'<a href="#classQuiz">Hier gehts zum Quiz</a></div>';
+		'<a data-role="button" class="coc-btn" href="#classQuiz">Hier gehts zum Quiz</a></div>';
 };
 
 Userpanel.prototype.appendUserForDebugging = function(user) {

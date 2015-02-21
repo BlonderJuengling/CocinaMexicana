@@ -26,6 +26,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.css" />
         <link rel="stylesheet" type="text/css" href="lib/pgwslider.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/cocina-custom.css" />
         <link rel="stylesheet" type="text/css" href="css/cocina.css" />
         <title>e-Learning - Cocina Mexicana</title>
     </head>
@@ -47,26 +48,25 @@
                     Du hast bisher noch nicht unser Einstufungsquiz gespielt.
                     Bitte hol dies schnellstmöglich nach, damit wir eine Einschätzung haben, wie gut du dich bereits
                     in der mexikanischen Küche auskennst.<br /><br />
-                    <a href="#classQuiz">Hier gehts zum Quiz</a></div>
+                    <a data-role="button" class="coc-btn" href="#classQuiz">Hier gehts zum Quiz</a></div>
                 </div>
-
                 <div class="main-page-slider-wrapper">
-                    <ul id="main-page-slider" class="pgwSlider">
+                    <ul class="pgwSlider">
                         <li>
-                            <a href="#dailyTip">
-                                <img src="img/daily_tip.png" alt="Tipp des Tages"
-                                     data-description="Täglich ein ganz besonderes Rezept">
+                            <a href="#knowledgeDatabase">
+                                <img src="img/knowledge_db.png" alt="Wissenswertes"
+                                     data-description="Informiere dich über die mexikanische Küche und Bräuche">
                             </a>
                         </li>
                         <li>
                             <a href="#recipeDatabase">
-                                <img src="img/recipe_database.png" alt="Rezeptdatenbank"
+                                <img src="img/recipe_database.png" alt="Rezepte"
                                      data-description="Suche nach einem passenden Rezept in unserer Datenbank">
                             </a>
                         </li>
                         <li>
                             <a href="#recipeByIngredient">
-                                <img src="img/recipe_by_ingredient.png" alt="Rezept nach Zutaten"
+                                <img src="img/recipe_by_ingredient.png" alt="Rezepte nach Zutaten"
                                      data-description="Finde ein Rezept nach den Zutaten, die du im Kühlschrank hast">
                             </a>
                         </li>
@@ -241,19 +241,17 @@
 
         <!-- navpanel -->
         <div data-role="panel" id="navpanel" data-display="overlay" data-position="left" data-theme="a">
-            <div style="height: 4em">
-                <em>Hier kleines Logo?</em>
+            <div class="nav-img-header">
+                <img class="nav-img-header" src="./img/logo_chalk.png">
             </div>
 
             <ul data-role="listview" id="navigationlist">
                 <li><a href="#home">Startseite</a></li>
                 <li id="usermenu"><a href="#login">Login / Registrieren</a></li>
-                <li><a href="#dailyTip">Tipp des Tages</a></li>
-                <li><a href="#recipeDatabase">Rezeptdatenbank</a></li>
-                <li><a href="#recipeByIngredient">Rezept nach Zutat</a></li>
-				<li><a href="#knowledgeDatabase">Wissensdatenbank</a></li>
-                <li><a href="#">F.A.Q.</a></li>
-                <li><a href="#">Über</a></li>
+				<li><a href="#knowledgeDatabase">Wissenswertes</a></li>
+                <li><a href="#recipeDatabase">Rezepte</a></li>
+                <li><a href="#recipeByIngredient">Rezepte nach Zutaten</a></li>
+                <li><a href="#">Info</a></li>
             </ul>
         </div><!-- /navpanel -->
 

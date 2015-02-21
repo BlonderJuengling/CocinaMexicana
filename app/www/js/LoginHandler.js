@@ -42,6 +42,7 @@ LoginHandler.prototype.validateCredentials = function(username, password) {
 			type: 'POST',
 			url: BaseRequestUrl + '/login',
 			data: { 'username' : username, 'password' : password},
+			dataType: 'json'
 		});
 
 	request.done(function (response) {

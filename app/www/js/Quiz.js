@@ -73,7 +73,8 @@ Quiz.prototype.storeQuizResult = function(result) {
 			data: {
 				'userid' : self.currentUser.getUserId(),
 				'score' : JSON.stringify(result)
-			}
+			},
+			dataType: 'json'
 		});
 
 	request.done(function (response) {

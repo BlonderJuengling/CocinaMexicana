@@ -119,7 +119,7 @@ RecipeController.prototype.highlightKeywords = function() {
 		keywordArray.push(keyword.name);
 	});
 
-	$('.tbl-ingredients').highlight(keywordArray, { element : 'a', className : 'ingr-highlight', target : '#detailPopup' });
+	$('.tbl-ingredients').highlight(keywordArray, { element : 'a', className : 'ingr-highlight ui-link', target : '#detailPopup' });
 	$('.ingr-highlight').on('click', function (event, data) {
 		var ingredientName = event.target.text,
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });

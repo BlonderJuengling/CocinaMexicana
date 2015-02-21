@@ -13,19 +13,20 @@ var app = {
         $('#errorPopup').popup();
         $('#detailPopup').popup().enhanceWithin();
 
-        this.initMainPageSlider();
+        //this.initMainPageSlider();
         this.displayMainQuizHint();
+        this.initMainPageSlider();
         this.bindEvents();
         this.navHandler.refresh();
     },
     // Bind Event Listeners
     initMainPageSlider: function () {
-        $('#main-page-slider').pgwSlider({
+        $('.pgwSlider').pgwSlider({
             displayControls: true,
             selectionMode: 'mouseOver',
             autoSlide: false,
             adaptiveHeight: false,
-            displayControls: true
+            displayControls: false
         });
     },
     displayMainQuizHint: function () {
@@ -36,7 +37,6 @@ var app = {
     bindEvents: function() {
         $('#login-submit-btn').on('click', function (event) {
             event.preventDefault();
-
             app.loginHandler.login();
         });
 

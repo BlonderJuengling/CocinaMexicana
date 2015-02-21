@@ -19,6 +19,7 @@ RegistrationHandler.prototype.register = function () {
 			type: 'POST',
 			url: BaseRequestUrl + '/account',
 			data: this.user,
+			dataType: 'json'
 		});
 
 	request.done(function (response) {

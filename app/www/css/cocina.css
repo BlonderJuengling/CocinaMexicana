@@ -62,42 +62,45 @@ hr {
 }
 
 .hint-quiz {
+	color: #FFFFFF;
+	text-shadow: none;
 	display: none;
 	margin: auto;
-	width: 75%;
-	border-color: #2C8B26;
+	max-width: 50em;
+	border-color: #CE1127;
 	border-style: solid;
-	background-color: #99FCA2;
+	background-color: #CE1127;
 	padding: 0.5em;
 	border-width: thin;
 }
 
 .quiz-answer {
-	border-color: rgb(119, 113, 113);
+	border-color: rgb(194, 196, 196);
 	border-style: solid;
-	background-color: #C0DCFF;
+	background-color: rgba(194, 196, 196, 0.6);
 	padding: 0.5em;
 	border-width: thin;
 }
 
 .quiz-explanation {
-	border-color: rgb(119, 113, 113);
+	border-color: rgb(194, 196, 196);
 	border-style: solid;
-	background-color: #C0DCFF;
+	background-color: rgba(194, 196, 196, 0.6);
 	padding: 0.5em;
 	border-width: thin;
 	font-size: smaller;
-	font-style: italic;
 }
 
 .quiz-wrong {
-	background-color: #FDB0BF;
-	border-color: #FF0A0A;
+	background-color: rgba(206, 17, 39, 0.5);
+	border-color: #CE1127;
+	text-shadow: none;
 }
 
 .quiz-correct {
-	background-color: #99FCA2;
+	background-color: rgba(0, 104, 71, 0.5);
 	border-color: #2C8B26;
+	text-shadow: none;
 }
 
 .debugging-info {
@@ -107,7 +110,7 @@ hr {
 
 .content-wrapper {
 	padding: 1em;
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -159,6 +162,8 @@ hr {
 .wrapper {
 	overflow: hidden;
 	margin-bottom: 2em;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
 }
 
 .preview-img {
@@ -206,6 +211,8 @@ hr {
 
 .knowledge-chapter-image{
 	float:left;
+	padding-right: 1em;
+	padding-bottom: 1em;
 }
 
 .knowledge-article-chapter{
@@ -242,4 +249,53 @@ hr {
 	margin-bottom: 1em;
 	width: 8em;
 	max-width: 10em;
+}
+
+.coc-btn {
+	max-width: 80%;
+	width: 15em;
+	margin: 0 auto;
+}
+
+div.nav-img-header {
+	height: 9em;
+	margin-bottom: 1.875em;
+}
+
+img.nav-img-header {
+	width: 100%;
+	height: auto;
+}
+
+#navpanel {
+	padding-top: 0;
+}
+
+a.ui-link {
+	color: #006847!important;
+}
+a:visited.ui-link {
+	color: #006847!important;
+}
+a:hover.ui-link {
+	color: #006847!important;
+}
+.ui-link {
+	color: #006847;
+}
+
+.pgwSlider a {
+	text-shadow: none;
+	color: #FFFFFF!important;
+}
+.pgwSlider a:visited {
+	text-shadow: none;
+	color: #FFFFFF!important;
+}
+.pgwSlider a:hover {
+	text-shadow: none;
+	color: #FFFFFF!important;
+}
+.pgwSlider b {
+	font-size: x-large;
 }
