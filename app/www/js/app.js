@@ -47,6 +47,11 @@ var app = {
             regHandler.register();
         });
 
+        $('#info').on('pagecreate', function (event) {
+            event.preventDefault();
+            $('#info > .content-wrapper').load('content/info.html');
+        });
+
         $('#userpanel').on('pagebeforeshow', function () {
             app.userpanel.setUser(app.currentUser);
             app.userpanel.open();
