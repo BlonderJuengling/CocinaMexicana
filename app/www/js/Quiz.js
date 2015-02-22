@@ -65,7 +65,7 @@ Quiz.prototype.storeQuizResult = function(result) {
 		request = $.ajax({
 			url: BaseRequestUrl + '/quiz',
 			beforeSend: function (xhr) {
-				xhr.setRequestHeader('Authorization', self.currentUser.getApiKey());
+				xhr.setRequestHeader('X-Authorization', self.currentUser.getApiKey());
 			},
 			type: 'POST',
 			data: {

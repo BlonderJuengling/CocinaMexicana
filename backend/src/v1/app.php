@@ -9,9 +9,9 @@ require_once PROJECT_ROOT . '/include/QuizEval.php';
 // allow cors
 $app->response->headers->set('Access-Control-Allow-Origin', '*');
 $app->response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-$app->response->headers->set('Access-Control-Allow-Headers', 'X-Requested-With');
+$app->response->headers->set('Access-Control-Allow-Headers', 'X-Accept-Charset, X-Authorization, Content-Type, X-Accept, X-Requested-With');
 $app->response->headers->set('Access-Control-Max-Age', '3600');
-$app->response->headers->set('Content-Type', 'application/json, Authorization');
+$app->response->headers->set('Content-Type', 'application/json, X-Authorization');
 
 // global user id from database
 $account_id = NULL;
@@ -134,9 +134,9 @@ if(!function_exists('authenticate'))
 		$response = array();
 		$app = \Slim\Slim::getInstance();
 
-		if(isset($headers['Authorization'])) {
+		if(isset($headers['X-AUTHORIZATION'])) {
 			$db = new DbHandler();
-			$apiKey = $headers['Authorization'];
+			$apiKey = $headers['X-AUTHORIZATION'];
 
 			if(!$db->isValidApiKey($apiKey)) {
 				$response['error'] = true;
@@ -317,7 +317,7 @@ $app->post('/quiz', 'authenticate', function () use ($app) {
  */
 $app->options('/(:name+)', function () use ($app) {
 	$app->response()->header('Access-Control-Allow-Origin', '*');
-	$app->response()->header('Access-Control-Allow-Headers', 'X-Requested-With, Authorization');
+	$app->response()->header('Access-Control-Allow-Headers', 'X-Accept-Charset, X-Authorization, Content-Type, X-Accept, X-Requested-With');
 });
 
 ?>
