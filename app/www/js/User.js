@@ -6,7 +6,7 @@ var User = function () {
 }
 
 User.prototype.load = function () {
-	if(window.localStorage =! null) {
+	if(window.localStorage != null) {
 		var userInStore = JSON.parse(window.localStorage.getItem('session'));
 
 		if(userInStore !== null) {
@@ -19,24 +19,32 @@ User.prototype.load = function () {
 	}
 }
 
+User.prototype.store = function() {
+	if(window.localStorage != null && this.user != null) {
+		window.localStorage.setItem('session', JSON.stringify(this.user));
+		console.log(this.TAG + 'store user changes in localStorage');
+	}
+};
+
 User.prototype.getCurrentUser = function () {
 	return this.user;
-}
+};
 
 User.prototype.setCurrentUser = function (user) {
 	this.user = user;
-}
+};
 
 User.prototype.clearCurrentUser = function () {
 	this.user = null;
-}
+	this.clearQuizHint();
+};
 
 User.prototype.getUserStatus = function () {
 	if(this.user == null)
 		return UserStatus.GUEST;
 
 	return this.user.status;
-}
+};
 
 User.prototype.getUserId = function() {
 	return this.user.id;
@@ -60,6 +68,7 @@ User.prototype.isLoggedIn = function() {
 User.prototype.setCurrentRank = function(rankId) {
 	this.user.rank_id = rankId;
 	this.updateQuizHint();
+	this.store();
 };
 
 User.prototype.updateQuizHint = function() {
@@ -69,8 +78,12 @@ User.prototype.updateQuizHint = function() {
 		$('.hint-quiz').show();
 };
 
+User.prototype.clearQuizHint = function() {
+	$('.hint-quiz').hide();
+};
+
 User.prototype.isClassQuizDone = function() {
-	if(Number.parseInt(this.user.rank_id) === -1)
+	if(parseInt(this.user.rank_id) === -1)
 		return false;
 
 	return true;

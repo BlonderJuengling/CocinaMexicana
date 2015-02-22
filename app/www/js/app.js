@@ -13,7 +13,6 @@ var app = {
         $('#errorPopup').popup();
         $('#detailPopup').popup().enhanceWithin();
 
-        //this.initMainPageSlider();
         this.displayMainQuizHint();
         this.initMainPageSlider();
         this.bindEvents();

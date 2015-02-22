@@ -89,7 +89,7 @@ QuizValidator.prototype.getUserSolution = function() {
 
 	for (var i = 0; i < selectedItems.length; i++) {
 		var questionSolution = $(selectedItems[i]).val();
-		userSolution.push(Number.parseInt(questionSolution));
+		userSolution.push(parseInt(questionSolution));
 	};
 
 	return userSolution;

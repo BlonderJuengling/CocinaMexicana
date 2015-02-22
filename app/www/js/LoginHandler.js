@@ -51,15 +51,20 @@ LoginHandler.prototype.validateCredentials = function(username, password) {
 			return;
 		}
 		else {
-			var user = response.account;
+			var user = response.account,
+				currUser = app.currentUser;
+
 			user.status = UserStatus.USER;
 
 			self.writeLocalStorage(user);
 			self.clearForm();
-			app.currentUser.setCurrentUser(user);
+			currUser.setCurrentUser(user);
 			app.navHandler.refresh();
 
-			$.mobile.changePage('#userpanel');
+			if(!currUser.isClassQuizDone())
+				$.mobile.changePage('#classQuiz');
+			else
+				$.mobile.changePage('#userpanel');
 		}
 	});
 

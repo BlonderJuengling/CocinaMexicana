@@ -68,8 +68,6 @@ Quiz.prototype.storeQuizResult = function(result) {
 				xhr.setRequestHeader('Authorization', self.currentUser.getApiKey());
 			},
 			type: 'POST',
-			crossDomain: true,
-			contentType: 'application/x-www-form-urlencoded',
 			data: {
 				'userid' : self.currentUser.getUserId(),
 				'score' : JSON.stringify(result)

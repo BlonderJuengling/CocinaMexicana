@@ -61,7 +61,7 @@ QuizBuilder.prototype.appendMcAnswers = function(answers) {
 	var self = this;
 
 	answers.forEach(function (item, index) {
-		var answerNumber = Number.parseInt(index) + 1;
+		var answerNumber = parseInt(index) + 1;
 		self.quizPage += '<label><input type="checkbox" name="quiz_' + self.quizID + '" value="' + answerNumber + '" />' + item + '</label>';
 	});
 };
@@ -70,7 +70,7 @@ QuizBuilder.prototype.appendScAnswers = function(answers) {
 	var self = this;
 
 	answers.forEach(function (item, index) {
-		var answerNumber = Number.parseInt(index) + 1;
+		var answerNumber = parseInt(index) + 1;
 		self.quizPage += '<label><input type="radio" name="quiz_' + self.quizID + '"  value="' + answerNumber + '" />' + item + '</label>';
 	});
 };
