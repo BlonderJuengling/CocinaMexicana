@@ -204,7 +204,7 @@ hr {
 	max-height:100px;
 }
 
-#knowledgetopics-ingredients li {
+.knowledgetopics-ingredients li {
 	display: inline;
 	list-style-type: none;
 	padding-left: 10px;
@@ -213,7 +213,7 @@ hr {
 	text-align: center;
 }
 
-#knowledgetopics-ingredients img {
+.knowledgetopics-ingredients img {
 	max-width:100%;
 	max-height:100px;
 }
@@ -312,4 +312,8 @@ a:hover.ui-link {
 }
 .pgwSlider b {
 	font-size: x-large;
+}
+
+.ingred-table-button {
+	padding-top: 2em;
 }

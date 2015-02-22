@@ -1,8 +1,10 @@
 var KnowledgeHandler = function (container) {
 	this.TAG = 'KnowledgeHandler => ';
-
+	this.keywordFile = 'ingredients.json';
+	this.keywords = '';
 	this.container = container;
 	this.setClickHandler();
+	this.setPopupHandler();
 }
 
 KnowledgeHandler.prototype.setClickHandler = function() {
@@ -15,5 +17,37 @@ KnowledgeHandler.prototype.setClickHandler = function() {
 		console.log(event.target.name);
 
 		$('.knowledge-article-chapter > .knowledge-content').eq(event.target.name -1).toggle();
+	});
+	
+	
+};
+
+KnowledgeHandler.prototype.loadKeywordList = function(callback) {
+	$.getJSON('content/' + this.keywordFile, function (keywords) {
+		if(typeof(callback) === 'function' && callback !== undefined)
+			callback('keywords-received', keywords);
+	});
+};
+
+KnowledgeHandler.prototype.setPopupHandler = function(){
+	var self = this;
+	
+	this.loadKeywordList(function (event, result) {
+		self.keywords = result;
+		self.managePopups();
+	});
+};
+
+KnowledgeHandler.prototype.managePopups = function(){
+	var self = this;
+
+	$(this.container).find('.knowledgetopics-ingredients a').click(function (event, data){
+		var ingredientName = this.text,
+			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
+			ingredientContr = new KnowledgeIngredientController(ingredient[0]);
+			
+
+		ingredientContr.parse();
+		$('#detailPopup').popup('open', { positionTo : 'window'});
 	});
 };
