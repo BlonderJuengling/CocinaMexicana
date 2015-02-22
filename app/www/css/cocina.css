@@ -315,6 +315,11 @@ a:hover.ui-link {
 	font-size: x-large;
 }
 
+.info-slider-wrapper {
+	width: 70%;
+	margin: 0 auto
+}
+
 .ingred-table-button {
 	padding-top: 2em;
 }

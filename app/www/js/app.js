@@ -58,7 +58,16 @@ var app = {
 
         $('#info').on('pagecreate', function (event) {
             event.preventDefault();
-            $('#info > .content-wrapper').load('content/info.html');
+            $('#info > .content-wrapper').load('content/info.html', function () {
+                $('.pgw-slider-info').pgwSlider({
+                    displayControls: true,
+                    autoSlide: true,
+                    adaptiveHeight: false,
+                    displayControls: true,
+                    displayList: false,
+                    transitionDuration: 1500
+                });
+            });
         });
 
         $('#userpanel').on('pagebeforeshow', function () {
