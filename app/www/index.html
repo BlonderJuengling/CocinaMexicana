@@ -216,11 +216,11 @@
         </div><!-- /register -->
 
         <!-- registerPopupSuccess -->
-        <div data-role="popup" id="registerPopupSuccess" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+        <div data-role="popup" id="registerPopupSuccess" data-dismissible="false" data-overlay-theme="b" data-theme="b" class="popup-coc">
             <div data-role="header" data-theme="a">
                 <h1>Erfolgreich registriert!</h1>
             </div>
-            <div role="main" class="ui-content">
+            <div role="main" class="ui-content popup-content">
                 <h3 class="ui-title">Du hast dich erfolgreich auf Cocina Mexicana registriert.</h3>
                 <p>Du wirst nun auf die Login-Seite weitergeleitet</p>
                 <a href="#login" class="ui-btn ui-cornor-all ui-shadow ui-btn-inline ui-btn-b">Okay</a>
@@ -228,17 +228,17 @@
         </div><!-- /registerPopupSuccess -->
 
         <!-- errorPopup -->
-        <div data-role="popup" id="errorPopup" data-dismissible="false" data-overlay-theme="b" data-theme="b">
+        <div data-role="popup" id="errorPopup" data-dismissible="false" data-overlay-theme="b" data-theme="b" class="popup-coc">
             <div data-role="header" data-theme="a">
                 <h1>Fehler!</h1>
             </div>
-            <div role="main" class="ui-content">
+            <div role="main" class="ui-content popup-content">
                 <a class="ui-btn ui-cornor-all ui-shadow ui-btn-inline ui-btn-b">Okay</a>
             </div>
         </div><!-- /errorPopup -->
 
         <!-- detailPopup -->
-        <div data-role="popup" id="detailPopup" data-dismissible="true" data-overlay-theme="b" data-theme="b">
+        <div data-role="popup" id="detailPopup" data-dismissible="true" data-overlay-theme="b" data-theme="b" class="popup-coc">
             <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <div data-role="header" data-theme="a">
                 <h1></h1>
@@ -246,6 +246,19 @@
             <div role="main" class="ui-content">
             </div>
         </div><!-- /detailPopup -->
+
+        <!-- feedbackPopup -->
+        <div data-role="popup" id="feedbackPopup" data-dismissible="true" data-overlay-theme="b" data-theme="b" class="popup-coc">
+            <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <div data-role="header" data-theme="a">
+                <h1>Feedback abgeschickt ...</h1>
+            </div>
+            <div role="main" class="ui-content popup-content">
+                <p>Vielen Dank für dein Feedback!</p>
+                <br />&nbsp;
+                <a href="#" class="ui-btn ui-cornor-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Schließen</a>
+            </div>
+        </div><!-- /feedbackPopup -->
 
         <!-- navpanel -->
         <div data-role="panel" id="navpanel" data-display="overlay" data-position="left" data-theme="a">

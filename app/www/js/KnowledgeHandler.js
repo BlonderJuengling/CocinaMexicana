@@ -1,11 +1,23 @@
-var KnowledgeHandler = function (container) {
+var KnowledgeHandler = function (container, pageId) {
 	this.TAG = 'KnowledgeHandler => ';
 	this.keywordFile = 'ingredients.json';
 	this.keywords = '';
 	this.container = container;
-	this.setClickHandler();
-	this.setPopupHandler();
+
+	this.loadPage(pageId);
 }
+
+KnowledgeHandler.prototype.loadPage = function(id) {
+	var self = this;
+
+	$(this.container).load('content/knowledgedb-' + id + '.html', function () {
+		$('.knowledge-body').enhanceWithin();
+        $('.knowledge-article-chapter > .knowledge-content').hide();
+
+        self.setClickHandler();
+		self.setPopupHandler();
+    });
+};
 
 KnowledgeHandler.prototype.setClickHandler = function() {
 	console.log(this.TAG + 'set listener');
@@ -18,8 +30,6 @@ KnowledgeHandler.prototype.setClickHandler = function() {
 
 		$('.knowledge-article-chapter > .knowledge-content').eq(event.target.name -1).toggle();
 	});
-	
-	
 };
 
 KnowledgeHandler.prototype.loadKeywordList = function(callback) {
@@ -31,7 +41,7 @@ KnowledgeHandler.prototype.loadKeywordList = function(callback) {
 
 KnowledgeHandler.prototype.setPopupHandler = function(){
 	var self = this;
-	
+
 	this.loadKeywordList(function (event, result) {
 		self.keywords = result;
 		self.managePopups();
@@ -45,7 +55,6 @@ KnowledgeHandler.prototype.managePopups = function(){
 		var ingredientName = this.text,
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
 			ingredientContr = new KnowledgeIngredientController(ingredient[0]);
-			
 
 		ingredientContr.parse();
 		$('#detailPopup').popup('open', { positionTo : 'window'});

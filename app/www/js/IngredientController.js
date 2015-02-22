@@ -15,12 +15,12 @@ IngredientController.prototype.parse = function() {
 	this.loadTemplate(function (event) {
 		console.log(self.TAG + event);
 
-		$(this.popupDom).enhanceWithin();
 		self.setTitle(data.name);
 		self.setImages(data.images);
 		self.setIntroduction(data.introduction);
 		self.setSections(data.sections);
-		self.setQuizBtn(data.quiz_url);
+		self.setKnowledgeDbBtn(2);
+		$(self.popupDom).enhanceWithin();
 
 		$(self.popupDom).popup('reposition', { positionTo : 'window' });
 	});
@@ -68,9 +68,8 @@ IngredientController.prototype.setSections = function(sections) {
 	});
 };
 
-IngredientController.prototype.setQuizBtn = function(quiz_url) {
-	$(this.popupDom).find('#start-quiz-btn').on('click', function (event) {
-		event.preventDefault();
-		console.log('hier dann neues fenster öffnen bitte');
+IngredientController.prototype.setKnowledgeDbBtn = function(id) {
+	$(this.popupDom).find('#goto-knowledge-btn').on('click', function (event) {
+		app.passDataObject.selectedKnowledgeId = id;
 	});
 };

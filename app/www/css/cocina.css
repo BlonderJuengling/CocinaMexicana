@@ -161,7 +161,7 @@ hr {
 
 .wrapper {
 	overflow: hidden;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	padding-left: 0.25em;
 	padding-right: 0.25em;
 }
@@ -266,9 +266,10 @@ hr {
 }
 
 .coc-btn {
-	max-width: 80%;
-	width: 15em;
+	max-width: 65%;
+	width: 17.5em;
 	margin: 0 auto;
+	margin-bottom: 0.35em;
 }
 
 div.nav-img-header {
@@ -316,4 +317,11 @@ a:hover.ui-link {
 
 .ingred-table-button {
 	padding-top: 2em;
+}
+
+.popup-coc {
+	min-width: 35em;
+}
+.popup-content {
+	text-align: center;
 }

@@ -4,6 +4,7 @@ var RecipeController = function (recipeId, user) {
 	this.id = recipeId;
 	this.template = 'recipe_detail.html';
 	this.keywordFile = 'ingredients.json';
+	this.moodleBaseUrl = "https://wuecampus2.uni-wuerzburg.de/moodle/mod/quiz/view.php?id="
 	this.keywords = '';
 	this.recipe = null;
 	this.user = user;
@@ -60,7 +61,9 @@ RecipeController.prototype.parse = function() {
 	this.loadMainPicture(recipe.images);
 	this.buildIngredients(recipe.ingredients);
 	this.buildPreperations(recipe.preperation);
+	this.buildRecipeQuiz(recipe.quiz_id);
 	this.setFeedbackVisiblity();
+	this.setFeedbackSubmitBtnEvent();
 
 	this.loadKeywordList(function (event, result) {
 		self.keywords = result;
@@ -102,6 +105,14 @@ RecipeController.prototype.buildPreperations = function(preperation) {
 	$('.recipe-preperation').append(instruction);
 };
 
+RecipeController.prototype.buildRecipeQuiz = function(quizId) {
+	var quizUrl = this.moodleBaseUrl + quizId;
+
+	$('.recipe-quiz')
+		.append('<a href="' + quizUrl + '" data-role="button" rel="external" target="_blank" class="coc-btn">Moodle Quiz starten</a>')
+		.enhanceWithin();
+};
+
 RecipeController.prototype.setFeedbackVisiblity = function() {
 	var overlayer = $('.feedback > .wrapper > .overlayer');
 
@@ -109,6 +120,14 @@ RecipeController.prototype.setFeedbackVisiblity = function() {
 		overlayer.hide();
 	else
 		overlayer.show();
+};
+
+RecipeController.prototype.setFeedbackSubmitBtnEvent = function() {
+	$('#feedback-submit-btn').on('click', function (event) {
+		event.preventDefault();
+		$(this).addClass('ui-disabled');
+		$('#feedbackPopup').popup('open');
+	});
 };
 
 RecipeController.prototype.highlightKeywords = function() {

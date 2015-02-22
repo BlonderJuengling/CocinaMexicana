@@ -4,13 +4,14 @@ var app = {
     navHandler: new NavigationHandler(),
     loginHandler: new LoginHandler(),
     userpanel: new Userpanel(),
-    passDataObject: { selectedRecipeId : null },
+    passDataObject: { selectedRecipeId : null, selectedKnowledgeId : null },
     // Application Constructor
     initialize: function() {
         $("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
         $("[data-role=panel]").panel().enhanceWithin();
         $('#registerPopupSuccess').popup(); // init popup to get expected behavior
         $('#errorPopup').popup();
+        $('#feedbackPopup').popup().enhanceWithin();
         $('#detailPopup').popup().enhanceWithin();
 
         this.displayMainQuizHint();
@@ -81,12 +82,15 @@ var app = {
 
 		$('#knowledgeDatabase').find('a').click(function (event, data) {
             event.preventDefault();
-			$('#knowledge-body').load('content/knowledgedb-' + this.id + '.html', function () {
-                $('.knowledge-body').enhanceWithin();
-                $('.knowledge-article-chapter > .knowledge-content').hide();
 
-                var knowdledgeHandler = new KnowledgeHandler($('.knowledge-body'));
-            });
+            new KnowledgeHandler($('.knowledge-body'), this.id);
+        });
+
+        $('#knowledgeDatabase').on('pagebeforeshow', function (event) {
+            if(app.passDataObject.selectedKnowledgeId !== null) {
+                new KnowledgeHandler($('.knowledge-body'), app.passDataObject.selectedKnowledgeId);
+                app.passDataObject.selectedKnowledgeId = null;
+            }
         });
 
 		$("#recipeByIngredient").on('pagebeforeshow',function(event,data){
