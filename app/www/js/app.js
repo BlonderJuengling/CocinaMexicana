@@ -85,8 +85,8 @@ var app = {
             });
         });
 
-		$(".knowledge-chapter-header").click(function(event){
-          $(".knowledge-chapter-image").toggle('normal');
+		$("#recipeByIngredient").on('pagebeforeshow',function(event,data){
+          $("#recipeByIngredient").load('content/recipe-by-ingredients.html');
         });
 
         $('#errorPopup .ui-content a').on('click', function () {
