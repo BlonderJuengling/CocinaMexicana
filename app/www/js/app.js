@@ -91,7 +91,7 @@ var app = {
         });
 
 		$("#recipeByIngredient").on('pagebeforeshow',function(event,data){
-          $("#recipeByIngredient").load('content/recipe-by-ingredients.html');
+            $("#recipeByIngredient").load('content/recipe-by-ingredients.html');
         });
 
         $('#errorPopup .ui-content a').on('click', function () {
