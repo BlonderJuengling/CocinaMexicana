@@ -36,14 +36,19 @@
         <!-- header -->
         <div data-role="header" data-position="fixed" data-theme="a">
             <div class="ui-grid-b ui-responsive">
-                <div class="ui-block-a"><div class="ui-body ui-body-d"><a href="#navpanel"><img src="img/ic_menu_black_36dp.png" /></a></div></div>
+                <div class="ui-block-a">
+                    <div class="ui-body ui-body-d nav-image-container">
+                        <a href="#navpanel"><img src="img/ic_menu_black_36dp.png" /></a>
+                        <a data-rel="back"><img src="img/ic_arrow_back_black_36dp.png" style="display: none"/></a>
+                    </div>
+                </div>
                 <div class="ui-block-b"><div class="ui-body ui-body-d page-title">Cocina Mexicana</div></div>
                 <div class="ui-block-c"><div class="ui-body ui-body-d"></div></div>
             </div><!-- /ui-grid-b -->
         </div><!-- header -->
 
         <!-- home -->
-        <div data-role="page" id="home">
+        <div data-role="page" id="home" class="swipe-container">
             <div role="main" class="ui-content">
                 <div class="hint-quiz">
                     Du hast bisher noch nicht unser Einstufungsquiz gespielt.
@@ -83,7 +88,7 @@
         </div><!-- /home -->
 
         <!-- classificationQuiz -->
-        <div data-role="page" id="classQuiz">
+        <div data-role="page" id="classQuiz" class="swipe-container">
             <div role="main" class="ui-content">
                 <div class="quiz-content">
                 </div>
@@ -91,7 +96,7 @@
         </div><!-- /classificationQuiz -->
 
         <!-- resultQuiz -->
-        <div data-role="page" id="resultQuiz">
+        <div data-role="page" id="resultQuiz" class="swipe-container">
             <div role="main" class="ui-content">
                 <div class="quiz-content">
                 </div>
@@ -99,14 +104,14 @@
         </div><!-- /resultQuiz -->
 
         <!-- dailyTip -->
-        <div data-role="page" id="dailyTip">
+        <div data-role="page" id="dailyTip" class="swipe-container">
             <div role="main" class="ui-content">
                 Täglicher Tipp
             </div>
         </div><!-- /dailyTip -->
 
         <!-- recipeDatabase -->
-        <div data-role="page" id="recipeDatabase">
+        <div data-role="page" id="recipeDatabase" class="swipe-container">
             <div role="main" class="ui-content">
                 <ul id="recipeList">
                     <li><a href="#" id="1">Burrito gefüllt mit Hackfleisch, Mais, Salat und Jalapenoscheiben</a></li>
@@ -117,19 +122,19 @@
         </div><!-- /recipeDatabase -->
 
         <!-- recipeByIngredient -->
-        <div data-role="page" id="recipeByIngredient">
+        <div data-role="page" id="recipeByIngredient" class="swipe-container">
             <div role="main" class="ui-content">
                 Rezepte nach Zutaten suchen
             </div>
         </div><!-- /recipeByIngredient -->
 
         <!-- recipeDetail -->
-        <div data-role="page" id="recipeDetail">
+        <div data-role="page" id="recipeDetail" class="swipe-container">
             <div role="main" class="ui-content"> </div>
         </div><!-- /recipeDetail -->
 
 		<!-- knowledgeDatabase -->
-		<div data-role="page" id="knowledgeDatabase">
+		<div data-role="page" id="knowledgeDatabase" class="swipe-container">
             <div role="main" class="ui-content content-wrapper">
 				<div class="knowledge-header">
 					<ul id="knowledgetopics">
@@ -145,21 +150,21 @@
         </div><!-- /knowledgeDatabase -->
 
         <!-- infoPage -->
-        <div data-role="page" id="info">
+        <div data-role="page" id="info" class="swipe-container">
             <div role="main" class="ui-content content-wrapper">
                 <!-- content dynamically load via javascript at runtime -->
             </div>
         </div>
 
         <!-- userpanel -->
-        <div data-role="page" id="userpanel">
+        <div data-role="page" id="userpanel" class="swipe-container">
             <div role="main" class="ui-content">
                 <!-- content dynamically load via javascript at runtime -->
             </div>
         </div><!-- /userpanel -->
 
         <!-- login -->
-        <div data-role="page" id="login">
+        <div data-role="page" id="login" class="swipe-container">
             <div role="main" class="ui-content">
                 <div class="ui-corner-all content-corners small-content-panel">
                     <div class="ui-bar ui-bar-a">Login</div>
@@ -183,7 +188,7 @@
         </div><!-- /login -->
 
         <!-- register -->
-        <div data-role="page" id="register">
+        <div data-role="page" id="register" class="swipe-container">
             <div role="main" class="ui-content">
                 <div class="ui-corner-all content-corners small-content-panel">
                     <div class="ui-bar ui-bar-a">Registrierung</div>

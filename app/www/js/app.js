@@ -18,6 +18,9 @@ var app = {
         this.initMainPageSlider();
         this.bindEvents();
         this.navHandler.refresh();
+
+        this.navHandler.observePageShowEvent();
+        this.navHandler.setNavpanelOnClickListener();
     },
     // Bind Event Listeners
     initMainPageSlider: function () {
@@ -35,8 +38,13 @@ var app = {
         }
     },
     bindEvents: function() {
+        $('.swipe-container').on('swiperight', function (event) {
+            if(event.swipestart.coords[0] < 30)
+                $('#navpanel').panel('open');
+        });
         $('#login-submit-btn').on('click', function (event) {
             event.preventDefault();
+
             app.loginHandler.login();
         });
 
