@@ -113,11 +113,119 @@
         <!-- recipeDatabase -->
         <div data-role="page" id="recipeDatabase" class="swipe-container">
             <div role="main" class="ui-content">
-                <ul id="recipeList">
-                    <li><a href="#" id="1">Burrito gefüllt mit Hackfleisch, Mais, Salat und Jalapenoscheiben</a></li>
-                    <li><a href="#" id="2">Kartoffelspalten mit Gemüse mexikanischer Art und Guacamole</a></li>
-                    <li><a href="#" id="3">Einfacher Tres Leches Kuchen</a></li>
-                </ul>
+                <table data-role="table" id="recipe-filter-tbl" class="ui-body-d ui-shadow ui-responsive">
+                    <thead>
+                        <tr class="ui-bar-d">
+                            <th colspan="2">Filter für Rezepte anwenden</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Schwierigkeit</td>
+                            <td>
+                                <div class="ui-grid-b">
+                                    <div class="ui-block-a">
+                                        <label for="level-easy">leicht</label>
+                                        <input type="checkbox" id="level-easy" name="level-easy" data-mini="true">
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <label for="level-medium">mittel</label>
+                                        <input type="checkbox" id="level-medium" name="level-medium" data-mini="true">
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <label for="level-hard">schwer</label>
+                                        <input type="checkbox" id="level-hard" name="level-hard" data-mini="true">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Zeit</td>
+                            <td>
+                                <input type="range" name="slider-time" id="slider-time" data-highlight="true" min="0" step="15" max="180" value="60">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Art</td>
+                            <td>
+                                <div class="ui-grid-b">
+                                    <div class="ui-block-a">
+                                        <label for="appetizer">Vorspeise</label>
+                                        <input type="checkbox" id="appetizer" name="appetizer" data-mini="true">
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <label for="main-meal">Hauptgericht</label>
+                                        <input type="checkbox" id="main-meal" name="main-meal" data-mini="true">
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <label for="dessert">Nachspeise</label>
+                                        <input type="checkbox" id="dessert" name="dessert" data-mini="true">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Besonderheiten</td>
+                            <td>
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a">
+                                        <label for="vegetarian">vegetarisch</label>
+                                        <input type="checkbox" id="vegetarian" name="vegetarian" data-mini="true">
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <label for="vegan">vegan</label>
+                                        <input type="checkbox" id="vegan" name="vegan" data-mini="true">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a">
+                                        <label for="lactose">laktosefrei</label>
+                                        <input type="checkbox" id="lactose" name="lactose" data-mini="true">
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <label for="glucose">glucosefrei</label>
+                                        <input type="checkbox" id="glucose" name="glucose" data-mini="true">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+                <table data-role="table" id="recipe-list-tbl" class="ui-body-d table-stripe ui-shadow ui-responsive">
+                    <thead>
+                        <tr class="ui-bar-d">
+                            <th>ID</th>
+                            <th>&nbsp;</th>
+                            <th>Gericht</th>
+                            <th>Schwierigkeit</th>
+                            <th>Zeit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img class="recipe-list-preview" /></td>
+                            <td><a href="#" id="1">Burrito gefüllt mit Hackfleisch, Mais, Salat und Jalapenoscheiben</a></td>
+                            <td>mittel</td>
+                            <td>15 Minuten</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img class="recipe-list-preview" /></td>
+                            <td><a href="#" id="2">Kartoffelspalten mit Gemüse mexikanischer Art und Guacamole</a></td>
+                            <td>mittel</td>
+                            <td>25 Minuten</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img class="recipe-list-preview" /></td>
+                            <td><a href="#" id="3">Einfacher Tres Leches Kuchen</a></td>
+                            <td>einfach</td>
+                            <td>130 Minuten</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div><!-- /recipeDatabase -->
 

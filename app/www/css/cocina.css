@@ -325,3 +325,19 @@ a:hover.ui-link {
 .popup-content {
 	text-align: center;
 }
+
+#recipe-filter-tbl {
+	max-width: 35em;
+	min-width: 20em;
+	margin: 0 auto;
+}
+
+#recipe-list-tbl {
+	width: 90%;
+	margin: 0 auto;
+}
+
+img.recipe-list-preview {
+	height: 4em;
+	width: 5em;
+}
