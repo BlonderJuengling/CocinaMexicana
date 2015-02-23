@@ -62,7 +62,7 @@ KnowledgeIngredientController.prototype.setSections = function(sections) {
 		var clone = $(sectionTemplate).clone();
 
 		$(clone).children().eq(0).text(item.heading);
-		$(clone).children().eq(1).text(item.content);
+		$(clone).children().eq(1).html(item.content);
 
 		$('#detailPopup #sections').append(clone);
 	});
