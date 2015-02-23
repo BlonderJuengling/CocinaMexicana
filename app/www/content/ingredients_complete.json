@@ -1,0 +1,123 @@
+[
+    {
+        "name" : "Mais",
+        "introduction" : "Das wichtigste Ernährungselement in Mexiko ist der Mais. Er ist die Grundlage der mexikanischen Küche und bildet einen Grundstein der gesamten kulinarischen Entwicklung. Aus ihm werden unendlich viele Gerichte gezaubert. Ohne ihn gäbe es keine Tortillas, keine Enchiladas, keine Tortillachips – kurz: die mexikanische Küche würde uns nicht so in ihren Bann ziehen.",
+        "sections" : [
+            {
+                "heading" : "Gelber Mais",
+                "content" : "Der normale gelbe Mais, wie wir ihn hier kennen, hat in Mexiko fast keine Bedeutung, stattdessen wird er speziell behandelt. Der Mais wird in einer Wasser-Kalklösung einige Tage lang getränkt, bis er sich durch Gärung zersetzt. Die entstandene Flüssigkeit wird als “Tejuino” an Märkten als Durstlöscher verkauft (schmeckt abscheulich bitter, ist aber Geschmacksache). Die gegärten Körner wiederum werden getrocknet und zu Mehl verarbeitet, das zur Herstellung von Maistortillas dient. Dieses Mehl können Sie im Fachhandel als Mais-Tortillamehl oder Masa Harina kaufen."
+            },
+            {
+                "heading" : "Weißer Mais",
+                "content" : "Es handelt sich um eine spezielle Sorte, die größer als die normale gelbe ist. Der weiße Mais hat einen harten Kern und eine weiße Ummantelung. Weißer Mais dient zur Herstellung von “Pozole” (Maiseintopf), einem klassischen und sehr beliebten Gericht. Exportiert wird diese Maissorte selten. Am ehesten finden Sie weißen Mais frisch im Fachhandel; leider ist er hier in Europa aber immer sehr teuer."
+            },
+            {
+                "heading" : "Popcorn a la Mexiko",
+                "content" : "Ob nun gerade Kinowetter herrscht oder nicht: Was hierzulande beim Kinobesuch nie fehlen sollte, ist auch in Mexiko ein beliebter Snack – Popcorn. Falls Sie einmal die Möglichkeit haben sollten, in Mexiko ins Kino zu gehen, werden Sie eine große Überraschung erleben: Während wir nur kleinere, meist süße Snacks genießen, begibt sich der Mexikaner an große Essenstheken und bestellt sich dort einen mittleren Imbiss, welchen er im Kinosaal verspeist. Sehr beliebt sind Hot-Dogs, Sandwiches, kleine Tacos, warme Tortillachips oder eben auch Popcorn."
+            },
+            {
+                "heading" : "Und wieder mit Chilisoße",
+                "content" : "Bei mexikanischem Popcorn gibt es viele Variationen: Einige bestreuen es mit in Essig eingelegten Chilis und krönen das Ganze mit einem kräftigen Schuss rote Chilisauce. Die knusprigen Maiskörner werden nach einer Weile zu einer matschig-scharfen Pampe – sicherlich nicht jedermanns Geschmack, doch schmeckt diese Mischung viel besser als sie aussieht. Probieren Sie es doch mal beim nächsten Film!"
+            }
+        ],
+        "images" : [
+            "mais_01.jpg",
+            "mais_02.jpg",
+            "mais_03.jpg",
+            "mais_04.jpg"
+        ]
+    },
+    {
+        "name" : "Chilischoten",
+        "introduction" : "Chilischoten sind die wohl wichtigsten Früchte für die mexikanische Küche. Für die Mexikaner aber heißt Chile (so werden sie bezeichnet) nicht gleich Chile: Jedes Gericht wird mit einer anderen Sorte Chili gereicht, auch wenn alle zur großen Capsicum-Familie gehören. Es gibt unendlich viele verschiedene Chilisorten, alle unterschiedlich in Schärfe und Geschmack, ebenso unterscheiden sich Anbaugebiet und beste Klimabedingungen je nach Art.",
+        "sections" : [
+            {
+                "heading" : "Generell gilt:",
+                "content" : "Je kleiner eine Schote, desto schärfer. Kerne sind ebenfalls sehr scharf und sollten mit Vorsicht behandelt werden. Empfindliche Personen sollten Chilischoten nur mit Gummihandschuhen verarbeiten, aber auch sonst gilt: Nicht versehentlich beim Zubereiten ans Auge oder andere Schleimhäute fassen."
+            },
+            {
+                "heading" : "Frische Chilis",
+                "content" : "Chile güeros – er ist blassgelb oder blassgrün und mild. Als Ersatz können die in türkischen Gemüsegeschäften erhältlichen länglichen Paprikas verwendet werden.
+				Chile habanero – ein kleiner, laternenförmiger, sehr scharfer Chile, welcher vor allem in Yucatan sehr beliebt ist.
+				Chile jalapeño – ein grüner scharfer kegelförmiger Chile, welcher aufgrund seiner aromatischer Note sehr beliebt ist. Meist wird diese Sorte mit Karotten und Zwiebel in Essig eingelegt.
+				Chile poblano – er ist grösser, runder und deutlich milder als der Chile jalapeño. Chile Poblano wird meistens gefüllt als Chile Relleno oder in Streifen geschnitten als Rajas mit Reis gegessen. Erhältlich ist diese Sorte auch als Konserve von Herdez. Gefüllte Chile Poblanos heißen in der TexMex-Küche “Poppers”. Anstatt Poblano-Chilis werden auch die kalifornischen Anaheim-Chiles verwendet, die von der Größe und von der Schärfe her vergleichbar sind."
+            },
+			{
+				"heading" : "Getrocknete Chilischoten",
+				"content" : "Chile ancho – Die getrocknete Version des Chile poblano ist etwa zwölf Zentimeter lang und hat eine dunkelrote, runzlige Haut. Einer Sauce beigegeben, rundet er das feine Aroma leicht ab. Die Schärfe dieser Sorte variiert sehr, aus diesem Grund sollte man beim Würzen sehr sparsam umgehen.
+				Chile chipotle – Bei diesem Chile handelt es sich um den geräucherten Chile Jalapeño. Er ist sehr scharf und verleiht den Gerichten einen rauchigen, rustikalen Geschmack.
+				Chile guajillo – Dieser scharfe Chile ist lang und hat eine glatte Haut. Man verwendet ihn eingeweicht oder zerrieben zum Würzen von Saucen und Fleischgerichten.
+				Chile pasilla – Dieser Chile hat seinen Namen nach dem spanischen Wort für “Rosine”, weil er eine sehr runzlige Haut hat. Wegen seines würzigen Geschmackes wird er oft für Moles und Saucen verwendet."
+			}
+        ]
+    },
+    {
+        "name" : "Avocado",
+        "introduction" : "Dieser in Mexiko heimische Baum aus der Familie der Lorbeergewächse entwickelt vielseitig verwendbare Früchte. Avocados enthalten bis zu 27 Prozent Fett und sind reich an Mineralien, Proteinen und Vitaminen. Es soll fast 400 verschiedene Sorten geben – von kleinen, fingerdicken Früchten, die mit der Haut gegessen werden, bis hin zu riesigen birnenförmigen Früchten. Außerhalb von Mexiko sind die beinahe glatte, grünschalige fuerte mit ihrem milden Geschmack und die narbige, braune hass, die wundervoll nussig schmeckt, am weitesten verbreitet. Avocados haben in der Küche Mexikos einen hohen Stellenwert. In vielen Gerichten werden sie verwendet – nicht nur kalt, sondern auch warm. Meist findet man bei einem mexikanischen Essen die milde Salsa Guacamole auf dem herrlich gedeckten Tisch.",
+        "sections" : [
+            {
+                "heading" : "Tipp",
+                "content" : "Sind die Früchte noch zu unreif, kann man diese in einer Papiertüte bei Zimmertemperatur einige Tage nachreifen lassen. Sollten sie im Gegenteil bereits zu weich sein, lassen sie sich im Kühlschrank einige Tage bedenkenlos lagern."
+            }
+        ]
+    },
+    {
+        "name" : "Tortilla",
+        "introduction" : "Für viele sind Tortillas, Tacos, Burritos oder Fajitas ein- und dasselbe. Doch da gibt es markante Unterschiede. Bei allen Gerichten werden zwar Tortillas verwendet, doch sind jeweils Füllungen, Zubereitungsarten und Präsentation verschieden.",
+        "sections" : [
+            {
+                "heading" : "Aufgepasst",
+                "content" : "Harte Tacoshells suchen Sie in in Mexiko vergebens, da sie ein typisches Gericht aus der TexMex-Küche sind. Wer also wirklich mexikanisch essen möchte, sollte etwas anderes als harte Tortilla-Hüllen bestellen."
+            },
+            {
+                "heading" : "Mais oder Weizen?",
+                "content" : "Bei Tortillas unterscheidet man zwischen zwei Tortilla-Arten: Tortillas aus Weizenmehl und Tortillas aus Maismehl.
+				Weizentortillas sind in Mexiko weniger beliebt und im Norden verbreiteter als im Süden. Weizentortillas werden hauptsächlich für Quesadillas benötigt, mit Käse gefüllt, zusammengeklappt und auf mittlerer Hitze in einer Pfanne ohne Fett gebraten, bis der Käse flüssig ist. Quesadillas finden wir auf mexikanischen Frühstückstischen oder als Zwischenmahlzeit. In der TexMex-Küche spielen Weizentortillas als Burrito eine große Rolle.
+				Maistortillas sind in Mexiko die wichtigsten Tortillas. Sie werden, wie es der Name schon sagt, aus Maismehl hergestellt. Das Maismehl wird dazu einem speziellen Gärverfahren unterzogen. Dieser komplizierte Vorgang nennt sich “Nixtamalisado”.
+				Maistortillas sollten immer frisch zubereitet werden. Sie halten in der Regel bis zu drei Tagen im Kühlschrank. Leider findet man solche Original-Tortillas kaum auf den Speisekarten hiesiger mexikanischer Restaurants. In Mexiko werden Tortillas auf grossen Platten, den sogenannten “Comales”, meist direkt an den Märkten zubereitet. Es gibt Tortillas aber auch kiloweise, frisch in Papier eingewickelt und im Beutel, in “Tortillarias” oder Supermärkten zu kaufen."
+            },
+			{
+				"heading" : "Tortillas und ihre Füllungen",
+				"content" : "Je nach Füllung dieser Tortillas entscheidet sich, ob es ein Taco, ein Burrito oder eine Enchilada wird.
+				Gefaltete Maistortillas mit Füllung sind Tacos.
+				Weizentortillas mit Füllung, die bereits gerollt an den Tisch gebracht werden, nennt man Burritos.
+				Füllt man Weizentortillas selbst am Tisch, nennen sie sich Fajitas.
+				Fritierte Burritos sind Chimichangas und stammen aus der TexMex-Küche.
+				Gefüllte, gerollte und mit Salsa gratinierte Maistortillas heißen Enchiladas.
+				Sind sie nur gefüllt, gerollt und fritiert, aber nicht überbacken, handelt es sich um Flautas.
+				Tostadas sind flache, belegte Maistortillas, in Bootform heißen sie Chalupas."
+			},
+			{
+				"heading" : "Die Herstellung von Tortillas",
+				"content" : "Früher wurden Tortillas von den Frauen von Anfang bis Ende selbst hergestellt. Dazu wurden die Maiskörner von den Kolben gelöst und in Wasser gekocht. Nach dem Erkalten wurden die Körner solange zwischen den Händen gerieben, bis alle Schalen sich gelöst hatten und entfernt waren. Nach nochmaligem Waschen wurden die Maiskörner getrocknet und auf einem Stein zerrieben. Das so gewonnene Mehl wurde mit etwas Schmalz oder Oel und lauwarmen Wasser zu Teig verarbeitet. Aus diesem Teig wurden (aus etwa eigrossen Stücken) mit den Händen die hauchdünnen Fladen geformt und auf heissen Steinen getrocknet.
+				Heute kann man in Mexiko die fertigen Tortillas in vielen Geschäften in Kühlregalen finden oder in Tortillabäckereien ofenwarm kaufen. Viele Hausfrauen bereiten ihre Tortillas allerdings noch heute selbst zu. Dazu wird ein spezielles Maismehl verwendet. Es wird in Deutschland unter der Bezeichnung “Masa Harina” gehandelt. Dieses Mehl gibt es in einigen Städten in speziellen Lebensmittelläden zu kaufen."
+			},
+			{
+				"heading" : "Tipp",
+				"content" : "Nachos selbst hergestellt: Sie brauchen ausgetrocknete Maistortillas nicht wegzuwerfen. Mit diesen trockenen Tortillas können Sie schmackhafte Nachos zaubern. Zerschneiden Sie die Tortillas in kleine Stücke und frittieren Sie diese kurz in heissem Oel. Mit etwas scharfer Tomatensauce übergossen und mit Käse gratiniert, ergibt dies ein herrliches Gericht für Zwischendurch."
+			}
+        ]
+    },
+    {
+        "name" : "Bohnen",
+        "introduction" : "Neben Mais, Chilis und Tortillas gehören Bohnen in fast alle mexikanischen Kochtöpfe und gelten seit jeher als interessante “Stärkealternative”. Aber auch als Beilage, Salat oder als Füllung in Chilis oder Sandwiches bilden Bohnen und deren Zubereitungen das Grundgerüst der mexikanischen Kochkultur.
+		Dabei finden Sie auf den Märkten viel mehr Sorten als hierzulande: Es gibt schwarze, braune, rote, gefleckte, weiße ganz unterschiedlicher Größen.
+		Als Bohnen bezeichnet man die Hülsen und Samen einiger Gattungen der Schmetterlingsblütler oder Leguminosen. Als Hülsenfrüchte bezeichnet man die reifen, getrockneten Samen dieser Leguminosen.
+		Bohnen sind nur gegart zum Verzehr geeignet. Rohe Bohnen enthalten Phasin, ein giftiges Eiweiß, welches beim Kochen zerfällt. Da Hülsenfrüchten einige essentielle Aminosäuren fehlen, ist eine Ergänzung durch Fleisch, Ei, Milch und Getreideeiweiß erforderlich. Der relativ hohe Zellulosegehalt bewirkt eine langsame Ausnutzung der Nährstoffe.",
+        "sections" : [
+            {
+                "heading" : "Sehr verbreitet: Schwarze Bohnen",
+                "content" : "Frijoles Negros – die schwarzen Bohnen – sind die in Mexiko am häufigsten verwendete Bohnensorte. Auch in den Küchen Südeuropas ist sie bekannt. Ob sie nun von Amerika nach Europa gebracht wurde oder umgekehrt, ist uns nicht bekannt.
+				Es handelt sich um eine sehr aromatische Bohne, die in Mexiko nach altem und traditionellem Rezept püriert und mit Schweineschmalz verfeinert wird. Als Exportartikel findet man diese Bohne meist nur getrocknet oder auch püriert in Konserven von “Herdez” oder “La Costeña”.
+				Aus der TexMex-Küche kennen Sie Frijoles Refritos vielleicht als Refried Beans. Unser Tipp: Kaufen Sie kein heimisches Bohnenpüree-Produkt aus (helleren) Kidneybohnen. Es lohnt sich, ein original Import-Produkt der genannten Marken zu besorgen.
+				Frijoles Negros dienen zur Herstellung von Molletes (eine Art Toast), Enchiladas, Tacos dorados (frittierte Maistortillarollen) oder als Beilage zu Fleischgerichten. Selten werden Frijoles Negros als eigenständige Mahlzeit eingenommen."
+            },
+			{
+				"heading" : "Zubereitungstipps für Bohnen",
+				"content" : "Da das harte Zellulosegerüst der Schalen die Quellung hemmt, haben Hülsenfrüchte eine lange Einweich- und Garzeit. Sie sollten daher schon am Vortag eingeweicht werden. Geschälte Hülsenfrüchte benötigen eine kürzere Einweich- und Garzeit.
+				Das Einweichwasser mit den gelösten Nähr- und Wirkstoffen sollte zum Kochen mitverwendet werden.
+				Um den Geschmack der Bohnen zu verstärken, geben Sie am besten eine in kleine Stücke geschnittene Zwiebel dem Kochwasser hinzu. Salz, Zitrone oder Essig erst nach dem Garen hinzufügen, da sonst das Weichwerden verzögert wird."
+			}
+        ]
+    }
+]

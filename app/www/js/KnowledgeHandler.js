@@ -1,6 +1,6 @@
 var KnowledgeHandler = function (container, pageId) {
 	this.TAG = 'KnowledgeHandler => ';
-	this.keywordFile = 'ingredients.json';
+	this.keywordFile = 'ingredients_complete.json';
 	this.keywords = '';
 	this.container = container;
 
@@ -44,6 +44,7 @@ KnowledgeHandler.prototype.setPopupHandler = function(){
 
 	this.loadKeywordList(function (event, result) {
 		self.keywords = result;
+		console.log(self.keywords);
 		self.managePopups();
 	});
 };

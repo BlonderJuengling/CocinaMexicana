@@ -93,7 +93,7 @@ var app = {
             }
         });
 
-		$("#recipeByIngredient").on('pagebeforeshow',function(event,data){
+		$("#recipeByIngredient").on('pagebeforecreate',function(event,data){
             $("#recipeByIngredient").load('content/recipe-by-ingredients.html');
         });
 
