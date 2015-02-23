@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="de.uniwue.elearn.cocina" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>CocinaMexicana</name>
+    <name>Cocina Mexicana</name>
     <description>
-        A sample app for elearning lecture on uni wuerzburg.
+        A small mexican cooking app created for elearning aspects.
     </description>
     <author email="handwerker.thomas@gmail.com" href="http://www.uni-wuerzburg.de">
         Cocina Mexicana Team
     </author>
     <content src="index.html" />
     <access origin="*" />
+
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="landscape" />
+    <preference name="fullscreen" value="false" />
+    <preference name="target-device" value="tablet" />
+    <preference name="android-minSdkVersion" value="14" />
+
+    <icon src="res/icon.png" />
 </widget>
