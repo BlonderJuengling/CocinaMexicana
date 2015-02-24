@@ -17,7 +17,8 @@ class DbConnect
 			{
 			self::$instance = new PDO(
                 "mysql:dbname=". $dbConfig['db_name'] .";host=". $dbConfig['db_host'] .";port=". $dbConfig['db_port'],
-                $dbConfig['db_user'], $dbConfig['db_password']);
+                $dbConfig['db_user'], $dbConfig['db_password'],
+                array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 			self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 		return self::$instance;

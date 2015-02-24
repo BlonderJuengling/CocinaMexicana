@@ -277,4 +277,23 @@ class DbHandler {
 			return NULL;
 		}
 	}
+
+	/**
+	 * Return list of available ranks in db and all information to ranking
+	 * @return Array ranklist
+	 */
+	public function getRankList() {
+		$statement = $this->conn->prepare("SELECT * FROM cm_ranks");
+		$statement->execute();
+
+		if($statement) {
+			$result = $statement->fetchAll(PDO::FETCH_OBJ);
+			$statement->closeCursor();
+			return $result;
+		}
+		else {
+			$statement->closeCursor();
+			return NULL;
+		}
+	}
 }

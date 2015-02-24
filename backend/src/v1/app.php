@@ -311,6 +311,28 @@ $app->post('/quiz', 'authenticate', function () use ($app) {
 });
 
 /**
+ * Ranks - get ranks, promotion criterion and all ranking info
+ * url - /ranks
+ * method - GET
+ */
+$app->get('/ranks', function () use ($app) {
+	$response = array();
+	$db = new DbHandler();
+
+	$rankList = $db->getRankList();
+	if($rankList != NULL) {
+		$response['error'] = false;
+		$response['ranks'] = $rankList;
+		echoResponse(200, $response);
+	}
+	else {
+		$response['error'] = true;
+		$response['message'] = 'Something went wrong while requesting rank information';
+		echoResponse(200, $response);
+	}
+});
+
+/**
  * Necessary for preflight CORS requests from ajax
  * url - /*wildcard*
  * method - OPTIONS
