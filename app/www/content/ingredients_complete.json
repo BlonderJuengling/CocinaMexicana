@@ -94,5 +94,57 @@
 				"content" : "<ul><li>Da das harte Zellulosegerüst der Schalen die Quellung hemmt, haben Hülsenfrüchte eine lange Einweich- und Garzeit. Sie sollten daher schon am Vortag eingeweicht werden. Geschälte Hülsenfrüchte benötigen eine kürzere Einweich- und Garzeit.<\/li><li>Das Einweichwasser mit den gelösten Nähr- und Wirkstoffen sollte zum Kochen mitverwendet werden.<\/li><li>Um den Geschmack der Bohnen zu verstärken, geben Sie am besten eine in kleine Stücke geschnittene Zwiebel dem Kochwasser hinzu. Salz, Zitrone oder Essig erst nach dem Garen hinzufügen, da sonst das Weichwerden verzögert wird.<\/li><\/ul>"
 			}
         ]
+    },
+    {
+        "name" : "Kürbis",
+        "introduction" : "Wir Europäer entdecken den Kürbis und seine enorme Sortenvielfalt gerade erst wieder – in Nord- und Südamerika hat er immer seinen Platz in der Küche gehabt. Kürbis ist eine uralte Kulturpflanze des Kontinents: Wissenschaftler gehen anhand archäologischer Funde davon aus, dass verschiedene Arten bereits zwischen 5000 und 3000 v. Chr. von Indios in Peru und Mexico zusammen mit Mais und Bohnen angebaut wurden.",
+        "sections" : [
+            {
+                "heading" : "Kürbis & Süßkartoffeln vom Straßenhändler",
+                "content" : "Mexikaner mögen Kürbis gern als süßen Snack: Kürbisse werden in kleinere Stücke geschnitten und in einer aus braunem Zucker bestehenden Masse mariniert. In Aluminiumfolie eingepackt, wird der Kürbis in einem mobilen Feuer-Ofen gebacken und von Straßenhändlern verkauft. Die Verkäufer ziehen durch die Gassen und Quartiere und bieten neben Kürbissen auch gebackene Süsskartoffeln (Camotes) und Gemüsebananen (Platanos Machos) an. Mit einem grellen Pfeifton, der durch eine spezielle Pfeife entsteht, machen die Verkäufer auf sich aufmerksam."
+            },
+			{
+                "heading" : "Tipp: Gebackener Kürbis selbst gemacht",
+                "content" : "Kürbis schälen, in Stücke von etwa 5 mal 5 Zentimetern schneiden, 500 g abwiegen. 100 ml Wasser mit 150 g braunem Zucker zu einem etwas dickeren Sirup kochen, zuletzt etwas Zimt zufügen. Kürbisstücke mit der noch warmen Marinade vermischen und etwa eine Stunde ziehen lassen. Danach Kürbis in Alufolie einwickeln und im Ofen backen, bis der Kürbis weich ist."
+            }
+        ]
+    },
+    {
+        "name" : "Kaktusblätter",
+        "introduction" : "Schon die Azteken und Mayas haben Blätter und Früchte des verbereiteten Ohrenkaktus (Opuntia ficus indica) zu kulinarischen Genüssen umgewandelt. Sie schätzten die Pflanze auch wegen ihrer Heilkraft und nutzten sie als Medizin. Heute ist erwiesen: Opuntia ist das einzige Lebensmittel, das eine anti-diabetische Wirkung besitzt! Die gezupften und geschälten Blätter des Ohrenkaktus werden liebevoll “Nopales” oder “Nopalitos” genannt. Aus ihnen zaubern die Mexikaner Salate und verschiedene Gemüse-, Fleisch-, und Reisgerichte.",
+        "sections" : [
+            {
+                "heading" : "Tunas – kein Fisch, sondern Frucht",
+                "content" : "Die leicht stachligen Früchte des Ohrenkaktus nennt man Tunas, hierzulande “Kaktusfeigen”. Von Juni bis August kann man sie in Mexiko frisch auf allen Märkten kaufen. Nach der Saison sind sie nur noch schwer zu finden. Die saftigen Früchte eignen sich bestens zum Rohkonsum oder als frischer Fruchtsaft, “Agua de Tuna”. In der Saison der Kaktusfrüchte wird dieser Durstlöscher im Becher von fliegenden Händlern verkauft. Sie müssen übrigens nicht bis Mexiko fliegen, um Tunas zu probieren. Auch in Tunesien, auf den Kanaren oder in der Türkei wachsen Kaktusfeigen. In Italien heißen sie “fichi d’india”, in den USA “prickly pears”."
+            }
+        ]
+    },
+    {
+        "name" : "Küchenkräuter",
+        "introduction" : "Die mexikanische Küche ist neben der Asiatischen, der Französischen und der Italienischen weltweit die Viertbeliebteste. Und das nicht ohne Grund. Für den typisch mexikanischen Geschmack sorgen Kräuter wie Epazote (Gänsefuss) und Koriander. Sie sind die beiden wichtigsten Kräuter Mexikos.",
+        "sections" : [
+            {
+                "heading" : "Epazote",
+                "content" : "Epazote ist ein Teekraut mit einem an Zitronen erinnernden Aroma, das frisch verwendet wird. In Mexiko gehört es in alle Bohnengerichte. Zum Leidwesen vieler Liebhaber der mexikanischen Küche ist Epazote in Europa nicht erhältlich. Als Alternative kann aber auch etwas Zitronenmelisse verwendet werden."
+            },
+			{
+                "heading" : "Koriander",
+                "content" : "Frischer Koriander ist einfacher zu bekommen als Epazote. Versuchen Sie es in einem chinesischen Lebensmittelgeschäft, falls Sie im Supermarkt oder auf dem Wochenmarkt nicht fündig geworden sind. Denn Koriander kommt in asiatischen Gerichten oft vor. Die zarten Blätter (viel zarter als glatte Petersilie) haben ein sehr intensives Aroma, etwas zitronig-seifig. Allerdings ist das Gewürz nicht jedermans Sache. Verwenden Sie es daher immer frisch, sehr sparsam und erst kurz vor dem Servieren. Getrockneter Koriander ist ein schlechter Ersatz, aber manchmal notwendig, wenn Sie gar keinen frischen Koriander bekommen."
+            },
+			{
+                "heading" : "Vanille – nicht nur für Süßspeisen",
+                "content" : "Mexiko, 1519: Spanische Soldaten erobern binnen zwei Jahren das Aztekenreich. Sie sind voller Hoffnung, schwer beladen mit Schätzen wieder heimzukehren – und finden ein Gewürz, das fast noch wertvoller ist als Gold: Vanille, die Frucht einer Orchidee. Schon Jahrhunderte vor den Spaniern wußten die Azteken schon um den intensiven Geschmack der Vanilleschote. Ihr Herrscher Montezuma schätzte die süßlich-herbe Würze, um sein königliches Schokoladengetränk tlilxochitl damit zu verfeinern. Die Spanier brachten Vanille mit nach Europa, aber erst durch einen Kunstgriff französischer Anbauer – künstliche Bestäubung der Pflanze im Gewächshaus – ließen sich große Erträge erzielen. In der mexikanischen Küche wird Vanille nicht nur in Desserts verwendet, sondern verleiht auch Fisch- und Geflügelgerichten besonderes Aroma."
+            }
+        ]
+    },
+    {
+        "name" : "Süßkartoffeln",
+        "introduction" : "Die Süßkartoffel (Camote) gewinnt auch in Europa ständig an Beliebtheit. Dieses spezielle Wurzelgemüse hat – wie auch die normale Kartoffel – ihren Ursprung in Amerika. Sie ist aber nicht mit der normalen Kartoffel verwandt. Leicht gelblich erinnert sie im Geschmack an Karotten, denn wie diese enthält sie Karotin.",
+        "sections" : [
+            {
+                "heading" : "Camote vom Straßenhändler",
+                "content" : "Während der US-Bürger die Batate hauptsätzlich zu Thanksgiving mit Marshmallows isst, genießt der Mexikaner seine Camote (so werden Süßkartoffeln in Mexiko genannt) im Ofen gegrillt – Kohlengeschmack inklusive. Unkompliziertes Rezept also: Einfach in Alufolie einwickeln und in heiße Asche legen. Auf dieselbe Weise werden auch Gemüsebananen gegrillt. Da aber durch die große Hitze die Banane weich wird, erinnert sie nach dem Garen eher an Bananenmus!<p>Camote-Verkäufer fahren mit meistens selbstgebastelten, rollenden Grillstationen durch die engen Strassen in Mexikos Wohnquartieren. Sie machen sich bemerkbar durch ein am Grill speziell befestigtes Horn, was im Ton einem Schiffshorn nahe kommt. Da diese Grillstationen alles andere als sicher sind, fängt öfters eine solche Station Feuer und muss schnell gelöscht werden. Ein tragisches Ereignis, denn oft verliert so ein Camote-Verkäufer mit seinem Wagen seine Existenz.<\/p>"
+            }
+        ]
     }
 ]
