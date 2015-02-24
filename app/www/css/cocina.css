@@ -56,7 +56,7 @@ hr {
 }
 
 .main-page-slider-wrapper {
-	max-width: 50em;
+	width: 80%;
 	margin: auto;
 	padding-top: 2em;
 }

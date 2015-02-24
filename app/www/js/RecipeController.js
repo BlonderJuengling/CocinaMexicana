@@ -109,8 +109,11 @@ RecipeController.prototype.buildRecipeQuiz = function(quizId) {
 	var quizUrl = this.moodleBaseUrl + quizId;
 
 	$('.recipe-quiz')
-		.append('<a href="' + quizUrl + '" data-role="button" rel="external" target="_blank" class="coc-btn">Moodle Quiz starten</a>')
+		.append('<a data-role="button" class="coc-btn">Moodle Quiz starten</a>')
 		.enhanceWithin();
+	$('.recipe-quiz').find('a:first').on('click', function () {
+		window.open(quizUrl, '_system');
+	});
 };
 
 RecipeController.prototype.setFeedbackVisiblity = function() {

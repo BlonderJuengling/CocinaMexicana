@@ -1,4 +1,4 @@
-var	BaseRequestUrl = 'http://localhost/cocina/api/v1',
+var	BaseRequestUrl = 'http://www.rhoenkaff.de/cocina/api/v1',
 
 	UserStatus = {
 		GUEST: 0,
