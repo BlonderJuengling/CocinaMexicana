@@ -102,7 +102,9 @@ var app = {
         });
 
 		$("#recipeByIngredient").on('pagebeforecreate',function(event,data){
-            $("#recipeByIngredient").load('content/recipe-by-ingredients.html');
+            $("#recipeByIngredient").load('content/recipe-by-ingredients.html', function () {
+                $(this).enhanceWithin();
+            });
         });
 
         $('#errorPopup .ui-content a').on('click', function () {

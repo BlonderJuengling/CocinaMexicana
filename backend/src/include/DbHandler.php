@@ -242,7 +242,7 @@ class DbHandler {
 	 */
 	public function getUniqueRankId($category, $sort) {
 		$statement = $this->conn->prepare("SELECT id FROM cm_ranks WHERE sort = :sort AND category = :cat");
-		$statement->bindParam(':cat', utf8_decode($category), PDO::PARAM_STR);
+		$statement->bindParam(':cat', $category, PDO::PARAM_STR);
 		$statement->bindParam(':sort', $sort, PDO::PARAM_INT);
 		$statement->execute();
 
@@ -270,7 +270,7 @@ class DbHandler {
 		if($statement) {
 			$result = $statement->fetch();
 			$statement->closeCursor();
-			return utf8_encode($result['rank']);
+			return $result['rank'];
 		}
 		else {
 			$statement->closeCursor();

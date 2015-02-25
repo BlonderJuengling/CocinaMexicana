@@ -1,6 +1,7 @@
 var Userpanel = function () {
 	this.TAG = 'Userpanel => ';
 	this.user = null;
+	this.template = 'userpanel.html';
 }
 
 Userpanel.prototype.setUser = function(user) {
@@ -14,42 +15,101 @@ Userpanel.prototype.open = function() {
 		return;
 	}
 
-	$('#userpanel .ui-content').html(this.buildUserpanelPage()).enhanceWithin();
+	var self = this;
+	$('#userpanel .ui-content').load('content/' + this.template, function () {
+		$('#ranking-tbl-wrapper').hide();
+
+		self.renderUserInformation($(this));
+		self.requestRankInformation();
+		self.setEventHandler();
+
+		if(!self.user.isClassQuizDone()) {
+			$('#userpanel .hint-quiz').show();
+		}
+
+
+
+		$(this).enhanceWithin();
+	});
+};
+
+Userpanel.prototype.renderUserInformation = function(uiContainer) {
+	var user = this.user.getCurrentUser();
+
+	$(uiContainer).find('#user-username').text(user.username);
+	$(uiContainer).find('#user-firstname').text(user.firstname);
+	$(uiContainer).find('#user-lastname').text(user.lastname);
+	$(uiContainer).find('#user-email').text(user.email);
+	// do fancy stuff here ;D
+};
+
+Userpanel.prototype.requestRankInformation = function() {
+	var self = this,
+		request = $.ajax({
+			url: BaseRequestUrl + '/ranks',
+			type: 'GET',
+			dataType: 'json'
+		});
+
+	request.done(function (response) {
+		if(response.error) {
+			alert(response.message);
+			return;
+		}
+
+		var ranks = response.ranks;
+		self.setUserCurrentRank(ranks);
+		self.buildDetailedRankInfo(ranks);
+	});
+
+	request.fail(function (jqXHR, status) {
+		console.log(self.TAG + 'Error | Status: ' + status + '; jqXHR: ' + JSON.stringify(jqXHR));
+	});
+};
+
+Userpanel.prototype.setUserCurrentRank = function(availableRanks) {
+	var rankSelector = $('#userpanel .ui-content').find('#user-rank');
 
 	if(!this.user.isClassQuizDone()) {
-		$('#userpanel .hint-quiz').show();
+		$(rankSelector).text('"noch nicht eingestuft"');
+		return;
 	}
 
-	$('#logout-submit-btn').on('click', function (event) {
-		event.preventDefault();
+	var self = this,
+		userRank = $.grep(availableRanks, function (rank) { return rank.id === self.user.getCurrentRankId(); })[0];
+	$(rankSelector).text(userRank.rank + ' (' + userRank.category + ')');
+};
 
+Userpanel.prototype.setEventHandler = function() {
+	$('#show-complete-ranking-btn').on('click', function() {
+		var uiContainer = $('#ranking-tbl-wrapper');
+		$(uiContainer).toggle();
+
+		if($(uiContainer).is(':visible'))
+			$(this).text('Rangsystem ausblenden');
+		else
+			$(this).text('Rangsystem einblenden');
+	});
+	$('#cert-dl-btn').on('click', function (event) {
+		event.preventDefault();
+		alert('Kommt noch ...');
+	});
+	$('#logout-btn').on('click', function (event) {
+		event.preventDefault();
 		app.loginHandler.logout();
 		$.mobile.changePage('');
 	});
 };
 
-Userpanel.prototype.buildUserpanelPage = function() {
-	var panelContent = '';
-
-	panelContent += '<h2>Hallo ' + this.user.getUsername() + ',</h2>';
-	panelContent += this.appendClassQuizHint(this.user.isClassQuizDone());
-	panelContent += '<p>Noch gibt es hier keine Funktion, aber schon bald folgt hier mehr! <br />' +
-		'<br />' +
-		'<button class="ui-shadow ui-btn ui-corner-all" data-theme="b" type="submit" id="logout-submit-btn">Ausloggen!</button>' +
-		'<p>&nbsp;</p>';
-
-	panelContent += this.appendUserForDebugging(this.user.getCurrentUser());
-
-	return panelContent;
-};
-
-Userpanel.prototype.appendClassQuizHint = function(isQuizDone) {
-	return '<div class="hint-quiz">Du hast bisher noch nicht unser Einstufungsquiz gespielt.' +
-		'Bitte hol dies schnellstmöglich nach, damit wir eine Einschätzung haben, wie gut du dich bereits ' +
-		'in der mexikanischen Küche auskennst.<br /><br />' +
-		'<a data-role="button" class="coc-btn" href="#classQuiz">Hier gehts zum Quiz</a></div>';
-};
-
-Userpanel.prototype.appendUserForDebugging = function(user) {
-	return '<span class="debugging-info">' + JSON.stringify(user) + '</span>';
+Userpanel.prototype.buildDetailedRankInfo = function(availableRanks) {
+	var rankTableBody = $('#ranking-tbl').find('tbody');
+	availableRanks.forEach(function (item, index) {
+		var tblRow =
+			'<tr>' +
+			'<td>' + item.rank + '</td>' +
+			'<td>' + item.category + '</td>' +
+			'<td>' + item.promotion_criterions + ' Rezepte</td>' +
+			'</tr>';
+		$(rankTableBody).append(tblRow);
+	});
 };

@@ -341,3 +341,8 @@ img.recipe-list-preview {
 	height: 4em;
 	width: 5em;
 }
+
+#ranking-tbl-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
