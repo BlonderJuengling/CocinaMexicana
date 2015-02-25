@@ -1,0 +1,44 @@
+{
+    "id" : "4",
+    "title" : "Burrito gefüllt mit Hackfleisch und Gemüse, überbacken",
+    "level" : "mittel",
+    "time" : "45 Minuten",
+    "kind" : "Hauptgericht",
+    "feature" : "",
+    "ingredients" : [
+        "8|Tortilla/s",
+        "|gemischtes Hackfleisch",
+        "|Zwiebeln",
+        "|Zucchini",
+		"|Karotten",
+		"|Brokkoli",
+		"|Creme fraiche",
+		"|Frischkäse",
+		"|Streukäse",
+        "1 Dose|Kidneybohnen",
+        "1 Dose|Mais",
+        "1 EL|Gewürzmischung",
+        "|Salz und Pfeffer"
+    ],
+    "preperation" : [
+        "Zwiebeln schälen und in kleine Würfel schneiden",
+        "Karotten und Zucchini waschen und in Würfel schneiden",
+        "Brokkoliröschen klein schneiden",
+        "Mais und Bohnen abtropfen lassen",
+		"Öl in der Pfanne erhitzen, Zwiebeln zugeben und leicht anbraten",
+		"Karotten, Zucchini und Brokkoli in Pfanne geben und kurz mitbraten",
+		"Kidneybohnen und Mais hinzufügen",
+		"Creme fraiche und Gewürzmischung dazugeben, mit Salz und Pfeffer abschmecken und für x Minuten garen lassen",
+		"Backofen auf 180°C (Umluft) vorheizen",
+		"Tortillas mit Frischkäse bestreichen",
+		"Tortillas mit der Gemüse-Hackfleisch-Mischung füllen, einrollen, und die Rolle mit Zahnstochern fixieren",
+		"mit Käse bestreuen",
+		"im Backofen für ca. 15 Minuten überbacken"
+    ],
+    "quiz_id" : "",
+    "images" : [
+        "recipe_4_a.jpg",
+        "recipe_4_b.jpg",
+        "recipe_4_c.jpg"
+    ]
+}

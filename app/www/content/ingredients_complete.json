@@ -146,5 +146,53 @@
                 "content" : "Während der US-Bürger die Batate hauptsätzlich zu Thanksgiving mit Marshmallows isst, genießt der Mexikaner seine Camote (so werden Süßkartoffeln in Mexiko genannt) im Ofen gegrillt – Kohlengeschmack inklusive. Unkompliziertes Rezept also: Einfach in Alufolie einwickeln und in heiße Asche legen. Auf dieselbe Weise werden auch Gemüsebananen gegrillt. Da aber durch die große Hitze die Banane weich wird, erinnert sie nach dem Garen eher an Bananenmus!<p>Camote-Verkäufer fahren mit meistens selbstgebastelten, rollenden Grillstationen durch die engen Strassen in Mexikos Wohnquartieren. Sie machen sich bemerkbar durch ein am Grill speziell befestigtes Horn, was im Ton einem Schiffshorn nahe kommt. Da diese Grillstationen alles andere als sicher sind, fängt öfters eine solche Station Feuer und muss schnell gelöscht werden. Ein tragisches Ereignis, denn oft verliert so ein Camote-Verkäufer mit seinem Wagen seine Existenz.<\/p>"
             }
         ]
+    },
+    {
+        "name" : "Zucchini",
+        "introduction" : "Die Zucchini gehört zur Familie der Kürbisgewächse. Kürbis heißt auf italienisch Zucca und die Verkleinerungsform davon ist Zucchini. Ausgewachsene Zucchinis können die Größe von Kürbissen erreichen. Sie sind dann allerdings nicht mehr so aromatisch und saftig, wie die kleineren Zucchinis. Große Zucchinis enthalten dann auch trockene harte Kerne, die man entfernen muß. Die großen Zucchinis eignen sich am besten zum Füllen und überbacken. Im Handel werden hauptsächlich die kleineren Zucchinis von 10-20 cm Länge angeboten. Sie sind saftig und haben noch keine harten Kerne entwickelt. Im Mittelmeerraum werden sehr gerne die ganz jungen kleinen Zucchinis verwendet. Die Erntezeit reicht von Juni bis Oktober. Das Fleisch der Zucchinis ist gut verdaulich, kalorienarm und enthält viel Vitamin B1. Der Geschmack ist milde und leicht nussig. Zucchinis kann man roh z.B. in Salat, gebraten oder gekocht essen. Man braucht nur den Stengelansatz abschneiden. Die Schale kann mitgegessen werden. Auch die große gelbe Blüte ist essbar. Sie wird meist gefüllt und kurz in Olivenöl gebraten, oder frittiert. Kleine Blüten können in Salaten mitverwendet werden. Meist ist die Schale dunkelgrün. Es gibt aber auch gelbe Zucchinis. Da Obst und Tomaten Ethylen absondern, sollte man Zucchinis nicht mit ihnen zusammen lagern. Sonst verderben die Zucchinis schneller. Ursprünglich stammt die Zucchini aus Mexiko und Westindien. Sie ist über Italien auch nach Deutschland gelangt.",
+        "sections" : [
+            {
+                "heading" : "",
+                "content" : ""
+            }
+        ]
+    },
+    {
+        "name" : "Tomatillos",
+        "introduction" : "Diese Frucht ist meist grün (manchmal auch violett) und wird gerne mit grünen Tomaten verwechselt. Spätestestens beim Aufschneiden sieht man aber das unterschiedliche “Innenleben”, und der leicht säuerliche Geschmack, der ein wenig an Stachelbeeren erinnert, ist ebenfalls anders. Zudem sind Tomatillos reich an Mineralstoffen und Vitaminen.\\nDie Verwandtschaft der Tomatillos mit der Andenbeere (Kap-Stachelbeere) ist unübersehbar.\\nIn Mexiko und dem US-Südwesten sind Tomatillos ein wichtiges Gemüse, das in zahlreichen Suppen, Eintöpfen und Salsas Verwendung findet. Dort bekommt man die Früchte frisch in jedem Supermarkt - nicht aber bei uns (in Deutschland haben wir frische Tomatillos bisher nur auf dem Viktualienmarkt in München gesehen).\\nDamit Tomatillos das ganze Jahr über vorrätig sind, können die selbst gezogenen Tomatillos gerne in Portionsbeuteln eingefroren werden (vorher blanchieren und abkühlen lassen). Gerade wenn Mexikanisches so richtig authentisch schmecken soll, kommt man an Tomatillos nicht vorbei. Außer Geschmack verleihen sie Salsa etc. eine leicht sämige Konsistenz, sodass auf Verdickungsmittel verzichtet werden kann.\\nAuch wenn man es immer wieder mal hört oder liest: Tomatillos lassen sich in Rezepten nicht durch grüne Tomaten ersetzen. Geschmack und Konsistenz sind einfach nicht vergleichbar.",
+        "sections" : [
+            {
+                "heading" : "",
+                "content" : ""
+            }
+        ]
+    },
+    {
+        "name" : "Limetten",
+        "introduction" : "Limetten sind - entgegen dem verbreiteten Irrglauben - keine grünen Zitronen, sondern eine eigenständige Zitrusart. Die Mexikanische Limette ist im tropischen Klima des Malaiischen Archipels beheimatet. Bereits im 13. Jh. war sie in Spanien und Frankreich bekannt. Dorthin ist sie vermutlich von Arabern, über Nordafrika oder den Nahen Osten, gelangt.<p>Die Spanier brachten sie in die Karibik und nach Mexiko; Mexiko zählt noch heute zu den Haupterzeugerländern, gefolgt von Brasilien, Ägypten, Indien, Sri Lanka, Iran und Ghana. Anders als die Persische Limette wächst die Mexikanische Limette nur in den Tropen, nicht in den Subtropen.<\/p>",
+        "sections" : [
+            {
+                "heading" : "Verfügbarkeit",
+                "content" : "Limetten sind das ganze Jahr über verfügbar, allerdings spielen die Mexikanischen Limetten eher eine geringe Rolle auf dem internationalen Markt."
+            },
+			{
+                "heading" : "Aussehen, Geschmack, Charakteristika",
+                "content" : "Sie ähneln in ihrer Form den Zitronen. Die Enden sind jedoch abgeflachter. Die Mexikanische Limette ist im Vergleich zur Persischen mit 2,5-5 cm Durchmesser wesentlich kleiner. Sie ist jedoch ebenso rund bis eiförmig.<p>Die glatte, sehr dünne Schale haftet fest an dem Fruchtfleisch der Limette an. Während der Reife verfärbt sich die Schale von einem saftigen dunkelgrün zu einem hellgrün bis gelb. Auch das Fruchtfleisch ist hellgrün bis gelb und enthält bis zu 15 Kerne. Die Persische Limette dagegen ist kernlos. Das Aroma beider Arten ist kaum zu unterscheiden.<\/p>"
+            }
+        ]
+    },
+    {
+        "name" : "Kakao",
+        "introduction" : "Für viele ist Schokolade eine Erfindung der Schweizer Chocolatiers. Dem ist nicht so: Schokolade wurde erstmals von den mexikanischen Urvölkern zubereitet und zwar als Ritual. Berichten zufolge waren die Olmeken (ein Indianerstamm in Mittelamerika) die erste Kultur, die die wertvollen Kakao-Früchte und darin enthaltenen Kakaobohnen zu schätzen wusste. Das Volk lebte im feuchten Tiefland der mexikanischen Golfküste.\\nNach den Olmeken entdeckten die Mayas den Geschmack der Schokoladenbohnen. Für sie war Kakao ein Geschenk des Gottes “Quetzalcoatl”. Kakao war kein alltägliches Getränk, es blieb dem Adel vorbehalten und wurde auch als Grabbeigabe verwendet. Die von den Maya konsumierte Schokolade unterscheidet sich deutlich von der heutigen. Zunächst wurde Schokolade ausschließlich getrunken und nicht in fester Form konsumiert. Des Weiteren gab es die unterschiedlichsten Zubereitungsformen mit den – aus unserer Sicht – eigenartigsten Gewürzmischungen (zum Beispiel mit Chilipfeffer, heute aber wieder schwer im Kommen!). Außerdem wurde Kakao in der Regel nicht gesüßt und behielt so seinen eher bitteren, herben Geschmack.",
+        "sections" : [
+            {
+                "heading" : "Kakao als Währung",
+                "content" : "Die Schokolade hatte auch bei den Azteken einen sehr hohen Stellenwert. Sie diente dem hohen Adel und anderen privilegierten Gruppen nicht nur als Genussmittel, sondern wurde auch als Zahlungsmittel verwendet. Wieviel genau eine Kakaobohne zur Zeit des Aztekenreiches wert war, wissen wir heute nicht mehr, aber die Währung der Kakaobohnen bestand auch unter spanischer Herrschaft fort. Aus dem Jahre 1545 ist eine Preisliste verschiedener Waren überliefert:<ul><li>Ein Truthahn hat den Wert von 200 Kakaobohnen.<\/li><li>Ein Hase ist 100 Kakaobohnen wert.<\/li><li>Eine große Tomate entspricht dem Wert einer Kakaobohne.<\/li><\/ul>"
+            },
+			{
+                "heading" : "Heiße Schokolade in Mexiko",
+                "content" : "Im kühlen November werden die Tage kürzer und die Nächte länger. Man wünscht sich an solchen nebligen und düsteren Abenden nichts mehr als ein bisschen Sonne und Wärme. Während das Kaminfeuer prasselt und man gemütlich auf dem Sofa sitzt, trinken viele Leute gerne eine Tasse heiße Schokolade.\\nAuch wenn es in Mexiko (außer im Hochland) kaum kälter als 12°C wird, empfinden die Mexikaner genauso das Bedürfnis nach einem warmen Getränk. An solchen Tagen wird in Mexiko eine warme Maisschokolade, Champurado, zubereitet.\\nDas Getränk wird mit einem speziell dafür entworfenen hölzernen Schneebesen gerührt. Sollten Sie keinen “molinilio”, wie dieser Besen genannt wird, besitzen, können Sie natürlich auch einen normalen Schneebesen verwenden."
+            }
+        ]
     }
 ]

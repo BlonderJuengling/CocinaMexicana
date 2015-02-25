@@ -35,7 +35,7 @@ KnowledgeIngredientController.prototype.loadTemplate = function(callback) {
 
 KnowledgeIngredientController.prototype.setTitle = function(title) {
 	console.log(title);
-	$(this.popupDom).find('h1:first').text(title);
+	$(this.popupDom).find('h1:first').html(title);
 };
 
 KnowledgeIngredientController.prototype.setImages = function(images) {
@@ -43,7 +43,7 @@ KnowledgeIngredientController.prototype.setImages = function(images) {
 };
 
 KnowledgeIngredientController.prototype.setIntroduction = function(introduction) {
-	$(this.popupDom).find('.introduction>.content').text(introduction);
+	$(this.popupDom).find('.introduction>.content').html(introduction);
 };
 
 KnowledgeIngredientController.prototype.setSections = function(sections) {
@@ -61,7 +61,7 @@ KnowledgeIngredientController.prototype.setSections = function(sections) {
 	sections.forEach(function (item, index) {
 		var clone = $(sectionTemplate).clone();
 
-		$(clone).children().eq(0).text(item.heading);
+		$(clone).children().eq(0).html(item.heading);
 		$(clone).children().eq(1).html(item.content);
 
 		$('#detailPopup #sections').append(clone);
