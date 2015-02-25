@@ -48,7 +48,7 @@
         </div><!-- header -->
 
         <!-- home -->
-        <div data-role="page" id="home">
+        <div data-role="page" id="home" class="swipe-container">
             <div role="main" class="ui-content">
                 <div class="hint-quiz">
                     Du hast bisher noch nicht unser Einstufungsquiz gespielt.
@@ -126,15 +126,15 @@
                                 <div class="ui-grid-b">
                                     <div class="ui-block-a">
                                         <label for="level-easy">leicht</label>
-                                        <input type="checkbox" id="level-easy" name="level-easy" data-mini="true">
+                                        <input type="radio" id="level-easy" name="level" data-mini="true">
                                     </div>
                                     <div class="ui-block-b">
                                         <label for="level-medium">mittel</label>
-                                        <input type="checkbox" id="level-medium" name="level-medium" data-mini="true">
+                                        <input type="radio" id="level-medium" name="level" data-mini="true">
                                     </div>
                                     <div class="ui-block-c">
                                         <label for="level-hard">schwer</label>
-                                        <input type="checkbox" id="level-hard" name="level-hard" data-mini="true">
+                                        <input type="radio" id="level-hard" name="level" data-mini="true">
                                     </div>
                                 </div>
                             </td>
@@ -151,15 +151,15 @@
                                 <div class="ui-grid-b">
                                     <div class="ui-block-a">
                                         <label for="appetizer">Vorspeise</label>
-                                        <input type="checkbox" id="appetizer" name="appetizer" data-mini="true">
+                                        <input type="radio" id="appetizer" name="kind" data-mini="true">
                                     </div>
                                     <div class="ui-block-b">
                                         <label for="main-meal">Hauptgericht</label>
-                                        <input type="checkbox" id="main-meal" name="main-meal" data-mini="true">
+                                        <input type="radio" id="main-meal" name="kind" data-mini="true">
                                     </div>
                                     <div class="ui-block-c">
                                         <label for="dessert">Nachspeise</label>
-                                        <input type="checkbox" id="dessert" name="dessert" data-mini="true">
+                                        <input type="radio" id="dessert" name="kind" data-mini="true">
                                     </div>
                                 </div>
                             </td>
@@ -389,7 +389,7 @@
             </ul>
         </div><!-- /navpanel -->
 
-        <script type="text/javascript" src="cordova.js"></script>
+        <!-- <script type="text/javascript" src="cordova.js"></script> -->
         <script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
         <script type="text/javascript" src="lib/jquery.mobile-1.4.5.js"></script>
         <script type="text/javascript" src="lib/pgwslider.min.js"></script>

@@ -65,6 +65,10 @@ User.prototype.isLoggedIn = function() {
 	return true;
 };
 
+User.prototype.getCurrentRankId = function() {
+	return this.user.rank_id;
+};
+
 User.prototype.setCurrentRank = function(rankId) {
 	this.user.rank_id = rankId;
 	this.updateQuizHint();
