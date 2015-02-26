@@ -24,8 +24,9 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.css" />
-        <link rel="stylesheet" type="text/css" href="lib/pgwslider.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/jquery-mobile/jquery.mobile-1.4.5.css" />
+        <link rel="stylesheet" type="text/css" href="lib/pgwslider/pgwslider.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/bxslider/jquery.bxslider.css" />
         <link rel="stylesheet" type="text/css" href="css/cocina-custom.css" />
         <link rel="stylesheet" type="text/css" href="css/cocina.css" />
         <link rel="shortcut icon" href="favicon.ico" />
@@ -205,21 +206,21 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td><img class="recipe-list-preview" /></td>
+                            <td><img class="recipe-list-preview" src="img/recipes/1/recipe_1_a.jpg" /></td>
                             <td><a href="#" id="1">Burrito gefüllt mit Hackfleisch, Mais, Salat und Jalapenoscheiben</a></td>
                             <td>mittel</td>
                             <td>15 Minuten</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td><img class="recipe-list-preview" /></td>
+                            <td><img class="recipe-list-preview" src="img/recipes/2/recipe_2_a.jpg" /></td>
                             <td><a href="#" id="2">Kartoffelspalten mit Gemüse mexikanischer Art und Guacamole</a></td>
                             <td>mittel</td>
                             <td>25 Minuten</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td><img class="recipe-list-preview" /></td>
+                            <td><img class="recipe-list-preview" src="img/recipes/3/recipe_3_a.jpg" /></td>
                             <td><a href="#" id="3">Einfacher Tres Leches Kuchen</a></td>
                             <td>einfach</td>
                             <td>130 Minuten</td>
@@ -389,10 +390,11 @@
             </ul>
         </div><!-- /navpanel -->
 
-        <!-- <script type="text/javascript" src="cordova.js"></script> -->
-        <script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
-        <script type="text/javascript" src="lib/jquery.mobile-1.4.5.js"></script>
-        <script type="text/javascript" src="lib/pgwslider.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="lib/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="lib/pgwslider/pgwslider.min.js"></script>
+        <script type="text/javascript" src="lib/bxslider/jquery.bxslider.js"></script>
         <script type="text/javascript" src="lib/jquery.highlight.js"></script>
         <script type="text/javascript" src="js/Globals.js"></script>
         <script type="text/javascript" src="js/LoginHandler.js"></script>
@@ -406,6 +408,7 @@
         <script type="text/javascript" src="js/IngredientController.js"></script>
 		<script type="text/javascript" src="js/KnowledgeIngredientController.js"></script>
         <script type="text/javascript" src="js/RecipeController.js"></script>
+        <script type="text/javascript" src="js/AnimationController.js"></script>
         <script type="text/javascript" src="js/KnowledgeHandler.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
     </body>

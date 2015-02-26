@@ -346,3 +346,21 @@ img.recipe-list-preview {
 	width: 50%;
 	margin: 0 auto;
 }
+
+#popup-animation-popup.ui-popup-container {
+	width: 820px;
+}
+
+.animation-slider-wrapper {
+	border: 0;
+	padding: 0px 5px;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	overflow: hidden;
+}
+
+ul.animation-slider {
+	-webkit-padding-start: 0px;
+	-webkit-margin-before: 0;
+}
