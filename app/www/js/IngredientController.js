@@ -4,25 +4,21 @@ var IngredientController = function (ingredientData) {
 	this.template = 'ingredient_detail.html';
 	this.popupDom = $('#detailPopup');
 	this.ingredient = ingredientData;
-
-	console.log(this.ingredient);
 }
 
-IngredientController.prototype.parse = function() {
+IngredientController.prototype.parse = function(callback) {
 	var self = this,
 		data = this.ingredient;
 
 	this.loadTemplate(function (event) {
-		console.log(self.TAG + event);
-
 		self.setTitle(data.name);
-		self.setImages(data.images);
 		self.setIntroduction(data.introduction);
 		self.setSections(data.sections);
 		self.setKnowledgeDbBtn(2);
 		$(self.popupDom).enhanceWithin();
 
-		$(self.popupDom).popup('reposition', { positionTo : 'window' });
+		if(typeof(callback) === 'function' && callback !== undefined)
+			callback('popup-content-finished');
 	});
 };
 
@@ -38,12 +34,8 @@ IngredientController.prototype.setTitle = function(title) {
 	$(this.popupDom).find('h1:first').text(title);
 };
 
-IngredientController.prototype.setImages = function(images) {
-	console.log(this.TAG + 'images loading here');
-};
-
 IngredientController.prototype.setIntroduction = function(introduction) {
-	$(this.popupDom).find('.introduction>.content').text(introduction);
+	$(this.popupDom).find('.introduction>.content').html(introduction);
 };
 
 IngredientController.prototype.setSections = function(sections) {
@@ -62,7 +54,7 @@ IngredientController.prototype.setSections = function(sections) {
 		var clone = $(sectionTemplate).clone();
 
 		$(clone).children().eq(0).text(item.heading);
-		$(clone).children().eq(1).text(item.content);
+		$(clone).children().eq(1).html(item.content);
 
 		$('#detailPopup #sections').append(clone);
 	});

@@ -57,7 +57,8 @@ KnowledgeHandler.prototype.managePopups = function(){
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
 			ingredientContr = new KnowledgeIngredientController(ingredient[0]);
 
-		ingredientContr.parse();
-		$('#detailPopup').popup('open', { positionTo : 'window'});
+		ingredientContr.parse(function (event) {
+			$('#detailPopup').popup('open', { positionTo : 'window'});
+		});
 	});
 };

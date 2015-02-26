@@ -8,7 +8,7 @@ var KnowledgeIngredientController = function (ingredientData) {
 	console.log(this.ingredient);
 }
 
-KnowledgeIngredientController.prototype.parse = function() {
+KnowledgeIngredientController.prototype.parse = function(callback) {
 	var self = this,
 		data = this.ingredient;
 
@@ -17,12 +17,12 @@ KnowledgeIngredientController.prototype.parse = function() {
 
 		$(this.popupDom).enhanceWithin();
 		self.setTitle(data.name);
-		self.setImages(data.images);
 		self.setIntroduction(data.introduction);
 		self.setSections(data.sections);
 		self.setQuizBtn(data.quiz_url);
 
-		$(self.popupDom).popup('reposition', { positionTo : 'window' });
+		if(typeof(callback) === 'function' && callback !== undefined)
+			callback('popup-content-finished');
 	});
 };
 
@@ -36,10 +36,6 @@ KnowledgeIngredientController.prototype.loadTemplate = function(callback) {
 KnowledgeIngredientController.prototype.setTitle = function(title) {
 	console.log(title);
 	$(this.popupDom).find('h1:first').html(title);
-};
-
-KnowledgeIngredientController.prototype.setImages = function(images) {
-	console.log(this.TAG + 'images loading here');
 };
 
 KnowledgeIngredientController.prototype.setIntroduction = function(introduction) {

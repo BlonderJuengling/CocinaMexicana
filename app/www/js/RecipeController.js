@@ -3,7 +3,7 @@ var RecipeController = function (recipeId, user) {
 
 	this.id = recipeId;
 	this.template = 'recipe_detail.html';
-	this.keywordFile = 'ingredients.json';
+	this.keywordFile = 'ingredients_complete.json';
 	this.moodleBaseUrl = "https://wuecampus2.uni-wuerzburg.de/moodle/mod/quiz/view.php?id="
 	this.keywords = '';
 	this.recipe = null;
@@ -173,7 +173,9 @@ RecipeController.prototype.highlightKeywords = function() {
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
 			ingredientContr = new IngredientController(ingredient[0]);
 
-		ingredientContr.parse();
-		$('#detailPopup').popup('open', { positionTo : 'window'});
+		ingredientContr.parse(function (eventName) {
+			console.log(self.TAG + eventName);
+			$('#detailPopup').popup('open', { positionTo : 'origin' }).popup('option', 'tolerance', '30,20');
+		});
 	});
 };
