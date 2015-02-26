@@ -35,6 +35,61 @@
 		"mit Käse bestreuen",
 		"im Backofen für ca. 15 Minuten überbacken"
     ],
+    "animations" : [
+        {
+            "title" : "Burrito zubereiten",
+            "steps" : [
+                {
+                    "image" : "burrito_01.jpg",
+                    "caption" : "Notwendige Zutaten auf einen Blick"
+                },
+                {
+                    "image" : "burrito_02.jpg",
+                    "caption" : "Öl in Pfanne erhitzen"
+                },
+                {
+                    "image" : "burrito_03.jpg",
+                    "caption" : "Zwiebel, Karotten, Zucchini und Brokkoli klein schneiden"
+                },
+                {
+                    "image" : "burrito_04.jpg",
+                    "caption" : "Zwiebel in heißen Öl anbraten"
+                },
+                {
+                    "image" : "burrito_05.jpg",
+                    "caption" : "Hackfleisch zugeben und anbraten"
+                },
+                {
+                    "image" : "burrito_06.jpg",
+                    "caption" : "Karotten, Zucchini, Brokkoli, Mais und Kidneybohnen hinzugeben und dünsten"
+                },
+                {
+                    "image" : "burrito_07.jpg",
+                    "caption" : "Creme fraiche hinzugeben, mit Taco-Würzmischung würzen"
+                },
+                {
+                    "image" : "burrito_08.jpg",
+                    "caption" : "Tortillas mit Frischkäse bestreichen"
+                },
+                {
+                    "image" : "burrito_09.jpg",
+                    "caption" : "Bestrichene Tortillas befüllen, einrollen und mit Zahnstochern fixieren"
+                },
+                {
+                    "image" : "burrito_10.jpg",
+                    "caption" : "In Auflaufform platzieren und mit Käse überstreuen"
+                },
+                {
+                    "image" : "burrito_11.jpg",
+                    "caption" : "Fertige befüllte Burritos ca. 15 Minuten im Backofen überbacken"
+                },
+                {
+                    "image" : "burrito_12.jpg",
+                    "caption" : "Burritos fertig zum genießen"
+                }
+            ]
+        }
+    ],
     "quiz_id" : "",
     "images" : [
         "recipe_4_a.jpg",
