@@ -14,7 +14,7 @@ var AnimationController = function (popupContent, animationIndex) {
 
 AnimationController.prototype.buildPopupContent = function() {
 	var self = this,
-		content ='<div class="animation-slider-wrapper"><ul class="animation-slider">',
+		content ='<div class="popup-content animation-slider-wrapper"><ul class="animation-slider">',
 		steps = this.data.animations[this.animationIndex].steps;
 
 	steps.forEach(function (item, index) {

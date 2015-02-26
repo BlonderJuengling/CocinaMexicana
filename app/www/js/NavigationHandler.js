@@ -38,14 +38,10 @@ NavigationHandler.prototype.observePageShowEvent = function() {
 			easing = 'linear';
 
 		if(pageHistory.activeIndex === -1) {
-			$(self.navBackImg).hide(duration, easing, function () {
-				$(self.navMenuImg).show(duration, easing);
-			});
+			$(self.navBackImg).hide(duration, easing);
 		}
 		else {
-			$(self.navMenuImg).hide(duration, easing, function () {
-				$(self.navBackImg).show(duration, easing);
-			});
+			$(self.navBackImg).show(duration, easing);
 		}
 	});
 };
