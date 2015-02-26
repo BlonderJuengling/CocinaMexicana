@@ -33,6 +33,9 @@ RecipeController.prototype.loadTemplate = function(callback) {
 RecipeController.prototype.loadRecipe = function(callback) {
 	var self = this;
 
+	if(this.id == null) // DEBUGGING CONTENT -> REMOVE LATER!!! :)
+		this.id = 2;
+
 	$.getJSON('content/recipe_' + this.id + '.json', function (recipe) {
 		self.recipe = recipe;
 
@@ -58,12 +61,13 @@ RecipeController.prototype.parse = function() {
 	$('#recipe-kind').text(recipe.kind);
 	$('#recipe-feature').text(recipe.feature);
 
-	this.loadMainPicture(recipe.images);
+	this.loadMainPicture(recipe.images, recipe.id);
 	this.buildIngredients(recipe.ingredients);
+	this.buildAnimations(recipe.animations);
 	this.buildPreperations(recipe.preperation);
 	this.buildRecipeQuiz(recipe.quiz_id);
 	this.setFeedbackVisiblity();
-	this.setFeedbackSubmitBtnEvent();
+	this.bindEvents();
 
 	this.loadKeywordList(function (event, result) {
 		self.keywords = result;
@@ -71,8 +75,8 @@ RecipeController.prototype.parse = function() {
 	});
 };
 
-RecipeController.prototype.loadMainPicture = function(images) {
-	var imgPath = 'img/recipes/',
+RecipeController.prototype.loadMainPicture = function(images, recipeId) {
+	var imgPath = 'img/recipes/' + recipeId + '/',
 		imgDom = $('.recipe-image');
 
 	if(images.length === 0)
@@ -95,14 +99,26 @@ RecipeController.prototype.buildIngredients = function(ingredients) {
 	$('.recipe-ingredients table').append(ingrTable);
 };
 
+RecipeController.prototype.buildAnimations = function(animations) {
+	if(animations === undefined || animations.length === 0)
+		return;
+
+	var animationContainer = $('.recipe-animation');
+	animations.forEach(function (item, index) {
+		$( animationContainer )
+			.append('<a href="#" data-role="button" class="open-animation-btn coc-btn" id="' + index + '">' + item.title + '</a>')
+			.enhanceWithin();
+	});
+};
+
 RecipeController.prototype.buildPreperations = function(preperation) {
 	var instruction = '';
 
 	preperation.forEach(function (step, index) {
-		instruction += '<h4>' + (index + 1) + '. Schritt:</h4>' + step + '<br />';
+		instruction += '<li>' + step + '</li>';
 	});
 
-	$('.recipe-preperation').append(instruction);
+	$('.recipe-preperation > ol').append(instruction);
 };
 
 RecipeController.prototype.buildRecipeQuiz = function(quizId) {
@@ -125,11 +141,21 @@ RecipeController.prototype.setFeedbackVisiblity = function() {
 		overlayer.show();
 };
 
-RecipeController.prototype.setFeedbackSubmitBtnEvent = function() {
+RecipeController.prototype.bindEvents = function() {
+	var self = this;
+
 	$('#feedback-submit-btn').on('click', function (event) {
 		event.preventDefault();
 		$(this).addClass('ui-disabled');
 		$('#feedbackPopup').popup('open');
+	});
+
+	$('.open-animation-btn').on('click', function (event) {
+		$.mobile.loading('show');
+		event.preventDefault();
+
+		var animationPopup = new AnimationController(self.recipe, event.target.id);
+		animationPopup.buildPopup();
 	});
 };
 

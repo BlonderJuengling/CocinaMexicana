@@ -13,6 +13,7 @@ var app = {
         $('#errorPopup').popup();
         $('#feedbackPopup').popup().enhanceWithin();
         $('#detailPopup').popup().enhanceWithin();
+        $('#animationPopup').popup().enhanceWithin();
 
         this.displayMainQuizHint();
         this.initMainPageSlider();

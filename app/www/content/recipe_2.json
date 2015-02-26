@@ -29,6 +29,74 @@
         "nächster Schritt mit Soße",
         "Auch hier noch was zubereiten"
     ],
+    "animations" : [
+        {
+            "title" : "Guacamole zubereiten",
+            "steps" : [
+                {
+                    "image" : "guacamole_01.jpg",
+                    "caption" : "Reife Avocado waschen"
+                },
+                {
+                    "image" : "guacamole_02.jpg",
+                    "caption" : "Avocado schälen"
+                },
+                {
+                    "image" : "guacamole_03.jpg",
+                    "caption" : "Avocado halbieren und Kern entfernen"
+                },
+                {
+                    "image" : "guacamole_04.jpg",
+                    "caption" : "Avocado in Stücke schneiden"
+                },
+                {
+                    "image" : "guacamole_05.jpg",
+                    "caption" : "Alles in Schüssel geben"
+                },
+                {
+                    "image" : "guacamole_06.jpg",
+                    "caption" : "Joghurt und Zitronensaft dazugeben"
+                },
+                {
+                    "image" : "guacamole_07.jpg",
+                    "caption" : "Ausgiebig pürieren"
+                },
+                {
+                    "image" : "guacamole_08.jpg",
+                    "caption" : "Tomaten würfeln, Knoblauchzehe fein hacken"
+                },
+                {
+                    "image" : "guacamole_09.jpg",
+                    "caption" : "Tomaten und Knoblauch hinzugeben"
+                },
+                {
+                    "image" : "guacamole_10.jpg",
+                    "caption" : "Tomaten und Knoblauch unterrühren"
+                },
+                {
+                    "image" : "guacamole_11.jpg",
+                    "caption" : "Guacamole mit Salz und Pfeffer abschmecken"
+                },
+                {
+                    "image" : "guacamole_12.jpg",
+                    "caption" : "Fertige Guacamole"
+                }
+            ]
+        },
+        {
+            "title" : "Test-Animation",
+            "steps" : [
+                {
+                    "image" : "guacamole_05.jpg",
+                    "caption" : "Untertitel 1"
+                },
+                {
+                    "image" : "guacamole_06.jpg",
+                    "caption" : "Untertitel 2"
+                }
+            ]
+        }
+    ],
     "quiz_id" : "348134",
     "images" : [
         "recipe_2_a.jpg",
