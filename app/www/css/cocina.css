@@ -238,6 +238,15 @@ hr {
 	overflow: overlay;
 }
 
+.knowledge-dishes-td-left{
+	width:50%;
+	padding-right:1em;
+}
+.knowledge-dishes-td-right{
+	width:50%;
+	padding-left:1em;
+}
+
 .ingr-highlight {
 	font-weight: bold;
 }

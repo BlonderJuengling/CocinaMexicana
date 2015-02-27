@@ -13,6 +13,10 @@ Umgesetzt
 * Wissensdatenbank zu Oberthemen wie Zutaten, mexikanische Biere, Vorurteile
 * 
 
+Teilweise umgesetzt
+-------------------
+
+
 Prototypisch umgesetzt
 ----------------------
 
