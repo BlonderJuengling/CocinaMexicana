@@ -388,3 +388,9 @@ ul.animation-slider {
 textarea {
 	height: auto !important
 }
+
+.cert-helper {
+	font-family: 'times';
+	font-size: 20pt;
+	display: none;
+}
