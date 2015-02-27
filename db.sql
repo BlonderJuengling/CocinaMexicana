@@ -33,8 +33,8 @@ INSERT INTO cm_ranks (rank, sort, category, promotion_criterions) VALUES
 	('Tellerwäscher', 1, 'Anfänger', '3'),
 	('Küchenhilfe', 2, 'Anfänger', '4'),
 	('Fertigtortillakäufer', 3, 'Anfänger', '5'),
-	('Gelegenheitskocher', 1, 'Fortgeschrittener', '6'),
+	('Gelegenheitskoch', 1, 'Fortgeschrittener', '6'),
 	('Mexikourlauber', 2, 'Fortgeschrittener', '8'),
-	('Jalapnozüchter', 1, 'Profi', '15'),
+	('Jalapenozüchter', 1, 'Profi', '15'),
 	('Küchengott', 2, 'Profi', '20'),
 	('Mexikaner', 3, 'Profi', '25');

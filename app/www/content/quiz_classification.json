@@ -1,7 +1,7 @@
 {
     "id" : "classQuiz",
     "title" : "Wie gut kennen Sie die mexikanische Küche?",
-    "intro" : "Das Einstufungsquiz soll lediglich dazu dienen, die grundlegenden Kenntnisse des Besuchers hinsichtlich der mexikanischen Küche zu überprüfen. Anhand des Quiz-Ergebnis wird der Anwender entsprechend seines Grundverständnisses eingestuft und klassifiziert.",
+    "intro" : "Bitte führen Sie dieses Quiz durch, damit wir uns einen Überblick über Ihre Kenntnisse bezüglich der mexikanischen Küche verschaffen können. Basierend auf Ihren Quiz-Ergebnissen werden Sie als Anfänger, Fortgeschritten oder Profi eingestuft und Ihnen werden anschließend auf Sie zugeschnittene Rezepte vorgeschlagen.",
     "questions" : [
         {
             "question" : "Welches dieser drei Gerichte ist ursprünglich nicht typisch mexikanisch?",

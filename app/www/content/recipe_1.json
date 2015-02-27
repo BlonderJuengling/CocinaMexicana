@@ -21,12 +21,19 @@
         "|Cayennepfeffer"
     ],
     "preperation" : [
-        "blubb lubb blubb",
-        "hier jetzt weiter",
-        "was dann bitte?",
-        "und nu?"
+        "Öl in eine Pfanne geben und erhitzen, Hackfleisch hinzugeben und anbraten",
+        "Hackfleisch mit Salz, Pfeffer und Cayennepfeffer würzen",
+        "Zwiebeln fein hacken und Salat in ca 1 cm und ca 4 cm lange Streifen schneiden",
+        "Zwiebeln zu dem Hackfleisch dazugeben",
+        "Wenn beides Farbe genommen hat, die Würzmischung einrühren",
+        "Tomaten in kleine Würfel schneiden und unterrühren",
+        "Wasser hinzugeben und 10-15 min. köcheln lassen bis die Flüssigkeit verdampft ist",
+        "Tortillas in der Mikrowelle erwärmen",
+        "Tortillas mit dem Hackfleisch, Mais, Jalapenos und einem Ring aus Salat belegen",
+        "Ein bisschen von der Käsesoße über den Salat geben",
+        "Tortilla zu einer Rolle einschlagen"
     ],
-    "quiz_id" : "348132",
+    "quiz_id" : "",
     "images" : [
         "recipe_1_a.jpg",
         "recipe_1_b.jpg",

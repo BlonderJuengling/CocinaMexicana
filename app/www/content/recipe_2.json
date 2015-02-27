@@ -26,9 +26,23 @@
         "1|Tomate"
     ],
     "preperation" : [
-        "Irgendwie die Kartoffeln schneiden",
-        "nächster Schritt mit Soße",
-        "Auch hier noch was zubereiten"
+        "Kartoffeln waschen (nicht schälen) und in Spalten schneiden",
+        "Kartoffeln in eine Auflaufform geben und mit Olivenöl beträufeln",
+        "Gewürze hinzugeben und gut vermischen",
+        "Im vorgeheizten Backofen bei 200 Grad (Umluft) 30 min. garen",
+        "Zwiebeln schälen und in Würfel schneiden",
+        "Paprika waschen und ebenfalls in Würfel schneiden",
+        "Mais und Kidneybohnen gut abtropfen lassen",
+        "Chilischote putzen und fein hacken",
+        "Öl erhitzen und Zwiebeln, Paprika und Chili darin anbraten",
+        "Mit den Tomaten ablöschen und 5-10 min. köcheln lassen",
+        "Mais und Bohnen hinzugeben und mit den Gewürzen abschmecken",
+        "Avocado waschen, schälen und den Kern entfernen",
+        "Avocado in Stücke schneiden und in eine Schüssel geben",
+        "Zitronensaft und Joghurt hinzufügen und pürieren",
+        "Knoblauch fein hacken",
+        "Tomate in Würfel schneiden",
+        "Knoblauch und Tomate untermischen und mit Salz und Pfeffer würzen"
     ],
     "animations" : [
         {
@@ -36,7 +50,7 @@
             "steps" : [
                 {
                     "image" : "guacamole_01.jpg",
-                    "caption" : "Reife Avocado waschen"
+                    "caption" : "Sehr reife Avocado waschen"
                 },
                 {
                     "image" : "guacamole_02.jpg",
@@ -85,15 +99,19 @@
             ]
         },
         {
-            "title" : "Test-Animation",
+            "title" : "Weitere beispielhafte Animation",
             "steps" : [
                 {
-                    "image" : "guacamole_05.jpg",
-                    "caption" : "Untertitel 1"
+                    "image" : "dummy_1.jpg",
+                    "caption" : "Kartoffel schälen und nach Belieben vierteln oder achteln"
                 },
                 {
-                    "image" : "guacamole_06.jpg",
-                    "caption" : "Untertitel 2"
+                    "image" : "dummy_2.jpg",
+                    "caption" : "Kartoffelspalten für 30 Minuten in den Ofen"
+                },
+                {
+                    "image" : "dummy_3.jpg",
+                    "caption" : "Paprika in kleine Stücke schneiden"
                 }
             ]
         }

@@ -398,3 +398,7 @@ textarea {
 	font-size: 20pt;
 	display: none;
 }
+
+.knowledge-chapter-text > p {
+	margin-top: 0;
+}
