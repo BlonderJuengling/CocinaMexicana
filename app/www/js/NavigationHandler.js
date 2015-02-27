@@ -5,7 +5,13 @@ var NavigationHandler = function () {
 	this.navImgContainer = $('.nav-image-container');
 	this.navMenuImg = $(this.navImgContainer).find('img').eq(0);
 	this.navBackImg = $(this.navImgContainer).find('img').eq(1);
+
+	this.setMousePointer();
 }
+
+NavigationHandler.prototype.setMousePointer = function() {
+	$(this.navBackImg).css('cursor', 'pointer');
+};
 
 NavigationHandler.prototype.refresh = function () {
 	var navItem = $('#navpanel #usermenu'),

@@ -168,7 +168,8 @@ RecipeController.prototype.highlightKeywords = function() {
 		keywordArray.push(keyword.name);
 	});
 
-	$('.tbl-ingredients').highlight(keywordArray, { element : 'a', className : 'ingr-highlight ui-link', target : '#detailPopup' });
+	$('.tbl-ingredients').highlight(keywordArray, { caseSensitive: true, element: 'a', className: 'ingr-highlight ui-link', target: '#detailPopup' });
+	$('.ingr-highlight').css('cursor', 'pointer').css('text-decoration', 'underline');
 	$('.ingr-highlight').on('click', function (event, data) {
 		var ingredientName = event.target.text,
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });

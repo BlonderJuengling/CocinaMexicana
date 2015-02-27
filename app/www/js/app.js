@@ -144,6 +144,11 @@ var app = {
             $('#errorPopup').popup('close');
         });
 
+        $('#navpanel').find('#quiz-moodle:first').on('click', function (event) {
+            event.preventDefault();
+            window.open('https://wuecampus2.uni-wuerzburg.de/moodle/course/view.php?id=11275', '_system');
+        })
+
         if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Blackberry)/)) {
             console.log('Running on mobile device');
             document.addEventListener('deviceready', this.onDeviceReady, false);
