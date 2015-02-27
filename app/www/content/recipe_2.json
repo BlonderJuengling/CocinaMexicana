@@ -5,6 +5,7 @@
     "time" : "25 Minuten",
     "kind" : "Hauptgericht",
     "feature" : "vegetarisch",
+    "serving_size" : "für 4 Personen",
     "ingredients" : [
         "5 große|Kartoffeln",
         "3 EL|Olivenöl",
@@ -51,11 +52,11 @@
                 },
                 {
                     "image" : "guacamole_05.jpg",
-                    "caption" : "Alles in Schüssel geben"
+                    "caption" : "Alles in eine Schüssel geben"
                 },
                 {
                     "image" : "guacamole_06.jpg",
-                    "caption" : "Joghurt und Zitronensaft dazugeben"
+                    "caption" : "Joghurt und Zitronensaft hinzugeben"
                 },
                 {
                     "image" : "guacamole_07.jpg",

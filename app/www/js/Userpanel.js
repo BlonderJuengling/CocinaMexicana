@@ -27,8 +27,6 @@ Userpanel.prototype.open = function() {
 			$('#userpanel .hint-quiz').show();
 		}
 
-
-
 		$(this).enhanceWithin();
 	});
 };
@@ -81,6 +79,8 @@ Userpanel.prototype.setUserCurrentRank = function(availableRanks) {
 };
 
 Userpanel.prototype.setEventHandler = function() {
+	var self = this;
+
 	$('#show-complete-ranking-btn').on('click', function() {
 		var uiContainer = $('#ranking-tbl-wrapper');
 		$(uiContainer).toggle();
@@ -90,15 +90,28 @@ Userpanel.prototype.setEventHandler = function() {
 		else
 			$(this).text('Rangsystem einblenden');
 	});
+
 	$('#cert-dl-btn').on('click', function (event) {
 		event.preventDefault();
-		alert('Kommt noch ...');
+		self.createCertPdf();
 	});
+
 	$('#logout-btn').on('click', function (event) {
 		event.preventDefault();
 		app.loginHandler.logout();
 		$.mobile.changePage('');
 	});
+};
+
+Userpanel.prototype.createCertPdf = function() {
+	var doc = new jsPDF('p', 'pt', 'a4', false);
+
+	doc.setFontSize(30);
+	doc.text(100,50,'Cocina Mexicana Zertifikat');
+	doc.setFontSize(15)
+	doc.text(20, 100, $('#user-firstname').text() + ' ' + $('#user-lastname').text());
+	doc.text(20, 130, 'Ausgezeichnet als ' + $('#user-rank').text());
+	doc.save('certficate-cocina-mexicana.pdf');
 };
 
 Userpanel.prototype.buildDetailedRankInfo = function(availableRanks) {

@@ -14,7 +14,7 @@
 	</div>
 	<hr />
 	<div class="recipe-ingredients wrapper">
-		<h3>Zutaten</h3>
+		<h3>Zutaten&nbsp;&nbsp;&nbsp;<span id="recipe-serving-size" style="font-size: medium; font-weight: normal;"></span></h3>
 		<table class="tbl-ingredients"></table>
 	</div>
 	<hr />
@@ -47,10 +47,8 @@
 						<label><input type="radio" name="level" value="hard" />schwer</label>
 					</div>
 					<div class="feedback-right">
-						Noch weitere Fragen hier?
-						<label><input type="checkbox" value="1" />Antwort 1</label>
-						<label><input type="checkbox" value="2" />Antwort 2</label>
-						<label><input type="checkbox" value="3" />Antwort 3</label>
+						<label>Feedback:</label>
+						<textarea cols="25" rows="6" data-mini="false">... dein Feedback an uns ...</textarea>
 					</div>
 					<div class="feedback-middle">
 						Benötigte Zeit (Minuten):
@@ -78,12 +76,10 @@
 					</div>
 				</div>
 				<div class="wrapper">
-					<div class="feedback-2-left">
-						<label>Feedback:</label>
-						<textarea cols="25" rows="8" data-mini-false>... dein Feedback an uns ...</textarea>
-					</div>
-					<div class="feedback-2-right">
-						{ Platzhalter für Bilder-Upload }
+					<div>
+						Bilder hochladen
+     					<input type="file" data-clear-btn="true" name="pic-1" id="pic-upload-1" value="">
+						<input type="file" data-clear-btn="true" name="pic-2" id="pic-upload-2" value=""><input type="file" data-clear-btn="true" name="pic-3" id="pic-upload-3" value="">
 					</div>
 				</div>
 				<br />

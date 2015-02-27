@@ -55,35 +55,9 @@
                     Du hast bisher noch nicht unser Einstufungsquiz gespielt.
                     Bitte hol dies schnellstmöglich nach, damit wir eine Einschätzung haben, wie gut du dich bereits
                     in der mexikanischen Küche auskennst.<br /><br />
-                    <a data-role="button" class="coc-btn" href="#classQuiz">Hier gehts zum Quiz</a></div>
+                    <a data-role="button" class="coc-btn" href="#classQuiz">Hier gehts zum Quiz</a>
                 </div>
                 <div class="main-page-slider-wrapper">
-                    <ul class="pgwSlider">
-                        <li>
-                            <a href="#knowledgeDatabase">
-                                <img src="img/knowledge_db.png" alt="Wissenswertes"
-                                     data-description="Informiere dich über die mexikanische Küche und Bräuche">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#recipeDatabase">
-                                <img src="img/recipe_database.png" alt="Rezepte"
-                                     data-description="Suche nach einem passenden Rezept in unserer Datenbank">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#recipeByIngredient">
-                                <img src="img/recipe_by_ingredient.png" alt="Rezepte nach Zutaten"
-                                     data-description="Finde ein Rezept nach den Zutaten, die du im Kühlschrank hast">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#userpanel">
-                                <img src="img/userpanel.png" alt="Persönlicher Bereich"
-                                     data-description="Verwalte deinen Account, sieh dir deine Statistik an, etc.">
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div><!-- /home -->
@@ -189,7 +163,6 @@
                 <table data-role="table" id="recipe-list-tbl" class="ui-body-d table-stripe ui-shadow ui-responsive">
                     <thead>
                         <tr class="ui-bar-d">
-                            <th>ID</th>
                             <th>&nbsp;</th>
                             <th>Gericht</th>
                             <th>Schwierigkeit</th>
@@ -198,28 +171,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>4</td>
                             <td><img class="recipe-list-preview" src="img/recipes/4/recipe_4_a.jpg" /></td>
                             <td><a href="#" id="4">Überbackener Burrito mit Hackfleisch und Gemüse gefüllt</a></td>
                             <td>mittel</td>
                             <td>45 Minuten</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td><img class="recipe-list-preview" src="img/recipes/3/recipe_3_a.jpg" /></td>
-                            <td><a href="#" id="3">Einfacher Tres Leches Kuchen</a></td>
-                            <td>einfach</td>
-                            <td>130 Minuten</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
                             <td><img class="recipe-list-preview" src="img/recipes/2/recipe_2_a.jpg" /></td>
                             <td><a href="#" id="2">Kartoffelspalten mit Gemüse mexikanischer Art und Guacamole</a></td>
                             <td>mittel</td>
                             <td>25 Minuten</td>
                         </tr>
                         <tr>
-                            <td>1</td>
+                            <td><img class="recipe-list-preview" src="img/recipes/3/recipe_3_a.jpg" /></td>
+                            <td><a href="#" id="3">Einfacher Tres Leches Kuchen</a></td>
+                            <td>einfach</td>
+                            <td>130 Minuten</td>
+                        </tr>
+                        <tr>
                             <td><img class="recipe-list-preview" src="img/recipes/1/recipe_1_a.jpg" /></td>
                             <td><a href="#" id="1">Burrito gefüllt mit Hackfleisch, Mais, Salat und Jalapenoscheiben</a></td>
                             <td>mittel</td>
@@ -397,6 +366,7 @@
         <script type="text/javascript" src="lib/pgwslider/pgwslider.min.js"></script>
         <script type="text/javascript" src="lib/bxslider/jquery.bxslider.js"></script>
         <script type="text/javascript" src="lib/jquery.highlight.js"></script>
+        <script type="text/javascript" src="lib/jspdf.min.js"></script>
         <script type="text/javascript" src="js/Globals.js"></script>
         <script type="text/javascript" src="js/LoginHandler.js"></script>
         <script type="text/javascript" src="js/User.js"></script>

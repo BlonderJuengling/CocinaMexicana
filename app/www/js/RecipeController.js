@@ -60,6 +60,7 @@ RecipeController.prototype.parse = function() {
 	$('#recipe-time').text(recipe.time);
 	$('#recipe-kind').text(recipe.kind);
 	$('#recipe-feature').text(recipe.feature);
+	$('#recipe-serving-size').text('(' + recipe.serving_size + ')');
 
 	this.loadMainPicture(recipe.images, recipe.id);
 	this.buildIngredients(recipe.ingredients);

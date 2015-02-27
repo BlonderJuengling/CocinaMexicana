@@ -5,16 +5,17 @@
     "time" : "45 Minuten",
     "kind" : "Hauptgericht",
     "feature" : "",
+    "serving_size" : "für 6 Personen",
     "ingredients" : [
         "8|Tortilla/s",
-        "|gemischtes Hackfleisch",
-        "|Zwiebeln",
-        "|Zucchini",
-		"|Karotten",
-		"|Brokkoli",
-		"|Creme fraiche",
-		"|Frischkäse",
-		"|Streukäse",
+        "600 gr|gemischtes Hackfleisch",
+        "2|Zwiebeln",
+        "3|Zucchini",
+		"3|Karotten",
+		"1|Brokkoli",
+		"200 gr|Creme fraiche",
+		"100 gr|Frischkäse",
+		"200 gr|Streukäse",
         "1 Dose|Kidneybohnen",
         "1 Dose|Mais",
         "1 EL|Gewürzmischung",
@@ -53,11 +54,11 @@
                 },
                 {
                     "image" : "burrito_04.jpg",
-                    "caption" : "Zwiebel in heißen Öl anbraten"
+                    "caption" : "Zwiebel in heißem Öl anbraten"
                 },
                 {
                     "image" : "burrito_05.jpg",
-                    "caption" : "Hackfleisch zugeben und anbraten"
+                    "caption" : "Hackfleisch hinzugeben und anbraten"
                 },
                 {
                     "image" : "burrito_06.jpg",
@@ -65,7 +66,7 @@
                 },
                 {
                     "image" : "burrito_07.jpg",
-                    "caption" : "Creme fraiche hinzugeben, mit Taco-Würzmischung würzen"
+                    "caption" : "Cremè fraîche hinzugeben, mit Taco-Würzmischung würzen"
                 },
                 {
                     "image" : "burrito_08.jpg",
@@ -81,7 +82,7 @@
                 },
                 {
                     "image" : "burrito_11.jpg",
-                    "caption" : "Fertige befüllte Burritos ca. 15 Minuten im Backofen überbacken"
+                    "caption" : "Fertig befüllte Burritos ca. 15 Minuten im Backofen überbacken"
                 },
                 {
                     "image" : "burrito_12.jpg",
@@ -90,7 +91,7 @@
             ]
         }
     ],
-    "quiz_id" : "",
+    "quiz_id" : "348132",
     "images" : [
         "recipe_4_a.jpg",
         "recipe_4_b.jpg",

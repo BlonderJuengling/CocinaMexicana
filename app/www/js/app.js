@@ -25,12 +25,25 @@ var app = {
     },
     // Bind Event Listeners
     initMainPageSlider: function () {
-        $('.pgwSlider').pgwSlider({
+        $('.main-page-slider-wrapper').load('content/slider_main.html', function () {
+            $('.pgwSliderMain').pgwSlider({
+                displayControls: true,
+                selectionMode: 'mouseOver',
+                autoSlide: false,
+                adaptiveHeight: false,
+                displayControls: false
+            });
+        });
+    },
+    initInfoPageSlider: function () {
+        $('.pgwSliderInfo').pgwSlider({
             displayControls: true,
-            selectionMode: 'mouseOver',
-            autoSlide: false,
+            autoSlide: true,
             adaptiveHeight: false,
-            displayControls: false
+            displayControls: true,
+            displayList: false,
+            transitionDuration: 1000,
+            intervalDuration: 8000
         });
     },
     displayMainQuizHint: function () {
@@ -39,6 +52,14 @@ var app = {
         }
     },
     bindEvents: function() {
+        $('#home').on('pagebeforeshow', function () {
+            // workaround for broken slider-layout happens from time to time
+            if($('#home').find('.pgwSlider.narrow').length > 0) {
+                $('.pgwSliderMain').pgwSlider().destroy();
+                app.initMainPageSlider();
+            }
+        });
+
         $('.swipe-container').on('swiperight', function (event) {
             if(event.swipestart.coords[0] < 30)
                 $('#navpanel').panel('open');
@@ -59,15 +80,17 @@ var app = {
         $('#info').on('pagecreate', function (event) {
             event.preventDefault();
             $('#info > .content-wrapper').load('content/info.html', function () {
-                $('.pgw-slider-info').pgwSlider({
-                    displayControls: true,
-                    autoSlide: true,
-                    adaptiveHeight: false,
-                    displayControls: true,
-                    displayList: false,
-                    transitionDuration: 1500
-                });
+                console.log('create info slider');
+                app.initInfoPageSlider();
             });
+        });
+
+        $('#info').on('pagebeforeshow', function () {
+            // workaround for broken slider-layout happens from time to time
+            if($('#info').find('.pgwSlider.narrow').length > 0) {
+                $('.pgwSliderInfo').pgwSlider().destroy();
+                app.initInfoPageSlider();
+            }
         });
 
         $('#userpanel').on('pagebeforeshow', function () {

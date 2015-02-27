@@ -51,17 +51,6 @@ AnimationController.prototype.buildPopup = function() {
 		}
 	});
 
-	$(document).on('popupbeforeposition', '.ui-popup', function () {
-        var image = $( this ).children( 'img' ),
-            height = image.height(),
-            width = image.width();
-        // Set height and width attribute of the image
-        $( this ).attr({ "height": height, "width": width });
-        // 68px: 2 * 15px for top/bottom tolerance, 38px for the header.
-        var maxHeight = $( window ).height() - 150 + "px";
-        $( "img.photo", this ).css( "max-height", maxHeight );
-    });
-
 	$(document).on('popupafterclose', '#popup-animation', function ()  {
 		$(this).remove();
 	});
