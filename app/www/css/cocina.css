@@ -239,6 +239,10 @@ hr {
 	overflow: overlay;
 }
 
+.knowledge-dish-header{
+	color:#006847;
+}
+
 .knowledge-dishes-td-left{
 	width:50%;
 	padding-right:1em;
