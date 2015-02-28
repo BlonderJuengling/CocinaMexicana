@@ -176,7 +176,6 @@ RecipeController.prototype.highlightKeywords = function() {
 			ingredientContr = new IngredientController(ingredient[0]);
 
 		ingredientContr.parse(function (eventName) {
-			console.log(self.TAG + eventName);
 			$('#detailPopup').popup('open', { positionTo : 'origin' }).popup('option', 'tolerance', '30,20');
 		});
 	});

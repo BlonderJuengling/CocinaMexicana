@@ -13,8 +13,6 @@ Quiz.prototype.load = function(callback) {
 	var self = this;
 
 	$.getJSON('content/' + this.file, function (quizData) {
-		console.log(self.TAG + 'load quiz data finished');
-
 		self.quiz = quizData;
 
 		if(typeof(callback) === 'function' && callback !== undefined) {

@@ -20,11 +20,9 @@ NavigationHandler.prototype.refresh = function () {
 	navItem.empty();
 
 	if(this.isUserLoggedIn()) {
-		console.log(this.TAG + 'user logged in -> show userpanel');
 		navItem.append('<a href="#userpanel">Persönlicher Bereich</a>');
 	}
 	else {
-		console.log(this.TAG + 'only guest -> show login');
 		navItem.append('<a href="#login">Login / Registrieren</a>');
 	}
 

@@ -4,8 +4,6 @@ var KnowledgeIngredientController = function (ingredientData) {
 	this.template = 'knowledge_ingredient_detail.html';
 	this.popupDom = $('#detailPopup');
 	this.ingredient = ingredientData;
-
-	console.log(this.ingredient);
 }
 
 KnowledgeIngredientController.prototype.parse = function(callback) {
@@ -13,8 +11,6 @@ KnowledgeIngredientController.prototype.parse = function(callback) {
 		data = this.ingredient;
 
 	this.loadTemplate(function (event) {
-		console.log(self.TAG + event);
-
 		$(this.popupDom).enhanceWithin();
 		self.setTitle(data.name);
 		self.setIntroduction(data.introduction);
@@ -34,7 +30,6 @@ KnowledgeIngredientController.prototype.loadTemplate = function(callback) {
 };
 
 KnowledgeIngredientController.prototype.setTitle = function(title) {
-	console.log(title);
 	$(this.popupDom).find('h1:first').html(title);
 };
 
@@ -67,6 +62,5 @@ KnowledgeIngredientController.prototype.setSections = function(sections) {
 KnowledgeIngredientController.prototype.setQuizBtn = function(quiz_url) {
 	$(this.popupDom).find('#start-quiz-btn').on('click', function (event) {
 		event.preventDefault();
-		console.log('hier dann neues fenster öffnen bitte');
 	});
 };

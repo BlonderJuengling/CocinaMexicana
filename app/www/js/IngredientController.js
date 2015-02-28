@@ -30,7 +30,6 @@ IngredientController.prototype.loadTemplate = function(callback) {
 };
 
 IngredientController.prototype.setTitle = function(title) {
-	console.log(title);
 	$(this.popupDom).find('h1:first').text(title);
 };
 

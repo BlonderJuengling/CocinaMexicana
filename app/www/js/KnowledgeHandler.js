@@ -20,14 +20,10 @@ KnowledgeHandler.prototype.loadPage = function(id) {
 };
 
 KnowledgeHandler.prototype.setClickHandler = function() {
-	console.log(this.TAG + 'set listener');
-
 	var self = this;
 
 	$(this.container).find('.btn-toggle:visible').on('click', function (event) {
 		event.preventDefault();
-		console.log(event.target.name);
-
 		$('.knowledge-article-chapter > .knowledge-content').eq(event.target.name -1).toggle();
 	});
 };
@@ -44,7 +40,6 @@ KnowledgeHandler.prototype.setPopupHandler = function(){
 
 	this.loadKeywordList(function (event, result) {
 		self.keywords = result;
-		console.log(self.keywords);
 		self.managePopups();
 	});
 };

@@ -80,7 +80,6 @@ var app = {
         $('#info').on('pagecreate', function (event) {
             event.preventDefault();
             $('#info > .content-wrapper').load('content/info.html', function () {
-                console.log('create info slider');
                 app.initInfoPageSlider();
             });
         });

@@ -8,7 +8,7 @@ var AnimationController = function (popupContent, animationIndex) {
 		closebtn : '<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>',
 		header : '<div data-role="header" style="padding: 0.5em">' + this.data.animations[this.animationIndex].title + '</div>',
 		content : this.buildPopupContent(),
-		popup : '<div data-role="popup" id="popup-animation" data-theme="none" data-overlay-theme="b" data-corners="false" data-tolerance="15"></div>'
+		popup : '<div data-role="popup" id="popup-animation" data-dismissible="true" data-theme="none" data-overlay-theme="b" data-corners="false" data-tolerance="15"></div>'
 	};
 }
 
