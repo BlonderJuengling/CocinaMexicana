@@ -20,12 +20,7 @@
                 "content" : "Bei mexikanischem Popcorn gibt es viele Variationen: Einige bestreuen es mit in Essig eingelegten Chilis und krönen das Ganze mit einem kräftigen Schuss rote Chilisauce. Die knusprigen Maiskörner werden nach einer Weile zu einer matschig-scharfen Pampe – sicherlich nicht jedermanns Geschmack, doch schmeckt diese Mischung viel besser als sie aussieht. Probieren Sie es doch mal beim nächsten Film!"
             }
         ],
-        "images" : [
-            "mais_01.jpg",
-            "mais_02.jpg",
-            "mais_03.jpg",
-            "mais_04.jpg"
-        ]
+        "image" : "mais_small.png"
     },
     {
         "name" : "Chilischoten",
@@ -53,7 +48,8 @@
                 "heading" : "Tipp",
                 "content" : "Sind die Früchte noch zu unreif, kann man diese in einer Papiertüte bei Zimmertemperatur einige Tage nachreifen lassen. Sollten sie im Gegenteil bereits zu weich sein, lassen sie sich im Kühlschrank einige Tage bedenkenlos lagern."
             }
-        ]
+        ],
+        "image" : "avocado_small.png"
     },
     {
         "name" : "Tortilla",
@@ -79,7 +75,8 @@
 				"heading" : "Tipp",
 				"content" : "Nachos selbst hergestellt: Sie brauchen ausgetrocknete Maistortillas nicht wegzuwerfen. Mit diesen trockenen Tortillas können Sie schmackhafte Nachos zaubern. Zerschneiden Sie die Tortillas in kleine Stücke und frittieren Sie diese kurz in heissem Oel. Mit etwas scharfer Tomatensauce übergossen und mit Käse gratiniert, ergibt dies ein herrliches Gericht für Zwischendurch."
 			}
-        ]
+        ],
+        "image" : "tortillas_small.png"
     },
     {
         "name" : "Bohnen",
@@ -93,7 +90,8 @@
 				"heading" : "Zubereitungstipps für Bohnen",
 				"content" : "<ul><li>Da das harte Zellulosegerüst der Schalen die Quellung hemmt, haben Hülsenfrüchte eine lange Einweich- und Garzeit. Sie sollten daher schon am Vortag eingeweicht werden. Geschälte Hülsenfrüchte benötigen eine kürzere Einweich- und Garzeit.<\/li><li>Das Einweichwasser mit den gelösten Nähr- und Wirkstoffen sollte zum Kochen mitverwendet werden.<\/li><li>Um den Geschmack der Bohnen zu verstärken, geben Sie am besten eine in kleine Stücke geschnittene Zwiebel dem Kochwasser hinzu. Salz, Zitrone oder Essig erst nach dem Garen hinzufügen, da sonst das Weichwerden verzögert wird.<\/li><\/ul>"
 			}
-        ]
+        ],
+        "image" : "bohnen_small.png"
     },
     {
         "name" : "Kürbis",
@@ -107,7 +105,8 @@
                 "heading" : "Tipp: Gebackener Kürbis selbst gemacht",
                 "content" : "Kürbis schälen, in Stücke von etwa 5 mal 5 Zentimetern schneiden, 500 g abwiegen. 100 ml Wasser mit 150 g braunem Zucker zu einem etwas dickeren Sirup kochen, zuletzt etwas Zimt zufügen. Kürbisstücke mit der noch warmen Marinade vermischen und etwa eine Stunde ziehen lassen. Danach Kürbis in Alufolie einwickeln und im Ofen backen, bis der Kürbis weich ist."
             }
-        ]
+        ],
+        "image" : "kuerbis.png"
     },
     {
         "name" : "Kaktusblätter",
@@ -117,7 +116,8 @@
                 "heading" : "Tunas – kein Fisch, sondern Frucht",
                 "content" : "Die leicht stachligen Früchte des Ohrenkaktus nennt man Tunas, hierzulande “Kaktusfeigen”. Von Juni bis August kann man sie in Mexiko frisch auf allen Märkten kaufen. Nach der Saison sind sie nur noch schwer zu finden. Die saftigen Früchte eignen sich bestens zum Rohkonsum oder als frischer Fruchtsaft, “Agua de Tuna”. In der Saison der Kaktusfrüchte wird dieser Durstlöscher im Becher von fliegenden Händlern verkauft. Sie müssen übrigens nicht bis Mexiko fliegen, um Tunas zu probieren. Auch in Tunesien, auf den Kanaren oder in der Türkei wachsen Kaktusfeigen. In Italien heißen sie “fichi d’india”, in den USA “prickly pears”."
             }
-        ]
+        ],
+        "image" : "kaktusblaetter.png"
     },
     {
         "name" : "Küchenkräuter",
@@ -135,7 +135,8 @@
                 "heading" : "Vanille – nicht nur für Süßspeisen",
                 "content" : "Mexiko, 1519: Spanische Soldaten erobern binnen zwei Jahren das Aztekenreich. Sie sind voller Hoffnung, schwer beladen mit Schätzen wieder heimzukehren – und finden ein Gewürz, das fast noch wertvoller ist als Gold: Vanille, die Frucht einer Orchidee. Schon Jahrhunderte vor den Spaniern wußten die Azteken schon um den intensiven Geschmack der Vanilleschote. Ihr Herrscher Montezuma schätzte die süßlich-herbe Würze, um sein königliches Schokoladengetränk tlilxochitl damit zu verfeinern. Die Spanier brachten Vanille mit nach Europa, aber erst durch einen Kunstgriff französischer Anbauer – künstliche Bestäubung der Pflanze im Gewächshaus – ließen sich große Erträge erzielen. In der mexikanischen Küche wird Vanille nicht nur in Desserts verwendet, sondern verleiht auch Fisch- und Geflügelgerichten besonderes Aroma."
             }
-        ]
+        ],
+        "image" : "kuechenkraeuter.png"
     },
     {
         "name" : "Süßkartoffeln",
@@ -155,7 +156,8 @@
                 "heading" : "",
                 "content" : ""
             }
-        ]
+        ],
+        "image" : "zucchini.png"
     },
     {
         "name" : "Tomatillos",
@@ -165,7 +167,8 @@
                 "heading" : "",
                 "content" : ""
             }
-        ]
+        ],
+        "image" : "tomatillos.png"
     },
     {
         "name" : "Limetten",
@@ -179,7 +182,8 @@
                 "heading" : "Aussehen, Geschmack, Charakteristika",
                 "content" : "Sie ähneln in ihrer Form den Zitronen. Die Enden sind jedoch abgeflachter. Die Mexikanische Limette ist im Vergleich zur Persischen mit 2,5-5 cm Durchmesser wesentlich kleiner. Sie ist jedoch ebenso rund bis eiförmig.<p>Die glatte, sehr dünne Schale haftet fest an dem Fruchtfleisch der Limette an. Während der Reife verfärbt sich die Schale von einem saftigen dunkelgrün zu einem hellgrün bis gelb. Auch das Fruchtfleisch ist hellgrün bis gelb und enthält bis zu 15 Kerne. Die Persische Limette dagegen ist kernlos. Das Aroma beider Arten ist kaum zu unterscheiden.<\/p>"
             }
-        ]
+        ],
+        "image" : "limetten.png"
     },
     {
         "name" : "Kakao",
@@ -193,6 +197,7 @@
                 "heading" : "Heiße Schokolade in Mexiko",
                 "content" : "Im kühlen November werden die Tage kürzer und die Nächte länger. Man wünscht sich an solchen nebligen und düsteren Abenden nichts mehr als ein bisschen Sonne und Wärme. Während das Kaminfeuer prasselt und man gemütlich auf dem Sofa sitzt, trinken viele Leute gerne eine Tasse heiße Schokolade. Auch wenn es in Mexiko (außer im Hochland) kaum kälter als 12°C wird, empfinden die Mexikaner genauso das Bedürfnis nach einem warmen Getränk. An solchen Tagen wird in Mexiko eine warme Maisschokolade, Champurado, zubereitet.<p>Das Getränk wird mit einem speziell dafür entworfenen hölzernen Schneebesen gerührt. Sollten Sie keinen “molinilio”, wie dieser Besen genannt wird, besitzen, können Sie natürlich auch einen normalen Schneebesen verwenden.<\/p>"
             }
-        ]
+        ],
+        "image" : "kakao.png"
     }
 ]

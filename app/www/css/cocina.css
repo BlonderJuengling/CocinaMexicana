@@ -128,11 +128,13 @@ hr {
 
 .recipe-ingredients {
 	margin-top: 1em;
-	margin-bottom: :1em;
+	margin-bottom: 1em;
 }
 
 .tbl-ingredients {
 	margin-left: 1em;
+	float: left;
+	width: 40%;
 }
 
 .feedback-left {
@@ -410,4 +412,25 @@ textarea {
 
 .sources-visible {
 	height: 100%
+}
+
+.ingredient-box {
+	display: none;
+	float: right;
+	overflow: auto;
+	width: 57.5%;
+	position: relative;
+	height: 450px;
+}
+
+.ingredient-img {
+	float: left;
+	height: 100px;
+	margin-right: 1em;
+ 	margin-bottom: 1em;
+}
+
+.ingredient-content {
+	text-align: justify;
+	padding-right: 1em;
 }

@@ -2,7 +2,7 @@ var IngredientController = function (ingredientData) {
 	this.TAG = 'IngredientController => ';
 
 	this.template = 'ingredient_detail.html';
-	this.popupDom = $('#detailPopup');
+	this.contentBox = $('.ingredient-box');
 	this.ingredient = ingredientData;
 };
 
@@ -13,32 +13,37 @@ IngredientController.prototype.parse = function(callback) {
 	this.loadTemplate(function (event) {
 		self.setTitle(data.name);
 		self.setIntroduction(data.introduction);
+		self.setImage(data.image);
 		self.setSections(data.sections);
 		self.setKnowledgeDbBtn(2);
-		$(self.popupDom).enhanceWithin();
+		$(self.contentBox).enhanceWithin();
 
 		if(typeof(callback) === 'function' && callback !== undefined)
-			callback('popup-content-finished');
+			callback('ingredient-content-finished');
 	});
 };
 
 IngredientController.prototype.loadTemplate = function(callback) {
-	$('#detailPopup .ui-content').load('content/' + this.template, function () {
+	$(this.contentBox).load('content/' + this.template, function () {
 		if(typeof(callback) === 'function' && callback !== undefined)
 			callback('template-loaded');
 	});
 };
 
 IngredientController.prototype.setTitle = function(title) {
-	$(this.popupDom).find('h1:first').text(title);
+	$(this.contentBox).find('h1:first').text(title);
 };
 
 IngredientController.prototype.setIntroduction = function(introduction) {
-	$(this.popupDom).find('.introduction>.content').html(introduction);
+	$(this.contentBox).find('.introduction>.content').html(introduction);
+};
+
+IngredientController.prototype.setImage = function(img) {
+	$(this.contentBox).find('img').attr('src', 'img/knowledge/' + img);
 };
 
 IngredientController.prototype.setSections = function(sections) {
-	var sectionsContainer = $('#detailPopup #sections'),
+	var sectionsContainer = $('.ingredient-box #sections'),
 		sectionTemplate = $(sectionsContainer).find('.section:first');
 
 	if(sections === undefined || sections.length === 0) {
@@ -55,12 +60,12 @@ IngredientController.prototype.setSections = function(sections) {
 		$(clone).children().eq(0).text(item.heading);
 		$(clone).children().eq(1).html(item.content);
 
-		$('#detailPopup #sections').append(clone);
+		$('.ingredient-box #sections').append(clone);
 	});
 };
 
 IngredientController.prototype.setKnowledgeDbBtn = function(id) {
-	$(this.popupDom).find('#goto-knowledge-btn').on('click', function (event) {
+	$(this.contentBox).find('#goto-knowledge-btn').on('click', function (event) {
 		app.passDataObject.selectedKnowledgeId = id;
 	});
 };

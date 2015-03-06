@@ -171,12 +171,14 @@ RecipeController.prototype.highlightKeywords = function() {
 	$('.tbl-ingredients').highlight(keywordArray, { caseSensitive: true, element: 'a', className: 'ingr-highlight ui-link', target: '#detailPopup' });
 	$('.ingr-highlight').css('cursor', 'pointer').css('text-decoration', 'underline');
 	$('.ingr-highlight').on('click', function (event, data) {
+		$.mobile.loading('show');
 		var ingredientName = event.target.text,
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName }),
 			ingredientContr = new IngredientController(ingredient[0]);
 
 		ingredientContr.parse(function (eventName) {
-			$('#detailPopup').popup('open', { positionTo : 'origin' }).popup('option', 'tolerance', '30,20');
+			$.mobile.loading('hide');
+			$('.ingredient-box').show();
 		});
 	});
 };
