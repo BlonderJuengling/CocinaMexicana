@@ -402,3 +402,12 @@ textarea {
 .knowledge-chapter-text > p {
 	margin-top: 0;
 }
+
+.sources-hidden {
+	height: 300px;
+	overflow: hidden;
+}
+
+.sources-visible {
+	height: 100%
+}

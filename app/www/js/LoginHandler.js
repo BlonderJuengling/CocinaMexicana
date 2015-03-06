@@ -3,8 +3,8 @@ var LoginHandler = function () {
 
 	this.user = null;
 	this.pass = null;
-	this.errors = new Array();
-}
+	this.errors = [];
+};
 
 LoginHandler.prototype.login = function () {
 	this.errors = []; // clear array with old error information
@@ -17,12 +17,12 @@ LoginHandler.prototype.login = function () {
 	}
 
 	this.validateCredentials(this.user, this.pass);
-}
+};
 
 LoginHandler.prototype.parseCredentialsFromForm = function () {
 	this.user = $('#login-form #login-username').val();
 	this.pass = $('#login-form #login-password').val();
-}
+};
 
 LoginHandler.prototype.isValidInput = function (event) {
 	if(this.user === '')
@@ -34,7 +34,7 @@ LoginHandler.prototype.isValidInput = function (event) {
 		return false;
 
 	return true;
-}
+};
 
 LoginHandler.prototype.validateCredentials = function(username, password) {
 	var self = this,
@@ -78,7 +78,7 @@ LoginHandler.prototype.showError = function () {
 		var error = this.errors[item];
 		$('#error-login-' + error.field).text(error.msg);
 	}
-}
+};
 
 LoginHandler.prototype.clearErrorLabels = function() {
 	$('#login-form .form-error').text('');
@@ -89,10 +89,10 @@ LoginHandler.prototype.clearForm = function() {
 };
 
 LoginHandler.prototype.writeLocalStorage = function (user) {
-	if(window.localStorage != null) {
+	if(window.localStorage !== null) {
 		var session = JSON.parse(window.localStorage.getItem('session'));
 
-		if(session == null) {
+		if(session === null) {
 			localStorage.setItem('session', JSON.stringify(user));
 
 			console.log(this.TAG + 'session data stored in LocalStorage');
@@ -107,16 +107,16 @@ LoginHandler.prototype.writeLocalStorage = function (user) {
 	else {
 		console.log(this.TAG + 'localStorage not available, can\'t handle user session');
 	}
-}
+};
 
 LoginHandler.prototype.logout = function () {
 	this.clearLocalStorage();
 	app.currentUser.clearCurrentUser();
 	app.navHandler.refresh();
-}
+};
 
 LoginHandler.prototype.clearLocalStorage = function () {
-	if(window.localStorage != null) {
+	if(window.localStorage !== null) {
 		window.localStorage.clear('session');
 	}
-}
+};

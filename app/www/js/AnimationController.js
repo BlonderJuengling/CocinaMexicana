@@ -10,7 +10,7 @@ var AnimationController = function (popupContent, animationIndex) {
 		content : this.buildPopupContent(),
 		popup : '<div data-role="popup" id="popup-animation" data-dismissible="true" data-theme="none" data-overlay-theme="b" data-corners="false" data-tolerance="15"></div>'
 	};
-}
+};
 
 AnimationController.prototype.buildPopupContent = function() {
 	var self = this,
@@ -19,7 +19,7 @@ AnimationController.prototype.buildPopupContent = function() {
 
 	steps.forEach(function (item, index) {
 		content += 	'<li><img src="img/recipes/' + self.data.id + '/' + item.image +'"' +
-					'title="' + (index +1) +'. Schritt: ' + item.caption + '" class="photo"/></li>'
+					'title="' + (index +1) +'. Schritt: ' + item.caption + '" class="photo"/></li>';
 	});
 
 	content +='</ul></div>';

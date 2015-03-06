@@ -4,7 +4,7 @@ var IngredientController = function (ingredientData) {
 	this.template = 'ingredient_detail.html';
 	this.popupDom = $('#detailPopup');
 	this.ingredient = ingredientData;
-}
+};
 
 IngredientController.prototype.parse = function(callback) {
 	var self = this,

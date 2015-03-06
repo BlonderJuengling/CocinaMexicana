@@ -5,7 +5,7 @@ var KnowledgeHandler = function (container, pageId) {
 	this.container = container;
 
 	this.loadPage(pageId);
-}
+};
 
 KnowledgeHandler.prototype.loadPage = function(id) {
 	var self = this;
@@ -49,7 +49,7 @@ KnowledgeHandler.prototype.managePopups = function(){
 
 	$(this.container).find('.knowledgetopics-ingredients a').click(function (event, data){
 		var ingredientName = this.text,
-			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
+			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName }),
 			ingredientContr = new KnowledgeIngredientController(ingredient[0]);
 
 		ingredientContr.parse(function (event) {

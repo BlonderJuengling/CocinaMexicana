@@ -4,11 +4,11 @@ var RecipeController = function (recipeId, user) {
 	this.id = recipeId;
 	this.template = 'recipe_detail.html';
 	this.keywordFile = 'ingredients_complete.json';
-	this.moodleBaseUrl = "https://wuecampus2.uni-wuerzburg.de/moodle/mod/quiz/view.php?id="
+	this.moodleBaseUrl = "https://wuecampus2.uni-wuerzburg.de/moodle/mod/quiz/view.php?id=";
 	this.keywords = '';
 	this.recipe = null;
 	this.user = user;
-}
+};
 
 RecipeController.prototype.init = function(callback) {
 	var self = this;
@@ -33,7 +33,7 @@ RecipeController.prototype.loadTemplate = function(callback) {
 RecipeController.prototype.loadRecipe = function(callback) {
 	var self = this;
 
-	if(this.id == null) // DEBUGGING CONTENT -> REMOVE LATER!!! :)
+	if(this.id === null) // DEBUGGING CONTENT -> REMOVE LATER!!! :)
 		this.id = 2;
 
 	$.getJSON('content/recipe_' + this.id + '.json', function (recipe) {
@@ -172,7 +172,7 @@ RecipeController.prototype.highlightKeywords = function() {
 	$('.ingr-highlight').css('cursor', 'pointer').css('text-decoration', 'underline');
 	$('.ingr-highlight').on('click', function (event, data) {
 		var ingredientName = event.target.text,
-			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName });
+			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName }),
 			ingredientContr = new IngredientController(ingredient[0]);
 
 		ingredientContr.parse(function (eventName) {

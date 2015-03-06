@@ -3,7 +3,7 @@ var QuizBuilder = function () {
 
 	this.quizPage = '';
 	this.quizID = null;
-}
+};
 
 QuizBuilder.prototype.build = function(quiz) {
 	this.quizID = quiz.id;

@@ -27,7 +27,6 @@ var app = {
     initMainPageSlider: function () {
         $('.main-page-slider-wrapper').load('content/slider_main.html', function () {
             $('.pgwSliderMain').pgwSlider({
-                displayControls: true,
                 selectionMode: 'mouseOver',
                 autoSlide: false,
                 adaptiveHeight: false,
@@ -37,7 +36,6 @@ var app = {
     },
     initInfoPageSlider: function () {
         $('.pgwSliderInfo').pgwSlider({
-            displayControls: true,
             autoSlide: true,
             adaptiveHeight: false,
             displayControls: true,
@@ -75,6 +73,21 @@ var app = {
             var regHandler = new RegistrationHandler();
 
             regHandler.register();
+        });
+
+        $('#impressum').on('pagecreate', function (event) {
+            event.preventDefault();
+            $('#impressum').find('#image-sources').load('content/image-sources.html', function () {
+                $('#toggle-sources-btn').on('click', function (event) {
+                    event.preventDefault();
+                    var sourcesDiv = $('#image-sources');
+
+                    if(sourcesDiv.hasClass('sources-hidden'))
+                        sourcesDiv.removeClass().addClass('sources-visible');
+                    else
+                        sourcesDiv.removeClass().addClass('sources-hidden');
+                });
+            });
         });
 
         $('#info').on('pagecreate', function (event) {
@@ -146,7 +159,7 @@ var app = {
         $('#navpanel').find('#quiz-moodle:first').on('click', function (event) {
             event.preventDefault();
             window.open('https://wuecampus2.uni-wuerzburg.de/moodle/course/view.php?id=11275', '_system');
-        })
+        });
 
         if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Blackberry)/)) {
             console.log('Running on mobile device');

@@ -5,7 +5,7 @@ var QuizValidator = function () {
 	this.evaluation = null;
 	this.result = null;
 	this.resultPage = '';
-}
+};
 
 QuizValidator.prototype.setQuiz = function(quiz) {
 	this.quiz = quiz;
@@ -36,15 +36,15 @@ QuizValidator.prototype.validate = function(callback) {
 };
 
 QuizValidator.prototype.getEvaluation = function(userSolution, quizQuestions) {
-	var eval = []
+	var evaluation = [];
 
 	for(var i = 0; i < userSolution.length; i++) {
-		eval.push({
+		evaluation.push({
 			'is_correct' : this.isAnswerCorrect(userSolution[i], quizQuestions[i].correct_answer),
 			'answer_index' : userSolution[i] -1 });
 	}
 
-	return eval;
+	return evaluation;
 };
 
 QuizValidator.prototype.getResult = function(evaluation) {
@@ -90,7 +90,7 @@ QuizValidator.prototype.getUserSolution = function() {
 	for (var i = 0; i < selectedItems.length; i++) {
 		var questionSolution = $(selectedItems[i]).val();
 		userSolution.push(parseInt(questionSolution));
-	};
+	}
 
 	return userSolution;
 };

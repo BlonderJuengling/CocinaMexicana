@@ -2,7 +2,7 @@ var Userpanel = function () {
 	this.TAG = 'Userpanel => ';
 	this.user = null;
 	this.template = 'userpanel.html';
-}
+};
 
 Userpanel.prototype.setUser = function(user) {
 	if(this.user === null)

@@ -7,7 +7,7 @@ var Quiz = function (fileName, currentUser) {
 	this.page = null;
 	this.builder = new QuizBuilder();
 	this.validator = new QuizValidator();
-}
+};
 
 Quiz.prototype.load = function(callback) {
 	var self = this;

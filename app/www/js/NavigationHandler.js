@@ -7,7 +7,7 @@ var NavigationHandler = function () {
 	this.navBackImg = $(this.navImgContainer).find('img').eq(1);
 
 	this.setMousePointer();
-}
+};
 
 NavigationHandler.prototype.setMousePointer = function() {
 	$(this.navBackImg).css('cursor', 'pointer');
@@ -27,11 +27,11 @@ NavigationHandler.prototype.refresh = function () {
 	}
 
 	navListView.listview('refresh');
-}
+};
 
 NavigationHandler.prototype.isUserLoggedIn = function () {
-	return app.currentUser.getUserStatus() === UserStatus.USER
-}
+	return app.currentUser.getUserStatus() === UserStatus.USER;
+};
 
 NavigationHandler.prototype.observePageShowEvent = function() {
 	var self = this;

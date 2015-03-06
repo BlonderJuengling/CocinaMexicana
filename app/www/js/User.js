@@ -3,10 +3,10 @@ var User = function () {
 	this.user = null;
 
 	this.load();
-}
+};
 
 User.prototype.load = function () {
-	if(window.localStorage != null) {
+	if(window.localStorage !== null) {
 		var userInStore = JSON.parse(window.localStorage.getItem('session'));
 
 		if(userInStore !== null) {
@@ -17,10 +17,10 @@ User.prototype.load = function () {
 		else
 			console.log(this.TAG + 'no user session exist in localStorage');
 	}
-}
+};
 
 User.prototype.store = function() {
-	if(window.localStorage != null && this.user != null) {
+	if(window.localStorage !== null && this.user !== null) {
 		window.localStorage.setItem('session', JSON.stringify(this.user));
 		console.log(this.TAG + 'store user changes in localStorage');
 	}
@@ -40,7 +40,7 @@ User.prototype.clearCurrentUser = function () {
 };
 
 User.prototype.getUserStatus = function () {
-	if(this.user == null)
+	if(this.user === null)
 		return UserStatus.GUEST;
 
 	return this.user.status;

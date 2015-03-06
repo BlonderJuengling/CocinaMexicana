@@ -46,7 +46,7 @@ RegistrationHandler.prototype.getValuesFromForm = function () {
 		'passwordRep' : $('#register-form #password-repeat').val(),
 		'firstname' : $('#register-form #firstname').val(),
 		'lastname' : $('#register-form #lastname').val(),
-	}
+	};
 };
 
 RegistrationHandler.prototype.clearErrorLabels = function() {
@@ -62,7 +62,7 @@ RegistrationHandler.prototype.isValid = function() {
 		this.errors.push({ 'field' : 'username', 'msg' : 'Username darf nicht leer sein' });
 	if(this.user.email === '')
 		this.errors.push({ 'field' : 'email', 'msg' : 'E-Mail darf nicht leer sein' });
-	if(this.user.password == '')
+	if(this.user.password === '')
 		this.errors.push({ 'field' : 'password', 'msg' : 'Passwort darf nicht leer sein' });
 	if(this.user.passwordRep === '')
 		this.errors.push({ 'field' : 'passwordRep', 'msg' : 'Passwort bitte wiederholen' });
