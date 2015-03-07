@@ -59,8 +59,10 @@ var app = {
         });
 
         $('.swipe-container').on('swiperight', function (event) {
-            if(event.swipestart.coords[0] < 30)
+            if(event.swipestart.coords[0] < 100){
+                console.log('swipe-right event received');
                 $('#navpanel').panel('open');
+            }
         });
         $('#login-submit-btn').on('click', function (event) {
             event.preventDefault();

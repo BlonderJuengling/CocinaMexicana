@@ -48,12 +48,31 @@ KnowledgeHandler.prototype.managePopups = function(){
 	var self = this;
 
 	$(this.container).find('.knowledgetopics-ingredients a').click(function (event, data){
-		var ingredientName = this.text,
+		$.mobile.loading('show');
+		$('.ingredient-list-wrapper').fadeOut('slow', function () {
+			$('.ingredient-detail-wrapper').fadeIn('slow');
+		});
+
+		var ingredientName = self.getIngredientName(event),
 			ingredient = $.grep(self.keywords, function (item) { return item.name === ingredientName }),
 			ingredientContr = new KnowledgeIngredientController(ingredient[0]);
 
 		ingredientContr.parse(function (event) {
-			$('#detailPopup').popup('open', { positionTo : 'window'});
+			$.mobile.loading('hide');
+
+			$('#ingredient-list-btn').on('click', function (event, data) {
+				event.preventDefault();
+				$('.ingredient-detail-wrapper').fadeOut('slow', function () {
+					$('.ingredient-list-wrapper').fadeIn('slow');
+				});
+			});
 		});
 	});
+};
+
+KnowledgeHandler.prototype.getIngredientName = function(eventData) {
+	if(eventData.target.nodeName === 'IMG')
+		return eventData.target.parentNode.textContent;
+
+	return eventData.target.textContent;
 };

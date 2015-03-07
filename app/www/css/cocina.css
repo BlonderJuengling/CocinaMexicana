@@ -425,7 +425,6 @@ textarea {
 
 .ingredient-img {
 	float: left;
-	height: 100px;
 	margin-right: 1em;
  	margin-bottom: 1em;
 }
@@ -433,4 +432,8 @@ textarea {
 .ingredient-content {
 	text-align: justify;
 	padding-right: 1em;
+}
+
+.ingredient-detail-wrapper {
+	display: none;
 }

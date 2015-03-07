@@ -2,7 +2,8 @@ var KnowledgeIngredientController = function (ingredientData) {
 	this.TAG = 'KnowledgeIngredientController => ';
 
 	this.template = 'knowledge_ingredient_detail.html';
-	this.popupDom = $('#detailPopup');
+	this.ingredientHeader = $('#knowledgeDatabase').find('.ingredient-list-wrapper');
+	this.ingredientDetails = $('#knowledgeDatabase').find('.ingredient-detail-wrapper');
 	this.ingredient = ingredientData;
 };
 
@@ -11,11 +12,13 @@ KnowledgeIngredientController.prototype.parse = function(callback) {
 		data = this.ingredient;
 
 	this.loadTemplate(function (event) {
-		$(this.popupDom).enhanceWithin();
 		self.setTitle(data.name);
 		self.setIntroduction(data.introduction);
+		self.setImage(data.image);
 		self.setSections(data.sections);
 		self.setQuizBtn(data.quiz_url);
+
+		self.ingredientDetails.enhanceWithin();
 
 		if(typeof(callback) === 'function' && callback !== undefined)
 			callback('popup-content-finished');
@@ -23,22 +26,26 @@ KnowledgeIngredientController.prototype.parse = function(callback) {
 };
 
 KnowledgeIngredientController.prototype.loadTemplate = function(callback) {
-	$('#detailPopup .ui-content').load('content/' + this.template, function () {
+	$(this.ingredientDetails).load('content/' + this.template, function () {
 		if(typeof(callback) === 'function' && callback !== undefined)
 			callback('template-loaded');
 	});
 };
 
 KnowledgeIngredientController.prototype.setTitle = function(title) {
-	$(this.popupDom).find('h1:first').html(title);
+	$(this.ingredientDetails).find('h1:first').html(title);
 };
 
 KnowledgeIngredientController.prototype.setIntroduction = function(introduction) {
-	$(this.popupDom).find('.introduction>.content').html(introduction);
+	$(this.ingredientDetails).find('.introduction>.content').html(introduction);
+};
+
+KnowledgeIngredientController.prototype.setImage = function(img) {
+	$(this.ingredientDetails).find('img').attr('src', 'img/knowledge/' + img);
 };
 
 KnowledgeIngredientController.prototype.setSections = function(sections) {
-	var sectionsContainer = $('#detailPopup #sections'),
+	var sectionsContainer = $('.ingredient-detail-wrapper #sections'),
 		sectionTemplate = $(sectionsContainer).find('.section:first');
 
 	if(sections === undefined || sections.length === 0) {
@@ -55,12 +62,12 @@ KnowledgeIngredientController.prototype.setSections = function(sections) {
 		$(clone).children().eq(0).html(item.heading);
 		$(clone).children().eq(1).html(item.content);
 
-		$('#detailPopup #sections').append(clone);
+		$('.ingredient-detail-wrapper #sections').append(clone);
 	});
 };
 
 KnowledgeIngredientController.prototype.setQuizBtn = function(quiz_url) {
-	$(this.popupDom).find('#start-quiz-btn').on('click', function (event) {
+	$(this.ingredientDetails).find('#start-quiz-btn').on('click', function (event) {
 		event.preventDefault();
 	});
 };

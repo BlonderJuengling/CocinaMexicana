@@ -38,7 +38,8 @@
 				"heading" : "Getrocknete Chilischoten",
 				"content" : "<ul><li>Chile ancho – Die getrocknete Version des Chile poblano ist etwa zwölf Zentimeter lang und hat eine dunkelrote, runzlige Haut. Einer Sauce beigegeben, rundet er das feine Aroma leicht ab. Die Schärfe dieser Sorte variiert sehr, aus diesem Grund sollte man beim Würzen sehr sparsam umgehen.<\/li><li>Chile chipotle – Bei diesem Chile handelt es sich um den geräucherten Chile Jalapeño. Er ist sehr scharf und verleiht den Gerichten einen rauchigen, rustikalen Geschmack.<\/li><li>Chile guajillo – Dieser scharfe Chile ist lang und hat eine glatte Haut. Man verwendet ihn eingeweicht oder zerrieben zum Würzen von Saucen und Fleischgerichten.<\/li><li>Chile pasilla – Dieser Chile hat seinen Namen nach dem spanischen Wort für “Rosine”, weil er eine sehr runzlige Haut hat. Wegen seines würzigen Geschmackes wird er oft für Moles und Saucen verwendet.<\/li><\/ul>"
 			}
-        ]
+        ],
+        "image" : "chili_small.png"
     },
     {
         "name" : "Avocado",
@@ -146,7 +147,8 @@
                 "heading" : "Camote vom Straßenhändler",
                 "content" : "Während der US-Bürger die Batate hauptsätzlich zu Thanksgiving mit Marshmallows isst, genießt der Mexikaner seine Camote (so werden Süßkartoffeln in Mexiko genannt) im Ofen gegrillt – Kohlengeschmack inklusive. Unkompliziertes Rezept also: Einfach in Alufolie einwickeln und in heiße Asche legen. Auf dieselbe Weise werden auch Gemüsebananen gegrillt. Da aber durch die große Hitze die Banane weich wird, erinnert sie nach dem Garen eher an Bananenmus!<p>Camote-Verkäufer fahren mit meistens selbstgebastelten, rollenden Grillstationen durch die engen Strassen in Mexikos Wohnquartieren. Sie machen sich bemerkbar durch ein am Grill speziell befestigtes Horn, was im Ton einem Schiffshorn nahe kommt. Da diese Grillstationen alles andere als sicher sind, fängt öfters eine solche Station Feuer und muss schnell gelöscht werden. Ein tragisches Ereignis, denn oft verliert so ein Camote-Verkäufer mit seinem Wagen seine Existenz.<\/p>"
             }
-        ]
+        ],
+        "image" : "suesskartoffeln.png"
     },
     {
         "name" : "Zucchini",
