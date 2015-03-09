@@ -5,6 +5,22 @@ var app = {
     loginHandler: new LoginHandler(),
     userpanel: new Userpanel(),
     passDataObject: { selectedRecipeId : null, selectedKnowledgeId : null },
+    mainSliderConfig: {
+        selectionMode: 'mouseOver',
+        autoSlide: false,
+        adaptiveHeight: false,
+        displayControls: false
+    },
+    infoSliderConfig: {
+        autoSlide: true,
+        adaptiveHeight: false,
+        displayControls: true,
+        displayList: false,
+        transitionDuration: 1000,
+        intervalDuration: 8000
+    },
+    mainSlider: null,
+    infoSlider: null,
     // Application Constructor
     initialize: function() {
         $("[data-role=header],[data-role=footer]").toolbar().enhanceWithin();
@@ -12,11 +28,9 @@ var app = {
         $('#registerPopupSuccess').popup(); // init popup to get expected behavior
         $('#errorPopup').popup();
         $('#feedbackPopup').popup().enhanceWithin();
-        $('#detailPopup').popup().enhanceWithin();
         $('#animationPopup').popup().enhanceWithin();
 
         this.displayMainQuizHint();
-        this.initMainPageSlider();
         this.bindEvents();
         this.navHandler.refresh();
 
@@ -25,24 +39,18 @@ var app = {
     },
     // Bind Event Listeners
     initMainPageSlider: function () {
-        $('.main-page-slider-wrapper').load('content/slider_main.html', function () {
-            $('.pgwSliderMain').pgwSlider({
-                selectionMode: 'mouseOver',
-                autoSlide: false,
-                adaptiveHeight: false,
-                displayControls: false
-            });
+        $('.main-page-slider-wrapper').load('content/slider_main.html', function() {
+            app.mainSlider = $('#home').find('.pgwSlider').pgwSlider(app.mainSliderConfig);
+            setTimeout(function () {
+                app.mainSlider.reload(app.mainSliderConfig);
+            }, 100);
         });
     },
     initInfoPageSlider: function () {
-        $('.pgwSliderInfo').pgwSlider({
-            autoSlide: true,
-            adaptiveHeight: false,
-            displayControls: true,
-            displayList: false,
-            transitionDuration: 1000,
-            intervalDuration: 8000
-        });
+        app.infoSlider = $('#info').find('.pgwSlider').pgwSlider(app.infoSliderConfig);
+        setTimeout(function () {
+            app.infoSlider.reload(app.infoSliderConfig);
+        }, 100);
     },
     displayMainQuizHint: function () {
         if(app.currentUser.isLoggedIn() && !app.currentUser.isClassQuizDone()) {
@@ -51,22 +59,20 @@ var app = {
     },
     bindEvents: function() {
         $('#home').on('pagebeforeshow', function () {
-            // workaround for broken slider-layout happens from time to time
-            if($('#home').find('.pgwSlider.narrow').length > 0) {
-                $('.pgwSliderMain').pgwSlider().destroy();
-                app.initMainPageSlider();
-            }
+            app.initMainPageSlider();
+        });
+
+        $('#home').on('pagehide', function () {
+            app.mainSlider.destroy();
         });
 
         $('.swipe-container').on('swiperight', function (event) {
             if(event.swipestart.coords[0] < 100){
-                console.log('swipe-right event received');
                 $('#navpanel').panel('open');
             }
         });
         $('#login-submit-btn').on('click', function (event) {
             event.preventDefault();
-
             app.loginHandler.login();
         });
 
@@ -92,19 +98,15 @@ var app = {
             });
         });
 
-        $('#info').on('pagecreate', function (event) {
+        $('#info').on('pagebeforeshow', function (event) {
             event.preventDefault();
             $('#info > .content-wrapper').load('content/info.html', function () {
                 app.initInfoPageSlider();
             });
         });
 
-        $('#info').on('pagebeforeshow', function () {
-            // workaround for broken slider-layout happens from time to time
-            if($('#info').find('.pgwSlider.narrow').length > 0) {
-                $('.pgwSliderInfo').pgwSlider().destroy();
-                app.initInfoPageSlider();
-            }
+        $('#info').on('pagehide', function () {
+            app.infoSlider.destroy();
         });
 
         $('#userpanel').on('pagebeforeshow', function () {
